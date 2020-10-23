@@ -31,8 +31,34 @@
     color: white;
 }
 
-.icon:hover {
-    fill: #d3708e;
+.icon {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.linkedin {
+    background: url('../../images/icons/linkedin.svg') no-repeat;
+}
+
+.linkedin:hover {
+    background: url('../../images/icons/linkedin-pink.svg') no-repeat;
+}
+
+.facebook {
+    background: url('../../images/icons/facebook.svg') no-repeat;
+}
+
+.facebook:hover {
+    background: url('../../images/icons/facebook-pink.svg') no-repeat;
+}
+
+.instagram {
+    background: url('../../images/icons/instagram.svg') no-repeat;
+}
+
+.instagram:hover {
+    background: url('../../images/icons/instagram-pink.svg') no-repeat;
 }
 
 .mail-link {

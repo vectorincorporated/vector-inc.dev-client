@@ -1,9 +1,6 @@
 import React from "react"
 
 import mail from '../../images/icons/mail.svg';
-import linkedin from '../../images/icons/linkedin.svg';
-import instagram from '../../images/icons/instagram.svg';
-import facebook from '../../images/icons/facebook.svg';
 import styles from './footer.module.css';
 
 const Footer = () => (
@@ -20,9 +17,9 @@ const Footer = () => (
             <div className={styles.socialsWrapper}>
                 <span>follow us</span>
                 <div className={styles.smallDivider}>....</div>
-                <img src={linkedin} className={styles.icon} alt="linkedin"/>
-                <img src={facebook} className={styles.icon} alt="facebook"/>
-                <img src={instagram} className={styles.icon} alt="instagram"/>
+                <a href='#' className={styles.linkedin + ' ' + styles.icon} />
+                <a href='#' className={styles.facebook + ' ' + styles.icon} />
+                <a href='#' className={styles.instagram  + ' ' + styles.icon} />
             </div>
         </div>
     </footer>
