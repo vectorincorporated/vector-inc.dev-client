@@ -5,6 +5,3 @@
  */
 
 // You can delete this file if you're not using it
-
-import "./src/styles/lines-animation.css";
-import "./src/styles/particles-animation.css";
