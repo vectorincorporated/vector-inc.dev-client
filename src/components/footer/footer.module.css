@@ -1,0 +1,50 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    padding: 16px 112px;
+    background-color: rgba(33, 30, 32, 0.8);
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.mail-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    row-gap: 5px;
+}
+
+.socials-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.icon {
+    margin-right: 20px;
+    color: white;
+}
+
+.icon:hover {
+    fill: #d3708e;
+}
+
+.mail-link {
+    color: #d3708e;
+}
+
+.divider {
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.small-divider {
+    margin-right: 10px;
+    margin-left: 10px;
+}
