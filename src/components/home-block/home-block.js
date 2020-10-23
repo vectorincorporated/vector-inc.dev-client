@@ -14,16 +14,7 @@ const HomeBlock = () => {
                 </h1>
             </div>
 
-            <button
-                style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    margin: `0 auto`,
-                    width: '608px',
-                    padding: `0 112px`,
-                    marginTop: '100px'
-                }}>
+            <button className={styles.btn}>
                 Get free consultation
             </button>
         </>
