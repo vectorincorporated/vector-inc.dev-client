@@ -26,18 +26,7 @@ const Layout = ({ children }) => {
     return (
         <>
             <Header siteTitle={data.site.siteMetadata.title} />
-            <div
-                style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    flexDirection: 'column',
-                    margin: `0 auto`,
-                    maxWidth: 960,
-                    padding: `0 112px`,
-                }}
-            >
-                <main>{children}</main>
-            </div>
+            <main>{children}</main>
         </>
     )
 }
