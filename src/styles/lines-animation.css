@@ -1,0 +1,60 @@
+body {
+    background-color: #323133;
+}
+
+body:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: repeating-linear-gradient(0deg, #111 0, #111 1px, transparent 2px, transparent 5px);
+    background-size: 100% 5px;
+    -webkit-animation: lines 2s ease-out infinite;
+    animation: lines 2s ease-out infinite;
+    opacity: 0.3;
+    mix-blend-mode: color-burn;
+    pointer-events: none;
+}
+
+@-webkit-keyframes giggle {
+    0%, 100% {
+        -webkit-transform: translate(-50%, -50%) translateY(-2px);
+        transform: translate(-50%, -50%) translateY(-2px);
+    }
+    50% {
+        -webkit-transform: translate(-50%, -50%) translateY(2px);
+        transform: translate(-50%, -50%) translateY(2px);
+    }
+}
+
+@keyframes giggle {
+    0%, 100% {
+        -webkit-transform: translate(-50%, -50%) translateY(-2px);
+        transform: translate(-50%, -50%) translateY(-2px);
+    }
+    50% {
+        -webkit-transform: translate(-50%, -50%) translateY(2px);
+        transform: translate(-50%, -50%) translateY(2px);
+    }
+}
+
+@-webkit-keyframes lines {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 0 25px;
+    }
+}
+
+@keyframes lines {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 0 25px;
+    }
+}
