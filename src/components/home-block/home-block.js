@@ -5,7 +5,7 @@ import styles from './home-block.module.css';
 
 const HomeBlock = () => {
     return (
-        <>
+        <div>
             <SEO title="Home" />
 
             <div className={ styles.title + ' wrap' }>
@@ -17,7 +17,7 @@ const HomeBlock = () => {
             <button className={styles.btn}>
                 Get free consultation
             </button>
-        </>
+        </div>
     )
 };
 
