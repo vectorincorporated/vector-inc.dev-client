@@ -6,14 +6,10 @@ const classNames = require('classnames');
 
 
 const ForWhatBlock = () => {
-    const [isInfoBlock, toggleInfoBlock] = useState(false);
+    const [isInfoBlock, setIsInfoBlock] = useState(false);
 
-    const showInfoBlock = () => {
-        toggleInfoBlock(true);
-    };
-    
-    const hideInfoBlock = () => {
-        toggleInfoBlock(false);
+    const toggleInfoBlock = (isInfoBlock) => {
+        setIsInfoBlock(isInfoBlock);
     };
 
     return (
@@ -29,31 +25,31 @@ const ForWhatBlock = () => {
 
             <div className={ styles.info }>
                 <div className={classNames( 'accent-text', styles.infoMenu )}>
-                    <div className={styles.infoItem} onMouseOver={showInfoBlock} onMouseLeave={hideInfoBlock}>
+                    <div className={styles.infoItem} onMouseOver={() => toggleInfoBlock(true)} onMouseLeave={() => toggleInfoBlock(false)}>
                         <span>Enhance your internal communication</span>
                         <div className={styles.line}>
                         </div>
                     </div>
 
-                    <div className={styles.infoItem} onMouseOver={showInfoBlock} onMouseLeave={hideInfoBlock}>
+                    <div className={styles.infoItem} onMouseOver={() => toggleInfoBlock(true)} onMouseLeave={() => toggleInfoBlock(false)}>
                         <span>Boost your marketing effort</span>
                         <div className={styles.line}>
                         </div>
                     </div>
 
-                    <div className={styles.infoItem} onMouseOver={showInfoBlock} onMouseLeave={hideInfoBlock}>
+                    <div className={styles.infoItem} onMouseOver={() => toggleInfoBlock(true)} onMouseLeave={() => toggleInfoBlock(false)}>
                         <span>Automate your Business processes</span>
                         <div className={styles.line}>
                         </div>
                     </div>
 
-                    <div className={styles.infoItem} onMouseOver={showInfoBlock} onMouseLeave={hideInfoBlock}>
+                    <div className={styles.infoItem} onMouseOver={() => toggleInfoBlock(true)} onMouseLeave={() => toggleInfoBlock(false)}>
                         <span>Increase your productivity</span>
                         <div className={styles.line}>
                         </div>
                     </div>
 
-                    <div className={styles.infoItem} onMouseOver={showInfoBlock} onMouseLeave={hideInfoBlock}>
+                    <div className={styles.infoItem} onMouseOver={() => toggleInfoBlock(true)} onMouseLeave={() => toggleInfoBlock(false)}>
                         <span>Set up work remotely</span>
                         <div className={styles.line}>
                         </div>
