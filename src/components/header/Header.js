@@ -2,7 +2,7 @@ import React from "react"
 
 import logo from '../../images/logo.svg';
 import menu from '../../images/menu-icon.svg';
-import headerStyles from './header.module.css';
+import headerStyles from './Header.module.css';
 
 const Header = () => (
     <header>

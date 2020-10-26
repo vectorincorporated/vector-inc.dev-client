@@ -1,6 +1,6 @@
 import React, {useState} from "react"
 
-import styles from './for-what-block.module.css';
+import styles from './ForWhatBlock.module.css';
 
 const classNames = require('classnames');
 
