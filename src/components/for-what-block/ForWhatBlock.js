@@ -86,7 +86,7 @@ const ForWhatBlock = () => {
 
                 </div>
 
-                <InfoBlock activeItem={ activeItem } />
+                { activeItem && <InfoBlock activeItem={ activeItem } />}
             </div>
         </div>
     )
