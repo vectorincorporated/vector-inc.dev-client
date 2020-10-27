@@ -1,9 +1,8 @@
-import React from "react"
+import React from "react";
+import classNames from 'classnames';
 
 import mail from '../../images/icons/mail.svg';
 import styles from './Footer.module.css';
-
-const classNames = require('classnames');
 
 const Footer = () => (
     <footer>
@@ -11,7 +10,7 @@ const Footer = () => (
             <div className={styles.mailWrapper}>
                 <img src={mail} alt="mail"/>
                 <div className={styles.smallDivider}>....</div>
-                <a className={styles.mailLink} href='mailto:vector@mail.com'>vector@mail.com</a>
+                <a className='link' href='mailto:vector@mail.com'>vector@mail.com</a>
             </div>
 
             <span className={styles.divider}>........................</span>
