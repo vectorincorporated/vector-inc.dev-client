@@ -1,14 +1,16 @@
 import React from "react";
 
-const InfoMenuItem = ({ toggleInfoBlock, styles, text }) => (
-    <div className={styles.infoItem}
-         onMouseOver={() => toggleInfoBlock(true)}
-         onMouseLeave={() => toggleInfoBlock(false)}>
+import styles from './InfoMenuItem.module.css';
 
-        <span>{ text }</span>
+const InfoMenuItem = ({ toggleInfoBlock, item }) => (
+    <div className={ styles.infoItem }
+         onMouseOver={(e) => toggleInfoBlock(e, item)}
+         onMouseLeave={(e) => toggleInfoBlock(e, null)}>
 
-        <div className={styles.line} />
+        <span>{ item.title }</span>
+
+        <div className={ styles.line } />
     </div>
-)
+);
 
 export default InfoMenuItem
