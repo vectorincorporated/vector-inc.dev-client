@@ -2,14 +2,15 @@ import React from "react";
 
 import styles from './InfoMenuItem.module.css';
 
-const InfoMenuItem = ({ toggleInfoBlock, item }) => (
+const InfoMenuItem = ({ toggleInfoBlock, item, activeItem, options }) => (
     <div className={ styles.infoItem }
-         onMouseOver={(e) => toggleInfoBlock(e, item)}
-         onMouseLeave={(e) => toggleInfoBlock(e, null)}>
+         onClick={(e) => toggleInfoBlock(e, item)}>
 
         <span>{ item.title }</span>
 
-        <div className={ styles.line } />
+        { item === activeItem &&
+            <div className={ options?.mode === 'left' ? styles.lineLeft : styles.lineRight } />
+        }
     </div>
 );
 
