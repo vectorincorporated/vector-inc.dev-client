@@ -29,7 +29,7 @@ const QuestionsFormBlock = () => {
                     <textarea className={styles.formField}
                               placeholder='LEAVE YOUR MESSAGE HERE... (optional)'/>
 
-                    <button className={styles.btn}>oxxxymiron</button>
+                    <button className={styles.btn}>send</button>
                 </div>
 
             </div>

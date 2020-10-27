@@ -23,6 +23,7 @@
     align-items: start;
     flex-direction: row-reverse;
     height: 570px;
+    width: 100%;
     margin-top: 80px;
     margin-bottom: 100px;
 }
@@ -35,3 +36,9 @@
     margin-top: 80px;
 }
 
+.circleWrapper {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}

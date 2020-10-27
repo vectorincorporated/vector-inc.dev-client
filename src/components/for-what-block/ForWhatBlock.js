@@ -5,6 +5,7 @@ import styles from './ForWhatBlock.module.css';
 import InfoMenuItem from "../info-menu-item/InfoMenuItem";
 import InfoBlock from "../info-block/InfoBlock";
 import BlockHeader from "../block-header/BlockHeader";
+import CircleAnimation from "../circle-animation/CircleAnimation";
 
 const items = [
     {
@@ -90,6 +91,10 @@ const ForWhatBlock = () => {
                     <InfoBlock activeItem={ activeItem }
                                options={{ isTitle: true, isDivider: true }}/>
                 }
+
+                <div className={styles.circleWrapper}>
+                    <CircleAnimation />
+                </div>
             </div>
         </div>
     )
