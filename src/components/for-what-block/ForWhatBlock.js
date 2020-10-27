@@ -1,10 +1,9 @@
-import React, {useState} from "react"
+import React, {useState} from "react";
+import classNames from "classnames";
 
 import styles from './ForWhatBlock.module.css';
 import InfoMenuItem from "../info-menu-item/InfoMenuItem";
 import InfoBlock from "../info-block/InfoBlock";
-
-const classNames = require('classnames');
 
 const items = [
     {
