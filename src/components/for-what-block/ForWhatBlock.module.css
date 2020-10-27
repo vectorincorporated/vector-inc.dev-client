@@ -32,20 +32,3 @@
     margin-top: 80px;
 }
 
-.info-block {
-    display: flex;
-    flex-direction: column;
-    height: 337px;
-    width: 300px;
-    margin-left: 64px;
-    padding: 16px;
-    border: 1px solid white;
-}
-
-.info-block-hidden {
-    display: none;
-}
-
-.divider {
-    margin-bottom: 8px;
-}

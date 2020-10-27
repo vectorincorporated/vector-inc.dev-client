@@ -2,6 +2,7 @@ import React, {useState} from "react"
 
 import styles from './ForWhatBlock.module.css';
 import InfoMenuItem from "../info-menu-item/InfoMenuItem";
+import InfoBlock from "../info-block/InfoBlock";
 
 const classNames = require('classnames');
 
@@ -85,17 +86,7 @@ const ForWhatBlock = () => {
 
                 </div>
 
-                <div className={ activeItem ? styles.infoBlock : styles.infoBlockHidden }>
-                    <span className='accent-text'>
-                        { activeItem?.title }
-                    </span>
-                    <span className={ styles.divider }>
-                        ••••••••••••••••••••••••••••••••••••••
-                    </span>
-                    <span className='regular-text'>
-                        { activeItem?.text }
-                    </span>
-                </div>
+                <InfoBlock activeItem={ activeItem } />
             </div>
         </div>
     )
