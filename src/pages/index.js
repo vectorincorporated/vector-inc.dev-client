@@ -1,11 +1,12 @@
 import React from "react"
 import Particles from "react-tsparticles";
 
+import { options } from '../utils/particles/particles-options';
+import SEO from "../components/seo";
 import Layout from "../components/layout"
 import HomeBlock from "../components/home-block/HomeBlock";
 import ForWhatBlock from "../components/for-what-block/ForWhatBlock";
-import { options } from '../utils/particles/particles-options';
-import SEO from "../components/seo";
+import ServicesBlock from "../components/services-block/ServicesBlock";
 
 const IndexPage = () => (
     <Layout>
@@ -17,6 +18,7 @@ const IndexPage = () => (
 
         <HomeBlock />
         <ForWhatBlock />
+        <ServicesBlock />
     </Layout>
 );
 

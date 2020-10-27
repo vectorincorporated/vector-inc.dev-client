@@ -79,13 +79,17 @@ const ForWhatBlock = () => {
                         items.map((item) => {
                             return <InfoMenuItem key={item.id}
                                                  toggleInfoBlock={toggleInfoBlock}
-                                                 item={item} />
+                                                 activeItem={activeItem}
+                                                 item={item}/>
                         })
                     }
 
                 </div>
 
-                { activeItem && <InfoBlock activeItem={ activeItem } />}
+                { activeItem &&
+                    <InfoBlock activeItem={ activeItem }
+                               options={{ isTitle: true, isDivider: true }}/>
+                }
             </div>
         </div>
     )

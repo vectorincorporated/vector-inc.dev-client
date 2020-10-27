@@ -75,3 +75,7 @@ input {
     font-family: "Ubuntu Mono", sans-serif;
     font-size: 18px;
 }
+
+.link {
+    color: #d3708e;
+}

@@ -1,13 +1,18 @@
 .info-block {
     display: flex;
     flex-direction: column;
-    height: 337px;
+    height: 100%;
     width: 300px;
     margin-left: 64px;
+    margin-right: 64px;
     padding: 16px;
     border: 1px solid white;
 }
 
 .divider {
     margin-bottom: 8px;
+}
+
+.read-more {
+    margin-top: 32px;
 }
