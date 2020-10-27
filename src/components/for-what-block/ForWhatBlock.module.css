@@ -1,0 +1,34 @@
+.for-what {
+    display: flex;
+    flex-direction: column;
+    margin-top: 200px;
+}
+
+.title {
+    margin-bottom: 10px;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.info-menu {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: start;
+}
+
+.info {
+    display: flex;
+    align-items: start;
+    margin-top: 80px;
+    margin-bottom: 200px;
+}
+
+.items {
+    margin-top: 80px;
+}
+

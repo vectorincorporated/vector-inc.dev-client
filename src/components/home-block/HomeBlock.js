@@ -1,6 +1,6 @@
 import React from "react"
 
-import styles from './home-block.module.css';
+import styles from './HomeBlock.module.css';
 
 const HomeBlock = () => {
     return (

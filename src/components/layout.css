@@ -2,59 +2,76 @@
 @import "../styles/particles-animation.css";
 @import "../styles/title-animation.css";
 
+@font-face {
+    font-family: 'VT323';
+    src: url('../fonts/VT323-Regular.ttf');
+    font-weight: 300;
+    font-style: normal;
+}
 
 @font-face {
-  font-family: 'VT323';
-  src: url('../fonts/VT323-Regular.ttf');
-  font-weight: 300;
-  font-style: normal;
+    font-family: 'Ubuntu Mono';
+    src: url('../fonts/UbuntuMono-R.ttf');
+    font-weight: 400;
+    font-style: normal;
 }
 
 html {
-  font-family: VT323, sans-serif;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
+    font-family: VT323, sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
 }
 
 body {
-  color: white;
-  font-family: VT323, sans-serif;
-  font-weight: normal;
-  word-wrap: break-word;
-  font-kerning: normal;
-  -moz-font-feature-settings: "kern", "liga", "clig", "calt";
-  -ms-font-feature-settings: "kern", "liga", "clig", "calt";
-  -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
-  font-feature-settings: "kern", "liga", "clig", "calt";
-  margin: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    color: white;
+    font-family: VT323, sans-serif;
+    font-weight: normal;
+    word-wrap: break-word;
+    font-kerning: normal;
+    -moz-font-feature-settings: "kern", "liga", "clig", "calt";
+    -ms-font-feature-settings: "kern", "liga", "clig", "calt";
+    -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
+    font-feature-settings: "kern", "liga", "clig", "calt";
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 main {
-  margin: 0 auto;
+    margin: 0 auto;
+    width: 1000px;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  text-transform: uppercase;
+    text-transform: uppercase;
 }
 
-h1 {
-  font-family: VT323, sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 56px;
-  line-height: 56px;
-  text-align: center;
-  text-transform: uppercase;
+h1, h2 {
+    font-family: VT323, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 56px;
+    line-height: 56px;
+    text-align: center;
+    text-transform: uppercase;
 }
 
 button,
 input {
-  overflow: visible;
-  height: 56px;
-  font-size: 24px;
-  font-family: VT323, sans-serif;
-  text-transform: uppercase;
-  border: none;
+    overflow: visible;
+    height: 56px;
+    font-size: 24px;
+    font-family: VT323, sans-serif;
+    text-transform: uppercase;
+    border: none;
+}
+
+.accent-text {
+    text-transform: uppercase;
+    font-size: 24px;
+}
+
+.regular-text {
+    font-family: "Ubuntu Mono", sans-serif;
+    font-size: 18px;
 }

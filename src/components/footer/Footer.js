@@ -1,7 +1,7 @@
 import React from "react"
 
 import mail from '../../images/icons/mail.svg';
-import styles from './footer.module.css';
+import styles from './Footer.module.css';
 
 const classNames = require('classnames');
 

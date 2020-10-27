@@ -1,0 +1,76 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    padding: 16px 112px;
+    background-color: rgba(33, 30, 32, 0.8);
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.mail-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    row-gap: 5px;
+}
+
+.socials-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.icon {
+    margin-right: 20px;
+    color: white;
+}
+
+.icon {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.linkedin {
+    background: url('../../images/icons/linkedin.svg') no-repeat;
+}
+
+.linkedin:hover {
+    background: url('../../images/icons/linkedin-pink.svg') no-repeat;
+}
+
+.facebook {
+    background: url('../../images/icons/facebook.svg') no-repeat;
+}
+
+.facebook:hover {
+    background: url('../../images/icons/facebook-pink.svg') no-repeat;
+}
+
+.instagram {
+    background: url('../../images/icons/instagram.svg') no-repeat;
+}
+
+.instagram:hover {
+    background: url('../../images/icons/instagram-pink.svg') no-repeat;
+}
+
+.mail-link {
+    color: #d3708e;
+}
+
+.divider {
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.small-divider {
+    margin-right: 10px;
+    margin-left: 10px;
+}
