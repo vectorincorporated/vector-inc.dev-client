@@ -49,7 +49,7 @@ const HowWeWorkBlock = () => {
             </div>
 
             {
-                stepList.map(step => <WorkStep step={step}/>)
+                stepList.map(step => <WorkStep key={step.order} step={step}/>)
             }
 
         </div>
