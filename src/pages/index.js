@@ -6,6 +6,7 @@ import SEO from "../components/seo";
 import Layout from "../components/layout"
 import HomeBlock from "../components/home-block/HomeBlock";
 import ForWhatBlock from "../components/for-what-block/ForWhatBlock";
+import HowWeWorkBlock from "../components/how-we-work/HowWeWorkBlock";
 import ServicesBlock from "../components/services-block/ServicesBlock";
 
 const IndexPage = () => (
@@ -19,6 +20,7 @@ const IndexPage = () => (
         <HomeBlock />
         <ForWhatBlock />
         <ServicesBlock />
+        <HowWeWorkBlock />
     </Layout>
 );
 

@@ -20,6 +20,7 @@ html {
     font-family: VT323, sans-serif;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
+    overflow-x: hidden;
 }
 
 body {
