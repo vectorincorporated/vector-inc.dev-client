@@ -6,10 +6,6 @@
     margin-bottom: 200px;
 }
 
-.title {
-    margin-bottom: 10px;
-}
-
 .header {
     display: flex;
     flex-direction: column;

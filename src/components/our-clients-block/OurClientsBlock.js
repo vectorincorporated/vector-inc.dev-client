@@ -11,6 +11,7 @@ import ea from '../../images/our-clients/ea.svg';
 import dropbox from '../../images/our-clients/Dropbox_logo.svg';
 import billboard from '../../images/our-clients/billboard.svg';
 import ClientCard from "../client-card/ClientCard";
+import BlockHeader from "../block-header/BlockHeader";
 
 const OurClientsBlock = () => {
     const clientList = [
@@ -44,12 +45,14 @@ const OurClientsBlock = () => {
         }
     ];
 
+    const header = {
+        title: 'Our Clients'
+    };
+
     return (
         <div className={ styles.ourClients }>
             <div className={styles.header}>
-                <h2 className={ styles.title }>
-                    Our Clients
-                </h2>
+                <BlockHeader header={ header } />
             </div>
 
             <div className={ styles.clientList }>
