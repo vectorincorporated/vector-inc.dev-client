@@ -10,6 +10,7 @@ import ps from '../../images/our-clients/ps.svg';
 import ea from '../../images/our-clients/ea.svg';
 import dropbox from '../../images/our-clients/Dropbox_logo.svg';
 import billboard from '../../images/our-clients/billboard.svg';
+import ClientCard from "../client-card/ClientCard";
 
 const OurClientsBlock = () => {
     const clientList = [
@@ -54,9 +55,7 @@ const OurClientsBlock = () => {
             <div className={ styles.clientList }>
                 {
                     clientList.map(client => {
-                        return <div className={ styles.client } key={ client.id }>
-                            <img src={ client.img } alt=''/>
-                        </div>
+                        return <ClientCard key={client.id} client={client}/>
                     })
                 }
             </div>
