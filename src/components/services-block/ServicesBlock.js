@@ -4,6 +4,7 @@ import classNames from "classnames";
 import styles from './ServicesBlock.module.css';
 import InfoMenuItem from "../info-menu-item/InfoMenuItem";
 import InfoBlock from "../info-block/InfoBlock";
+import BlockHeader from "../block-header/BlockHeader";
 
 const defaultText = `
         You want to build your product with a team that establishes a clear design process, meets deadlines, and delivers a spot-on end result? 
@@ -54,6 +55,11 @@ const items = [
     }
 ];
 
+const header = {
+    title: 'Services',
+    description: 'Here are the details of our services'
+};
+
 
 const ServicesBlock = () => {
     const [activeItem, setActiveItem] = useState(null);
@@ -66,12 +72,7 @@ const ServicesBlock = () => {
     return (
         <div className={ styles.services }>
             <div className={styles.header}>
-                <h2 className={ styles.title }>
-                    Services
-                </h2>
-                <span className='accent-text'>
-                    Here are the details of our services
-                </span>
+                <BlockHeader header={ header } />
             </div>
 
             <div className={ styles.info }>

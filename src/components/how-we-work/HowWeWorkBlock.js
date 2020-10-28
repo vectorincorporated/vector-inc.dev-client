@@ -7,6 +7,7 @@ import development from '../../images/icons/how-we-work/development.svg'
 import testing from '../../images/icons/how-we-work/testing.svg'
 import launch from '../../images/icons/how-we-work/launch.svg'
 import WorkStep from "../work-step/WorkStep";
+import BlockHeader from "../block-header/BlockHeader";
 
 const stepList = [
     {
@@ -36,22 +37,21 @@ const stepList = [
     }
 ];
 
+const header = {
+    title: 'How we work',
+    description: 'we use the best technologies to enhance your product'
+};
+
+
 const HowWeWorkBlock = () => {
     return (
         <div className={ styles.howWeWork }>
             <div className={styles.header}>
-                <h2 className={ styles.title }>
-                    How we work
-                </h2>
-                <span className='accent-text'>
-                    we use the best technologies to enhance your product
-                </span>
+                <BlockHeader header={ header } />
             </div>
 
             {
-                stepList.map((step) => {
-                    return <WorkStep step={step} />
-                })
+                stepList.map(step => <WorkStep key={step.order} step={step}/>)
             }
 
         </div>

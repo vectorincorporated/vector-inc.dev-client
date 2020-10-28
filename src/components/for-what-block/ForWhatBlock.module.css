@@ -4,10 +4,6 @@
     margin-top: 300px;
 }
 
-.title {
-    margin-bottom: 10px;
-}
-
 .header {
     display: flex;
     flex-direction: column;

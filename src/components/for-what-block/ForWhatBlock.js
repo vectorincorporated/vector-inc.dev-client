@@ -4,6 +4,7 @@ import classNames from "classnames";
 import styles from './ForWhatBlock.module.css';
 import InfoMenuItem from "../info-menu-item/InfoMenuItem";
 import InfoBlock from "../info-block/InfoBlock";
+import BlockHeader from "../block-header/BlockHeader";
 
 const items = [
     {
@@ -53,6 +54,10 @@ const items = [
     }
 ];
 
+const header = {
+    title: 'For what',
+    description: 'we use the best technologies to enhance your product'
+};
 
 const ForWhatBlock = () => {
     const [activeItem, setActiveItem] = useState(null);
@@ -65,12 +70,7 @@ const ForWhatBlock = () => {
     return (
         <div className={ styles.forWhat }>
             <div className={styles.header}>
-                <h2 className={ styles.title }>
-                    For what
-                </h2>
-                <span className='accent-text'>
-                    we use the best technologies to enhance your product
-                </span>
+                <BlockHeader header={ header } />
             </div>
 
             <div className={ styles.info }>
