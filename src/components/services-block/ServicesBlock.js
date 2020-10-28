@@ -5,6 +5,7 @@ import styles from './ServicesBlock.module.css';
 import InfoMenuItem from "../info-menu-item/InfoMenuItem";
 import InfoBlock from "../info-block/InfoBlock";
 import BlockHeader from "../block-header/BlockHeader";
+import CircleAnimation from "../circle-animation/CircleAnimation";
 
 const defaultText = `
         You want to build your product with a team that establishes a clear design process, meets deadlines, and delivers a spot-on end result? 
@@ -95,6 +96,10 @@ const ServicesBlock = () => {
                                activeItem={ activeItem }
                                options={{ readMore: true }} />
                 }
+
+                <div className={styles.circleWrapper}>
+                    <CircleAnimation />
+                </div>
             </div>
         </div>
     )

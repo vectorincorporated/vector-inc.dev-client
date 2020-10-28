@@ -29,3 +29,9 @@
     margin-top: 80px;
 }
 
+.circleWrapper {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}

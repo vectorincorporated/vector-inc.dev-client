@@ -8,6 +8,7 @@ import HomeBlock from "../components/home-block/HomeBlock";
 import ForWhatBlock from "../components/for-what-block/ForWhatBlock";
 import HowWeWorkBlock from "../components/how-we-work/HowWeWorkBlock";
 import ServicesBlock from "../components/services-block/ServicesBlock";
+import QuestionsFormBlock from "../components/question-form-block/QuestionsFormBlock";
 import OurClientsBlock from "../components/our-clients-block/OurClientsBlock";
 
 const IndexPage = () => (
@@ -23,6 +24,7 @@ const IndexPage = () => (
         <ServicesBlock />
         <HowWeWorkBlock />
         <OurClientsBlock />
+        <QuestionsFormBlock />
     </Layout>
 );
 

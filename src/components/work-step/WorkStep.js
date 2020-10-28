@@ -7,7 +7,6 @@ const WorkStep = ({ step }) => {
     return (
         <div>
             {
-                step.order &&
                 step.order %2 === 0 ?
 
                     <div className={ styles.step }>
