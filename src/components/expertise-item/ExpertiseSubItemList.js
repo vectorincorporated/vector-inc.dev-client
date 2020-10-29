@@ -1,9 +1,9 @@
 import React from "react";
 import classNames from 'classnames';
 
-import styles from "./ExpertiseItem.module.css";
+import styles from "./ExpertiseSubItemList.module.css";
 
-const ExpertiseItem = ({ activeItem }) => {
+const ExpertiseSubItemList = ({ activeItem }) => {
     return (
         <div className={ styles.expertiseItem }>
             {
@@ -21,4 +21,4 @@ const ExpertiseItem = ({ activeItem }) => {
     )
 };
 
-export default ExpertiseItem;
+export default ExpertiseSubItemList;

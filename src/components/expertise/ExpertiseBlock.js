@@ -4,7 +4,7 @@ import styles from "./ExpertiseBlock.module.css";
 import BlockHeader from "../block-header/BlockHeader";
 import classNames from "classnames";
 import InfoMenuItem from "../info-menu-item/InfoMenuItem";
-import ExpertiseItem from "../expertise-item/ExpertiseItem";
+import ExpertiseSubItemList from "../expertise-item/ExpertiseSubItemList";
 import SphereAnimation from "../sphere-animation/SphereAnimation";
 
 const items = [
@@ -108,7 +108,7 @@ const ExpertiseBlock = () => {
                 </div>
 
                 { activeItem &&
-                    <ExpertiseItem activeItem={ activeItem }/>
+                    <ExpertiseSubItemList activeItem={ activeItem }/>
                 }
 
                 <div className={styles.animationWrapper}>
