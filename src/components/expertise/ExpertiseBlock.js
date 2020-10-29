@@ -108,7 +108,9 @@ const ExpertiseBlock = () => {
                 </div>
 
                 { activeItem &&
-                    <ExpertiseSubItemList activeItem={ activeItem }/>
+                    <div className={styles.subItems}>
+                        <ExpertiseSubItemList activeItem={ activeItem }/>
+                    </div>
                 }
 
                 <div className={styles.animationWrapper}>
