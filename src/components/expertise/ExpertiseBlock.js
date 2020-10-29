@@ -4,8 +4,8 @@ import styles from "./ExpertiseBlock.module.css";
 import BlockHeader from "../block-header/BlockHeader";
 import classNames from "classnames";
 import InfoMenuItem from "../info-menu-item/InfoMenuItem";
-import CircleAnimation from "../circle-animation/CircleAnimation";
 import ExpertiseItem from "./expertise-item/ExpertiseItem";
+import SphereAnimation from "../sphere-animation/SphereAnimation";
 
 const items = [
     {
@@ -111,8 +111,8 @@ const ExpertiseBlock = () => {
                     <ExpertiseItem activeItem={ activeItem }/>
                 }
 
-                <div className={styles.circleWrapper}>
-                    <CircleAnimation />
+                <div className={styles.animationWrapper}>
+                    <SphereAnimation />
                 </div>
             </div>
         </div>
