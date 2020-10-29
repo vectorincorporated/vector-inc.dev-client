@@ -2,16 +2,17 @@ import React from "react";
 import classNames from 'classnames';
 
 import styles from './WorkList.module.css';
+import PortfolioWorkItem from "../portfolio-work-item/PortfolioWorkItem";
 
 const WorkList = ({ works, latest }) => {
     return (
         <div className={styles.worksWrapper}>
-            <div>
-                <div className={styles.header}>
+            <div className={styles.header}>
+                <div>
                     { latest ? 'Last month' : 'Long time ago'}
                 </div>
                 <div className={styles.divider}>
-                    •••••••••••••••••••••••••••••••••••••••••••••
+                    ••••••••••••••••••••••••••••
                 </div>
             </div>
 
@@ -19,7 +20,7 @@ const WorkList = ({ works, latest }) => {
                 {
                     works.map((work) => {
                         return <div className={styles.work } key={work.id}>
-                            <div>Work!</div>
+                            <PortfolioWorkItem work={work} />
                         </div>
                     })
                 }

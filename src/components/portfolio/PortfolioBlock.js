@@ -10,15 +10,15 @@ import SphereAnimation from "../sphere-animation/SphereAnimation";
 const works = [
     {
         id: 1,
-        title: 'Enterprise solutions'
+        title: 'Project_1'
     },
     {
         id: 2,
-        title: 'Full Stack Web Apps'
+        title: 'Project_1'
     },
     {
         id: 3,
-        title: 'Cloud Storage'
+        title: 'Project_1'
     }
 ];
 
@@ -51,16 +51,15 @@ const PortfolioBlock = () => {
                     </div>
                 </div>
 
-                { activeItem &&
-                {/*<ExpertiseItem activeItem={ activeItem }/>*/}
+                { activeItem ?
+                    <div className={styles.workInfoWrapper}>
+                        <WorkInfo activeItem={activeItem}/>
+                    </div>
+                    :
+                    <div className={styles.animationWrapper}>
+                        <SphereAnimation/>
+                    </div>
                 }
-                <div className={styles.workInfoWrapper}>
-                    <WorkInfo activeItem={activeItem}/>
-                </div>
-
-                <div className={styles.animationWrapper}>
-                    <SphereAnimation />
-                </div>
             </div>
 
         </div>
