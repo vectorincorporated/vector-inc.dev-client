@@ -1,7 +1,7 @@
 import React from "react";
-import classNames from 'classnames';
 
 import styles from "./ExpertiseSubItemList.module.css";
+import ExpertiseSubItem from "../expertise-sub-item/ExpertiseSubItem";
 
 const ExpertiseSubItemList = ({ activeItem }) => {
     return (
@@ -9,12 +9,7 @@ const ExpertiseSubItemList = ({ activeItem }) => {
             {
                 activeItem.items.map((item, i) => {
                     // TODO: use id for key instead index
-                    return <div key={i} className={ styles.item }>
-                                <div className={ styles.circleLeft } />
-                                <span className={classNames(styles.itemText, 'regular-text')}>
-                                    { item }
-                                </span>
-                            </div>
+                    return <ExpertiseSubItem item={item} key={i}/>
                 })
             }
         </div>

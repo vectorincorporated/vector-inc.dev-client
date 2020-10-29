@@ -10,8 +10,8 @@ const SphereAnimation = () => {
         <div className={styles.view}>
             <div className={classNames(styles.plane, styles.main)}>
                 {
-                    circles.map(() => {
-                        return <div className={styles.circle} />
+                    circles.map((i) => {
+                        return <div key={i} className={styles.circle} />
                     })
                 }
             </div>

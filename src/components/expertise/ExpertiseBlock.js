@@ -4,7 +4,7 @@ import styles from "./ExpertiseBlock.module.css";
 import BlockHeader from "../block-header/BlockHeader";
 import classNames from "classnames";
 import InfoMenuItem from "../info-menu-item/InfoMenuItem";
-import ExpertiseSubItemList from "../expertise-item/ExpertiseSubItemList";
+import ExpertiseSubItemList from "../expertise-sub-item-list/ExpertiseSubItemList";
 import SphereAnimation from "../sphere-animation/SphereAnimation";
 
 const items = [
