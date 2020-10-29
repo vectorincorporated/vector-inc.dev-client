@@ -7,7 +7,9 @@ import ExpertiseBlock from "../components/expertise/ExpertiseBlock";
 const ExpertisePage = () => (
     <Layout>
         <SEO title="Expertise Page" />
-        <ExpertiseBlock />
+        <div>
+            <ExpertiseBlock />
+        </div>
     </Layout>
 );
 
