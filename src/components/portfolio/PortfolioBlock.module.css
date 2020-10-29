@@ -1,0 +1,57 @@
+.portfolio {
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.content-block {
+    display: flex;
+    justify-content: flex-start;
+    align-items: start;
+
+}
+
+.works-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: start;
+}
+
+.works {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    height: 300px;
+}
+
+.new-works {
+
+}
+
+.old-works {
+
+}
+
+.work-info-wrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100%;
+    min-width: 300px;
+    margin-left: 64px;
+}
+
+.animation-wrapper {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: 100%;
+    width: 100%;
+}

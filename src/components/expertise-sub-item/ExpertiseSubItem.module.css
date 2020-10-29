@@ -1,0 +1,22 @@
+.circle-left {
+    position: absolute;
+    left: -8px;
+    width: 16px;
+    height: 16px;
+    background-color: white;
+    border-radius: 100%;
+}
+
+.item {
+    height: 100%;
+    border-left: 1px solid white;
+}
+
+.item:last-child {
+    border-left: none;
+}
+
+.item-text {
+    white-space: nowrap;
+    margin-left: 20px;
+}
