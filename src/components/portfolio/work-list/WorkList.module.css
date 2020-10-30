@@ -1,0 +1,20 @@
+.works-wrapper {
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    white-space: nowrap;
+    font-size: 32px;
+}
+
+.divider {
+    margin-left: 10px;
+}
+
+.works {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}

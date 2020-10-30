@@ -2,11 +2,14 @@ import React from "react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import PortfolioBlock from "../components/portfolio/PortfolioBlock";
 
 const PortfolioPage = () => (
     <Layout>
         <SEO title="Portfolio Page" />
-        <h1>Portfolio works!</h1>
+        <div>
+            <PortfolioBlock />
+        </div>
     </Layout>
 );
 
