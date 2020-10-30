@@ -1,0 +1,7 @@
+.popup-content {
+    position: absolute !important;
+    width: 100% !important;
+    height: 100%;
+    background: #211E20 !important;
+    border: none;
+}
