@@ -3,17 +3,19 @@
 }
 
 .icon {
-    background: url('../../../images/icons/portfolio/portfolio-work.svg') no-repeat;
+    background: url('../../../images/icons/portfolio/portfolio-work.svg') no-repeat center;
     width: 60px;
     height: 80px;
 }
 
 .icon:hover {
-    background: url('../../../images/icons/portfolio/portfolio-work-hover.svg') no-repeat;
+    background: url('../../../images/icons/portfolio/portfolio-work-hover.svg') no-repeat center;
 }
 
 .icon-active {
-    background: url('../../../images/icons/portfolio/portfolio-work-active.svg') no-repeat;
+    background: url('../../../images/icons/portfolio/portfolio-work-active.svg') no-repeat center;
+    width: 60px;
+    height: 80px;
 }
 
 .title {

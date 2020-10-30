@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import styles from './WorkList.module.css';
 import PortfolioWorkItem from "../portfolio-work-item/PortfolioWorkItem";
 
-const WorkList = ({ works, latest }) => {
+const WorkList = ({ works, toggleInfoBlock, latest, activeItem }) => {
     return (
         <div className={styles.worksWrapper}>
             <div className={styles.header}>
@@ -20,7 +20,9 @@ const WorkList = ({ works, latest }) => {
                 {
                     works.map((work) => {
                         return <div className={styles.work } key={work.id}>
-                            <PortfolioWorkItem work={work} />
+                            <PortfolioWorkItem work={work}
+                                               toggleInfoBlock={toggleInfoBlock}
+                                               activeItem={activeItem}/>
                         </div>
                     })
                 }

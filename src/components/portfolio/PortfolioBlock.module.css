@@ -1,6 +1,5 @@
 .portfolio {
     display: flex;
-    flex-direction: column;
     margin-top: 100px;
 }
 
@@ -28,7 +27,7 @@
     display: flex;
     justify-content: flex-start;
     flex-direction: row;
-    height: 300px;
+    height: 500px;
 }
 
 .new-works {
@@ -43,7 +42,6 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    height: 100%;
     min-width: 300px;
     margin-left: 64px;
 }

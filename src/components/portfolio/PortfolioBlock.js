@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-import classNames from "classnames";
 
 import styles from './PortfolioBlock.module.css';
 import BlockHeader from "../block-header/BlockHeader";
@@ -10,15 +9,18 @@ import SphereAnimation from "../sphere-animation/SphereAnimation";
 const works = [
     {
         id: 1,
-        title: 'Project_1'
+        title: 'Project_1',
+        text: 'Lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron'
     },
     {
         id: 2,
-        title: 'Project_1'
+        title: 'Project_2',
+        text: 'Lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron'
     },
     {
         id: 3,
-        title: 'Project_1'
+        title: 'Project_3',
+        text: 'Lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron'
     }
 ];
 
@@ -36,32 +38,38 @@ const PortfolioBlock = () => {
 
     return (
         <div className={styles.portfolio}>
-            <div className={ styles.header }>
-                <BlockHeader header={ header } />
-            </div>
 
             <div className={ styles.works }>
                 <div className={ styles.worksWrapper }>
+                    <div className={ styles.header }>
+                        <BlockHeader header={ header } />
+                    </div>
                     <div className={styles.newWorks}>
-                        <WorkList works={works}/>
+                        <WorkList works={works}
+                                  toggleInfoBlock={toggleInfoBlock}
+                                  activeItem={activeItem}
+                                  latest={true}/>
                     </div>
 
                     <div className={styles.oldWorks}>
-                        <WorkList works={works}/>
+                        <WorkList works={works}
+                                  toggleInfoBlock={toggleInfoBlock}
+                                  activeItem={activeItem}/>
                     </div>
                 </div>
 
-                { activeItem ?
-                    <div className={styles.workInfoWrapper}>
-                        <WorkInfo activeItem={activeItem}/>
-                    </div>
-                    :
+                { !activeItem &&
                     <div className={styles.animationWrapper}>
                         <SphereAnimation/>
                     </div>
                 }
             </div>
 
+            { activeItem &&
+                <div className={styles.workInfoWrapper}>
+                    <WorkInfo activeItem={activeItem}/>
+                </div>
+            }
         </div>
     )
 };
