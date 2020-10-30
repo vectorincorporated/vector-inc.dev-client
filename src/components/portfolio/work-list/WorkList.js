@@ -19,7 +19,7 @@ const WorkList = ({ works, toggleInfoBlock, latest, activeItem }) => {
             <div className={styles.works}>
                 {
                     works.map((work) => {
-                        return <div className={styles.work } key={work.id}>
+                        return <div key={work.id}>
                             <PortfolioWorkItem work={work}
                                                toggleInfoBlock={toggleInfoBlock}
                                                activeItem={activeItem}/>
