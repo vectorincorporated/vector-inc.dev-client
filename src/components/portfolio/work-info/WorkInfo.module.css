@@ -43,9 +43,15 @@
 }
 
 .web-icon {
-
+    background: url('../../../images/icons/portfolio/web.svg') no-repeat center;
+    width: 24px;
+    height: 24px;
+    margin-left: 5px;
 }
 
 .eye-icon {
-
+    background: url('../../../images/icons/portfolio/eye.svg') no-repeat center;
+    width: 24px;
+    height: 24px;
+    margin-left: 5px;
 }
