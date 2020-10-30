@@ -44,14 +44,15 @@ const PortfolioBlock = () => {
                     <div className={ styles.header }>
                         <BlockHeader header={ header } />
                     </div>
-                    <div className={styles.newWorks}>
+
+                    <div>
                         <WorkList works={works}
                                   toggleInfoBlock={toggleInfoBlock}
                                   activeItem={activeItem}
                                   latest={true}/>
                     </div>
 
-                    <div className={styles.oldWorks}>
+                    <div>
                         <WorkList works={works}
                                   toggleInfoBlock={toggleInfoBlock}
                                   activeItem={activeItem}/>
