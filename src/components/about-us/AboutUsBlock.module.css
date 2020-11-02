@@ -1,0 +1,72 @@
+.about-us {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.content {
+    display: flex;
+    margin-top: 40px;
+}
+
+.aboutInfo {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 50%;
+}
+
+.info-title {
+    font-size: 40px;
+}
+
+.qoutation {
+    margin-top: 40px;
+    font-size: 24px;
+    line-height: 24px;
+}
+
+.author {
+    align-self: flex-end;
+    color: #D3708E;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+.divider {
+    margin-top: 5px;
+    margin-bottom: 8px;
+    font-size: 24px;
+}
+
+.logo-animation {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
+
+.logo-animation img {
+    width: 489px;
+}
+
+.pulse {
+    /*-webkit-animation: mymove 10s infinite; !* Chrome, Safari, Opera *!*/
+    /*animation: mymove 10s infinite;*/
+}
+
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes mymove {
+    50% {opacity: 0;}
+}
+
+/* Стандартный синтаксис */
+@keyframes mymove {
+    50% {opacity: 0;}
+}
