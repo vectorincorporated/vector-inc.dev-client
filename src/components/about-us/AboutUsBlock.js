@@ -1,10 +1,9 @@
-import React, {useState} from "react";
+import React, {} from "react";
 import classNames from "classnames";
 
 import styles from './AboutUsBlock.module.css';
-import bigVLogo from '../../images/big-V-logo.svg';
-import bigVLogoWithGlow from '../../images/big-V-logo-with-glow.svg';
 import BlockHeader from "../block-header/BlockHeader";
+import BigVLogo from "../big-v-logo/BigVLogo";
 
 const info = {
     title: 'VECTOR incorporated',
@@ -39,8 +38,7 @@ const AboutUsBlock = () => {
                 </div>
 
                 <div className={styles.logoAnimation}>
-                    {/*<img src={bigVLogoWithGlow} className={styles.pulse} alt=''/>*/}
-                    <img src={bigVLogo} alt=''/>
+                    <BigVLogo />
                 </div>
             </div>
         </div>
