@@ -4,14 +4,21 @@
     align-items: center;
     flex-direction: column;
     height: 100%;
-    background: #211E20;
+    background-color: #211E20;
+    opacity: 0.8;
 }
 
-.header {
+.close-btn-wrapper {
     display: flex;
     justify-content: flex-end;
     width: 100%;
     margin-right: 100px;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 
 .close-btn {
@@ -19,17 +26,12 @@
     cursor: pointer;
 }
 
-.links {
+.form {
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
     height: 100%;
+    width: 100%;
 }
 
-.link {
-    font-size: 56px;
-    color: white;
-    text-decoration: none;
-    text-transform: uppercase;
-}
