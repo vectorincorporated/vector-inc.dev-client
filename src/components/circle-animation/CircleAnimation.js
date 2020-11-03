@@ -5,6 +5,7 @@ import styles from './CircleAnimation.module.css';
 const CircleAnimation = () => {
     return (
         <svg
+            className={styles.circle}
             xmlns="http://www.w3.org/2000/svg"
             x="0"
             y="0"
