@@ -1,0 +1,67 @@
+.our-team {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.info {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 100%;
+}
+
+.info-title {
+    font-size: 40px;
+}
+
+.divider {
+    margin-top: 5px;
+    margin-bottom: 8px;
+    font-size: 24px;
+}
+
+.line {
+    position: absolute;
+    width: 100%;
+    top: 100px;
+    border-top: 1px solid white;
+    z-index: -1;
+}
+
+.members {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 100px;
+    margin-top: 40px;
+}
+
+.dots {
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    top: 92px;
+    width: 100%;
+    padding-left: 100px;
+    padding-right: 100px;
+    box-sizing: border-box;
+}
+
+.dot {
+    width: 16px;
+    height: 16px;
+    background-color: white;
+    border-radius: 100%;
+}
+
+.dot:last-child {
+    display: none;
+}
+

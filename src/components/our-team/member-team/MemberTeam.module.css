@@ -1,0 +1,21 @@
+.member {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.memberPhoto {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.name {
+    margin-top: 15px;
+}
+
+.position {
+    color: #d3708e;
+    margin-top: 8px;
+}
