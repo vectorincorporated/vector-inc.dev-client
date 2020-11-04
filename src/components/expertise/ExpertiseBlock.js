@@ -114,7 +114,7 @@ const ExpertiseBlock = () => {
                 }
 
                 <div className={styles.animationWrapper}>
-                    <SphereAnimation />
+                    <SphereAnimation color='pink' />
                 </div>
             </div>
         </div>
