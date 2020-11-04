@@ -4,6 +4,7 @@ import classNames from "classnames";
 import styles from './QuestionsFormBlock.module.css';
 import BlockHeader from "../block-header/BlockHeader";
 import FormAnimation from "../form-animation/FormAnimation";
+import Form from "../form/Form";
 
 const header = {
     title: 'HAVE SOME QUESTIONS?',
@@ -20,18 +21,7 @@ const QuestionsFormBlock = () => {
 
                 <div className={classNames( 'accent-text', styles.main )}>
                     <div className={styles.form}>
-                        <input className={styles.formField}
-                               type='text'
-                               placeholder='YOUR NAME *' />
-
-                        <input className={styles.formField}
-                               type='text'
-                               placeholder='YOUR E-MAIL *' />
-
-                        <textarea className={styles.formField}
-                                  placeholder='LEAVE YOUR MESSAGE HERE... (optional)'/>
-
-                        <button className={styles.btn}>send</button>
+                        <Form />
                     </div>
 
                     <div className={styles.animation}>

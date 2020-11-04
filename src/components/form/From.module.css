@@ -1,0 +1,18 @@
+.form {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: start;
+    flex: 50%;
+    margin-top: 30px;
+    max-width: 608px;
+    width: 100%;
+}
+
+.form-field {
+    width: 100%;
+    margin-bottom: 20px;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;
+}
