@@ -1,6 +1,7 @@
 .portfolio {
     display: flex;
     margin-top: 100px;
+    width: 100%;
 }
 
 .header {
@@ -28,6 +29,7 @@
     justify-content: flex-start;
     flex-direction: row;
     height: 500px;
+    width: 100%;
 }
 
 .work-info-wrapper {
