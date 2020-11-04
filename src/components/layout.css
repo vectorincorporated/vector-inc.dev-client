@@ -2,6 +2,7 @@
 @import "../styles/particles-animation.css";
 @import "../styles/title-animation.css";
 @import "../styles/menu-popup.css";
+@import "../styles/scrollbar.css";
 
 @font-face {
     font-family: 'VT323';
