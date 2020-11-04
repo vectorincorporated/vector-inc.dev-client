@@ -8,7 +8,6 @@ const circles = [1, 2, 3, 4, 5, 6];
 
 const SphereAnimation = ({ color }) => {
     const styles = color === 'pink' ? stylePinks : styleWhite;
-    console.log(color);
 
     return (
         <div className={styles.view}>
