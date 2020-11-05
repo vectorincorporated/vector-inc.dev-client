@@ -61,7 +61,7 @@ const PortfolioBlock = () => {
 
                 { !activeItem &&
                     <div className={styles.animationWrapper}>
-                        <SphereAnimation/>
+                        <SphereAnimation color='white'/>
                     </div>
                 }
             </div>

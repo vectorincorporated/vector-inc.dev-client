@@ -1,19 +1,22 @@
-import React from "react"
+import React from "react";
+import classNames from 'classnames';
 
 import styles from './HomeBlock.module.css';
+import ContactFormPopup from "../contact-form-popup/ContactFormPopup";
+import Popup from "reactjs-popup";
 
 const HomeBlock = () => {
     return (
-        <div>
-            <div className={ styles.title + ' wrap' }>
+        <div className={styles.wrapper}>
+            <div className={classNames(styles.title, 'wrap')}>
                 <h1 className='glitch' data-text="WE USE THE BEST TECHNOLOGIES TO ENHANCE YOUR PRODUCT">
                     We use the best technologies <br/>to enhance your product
                 </h1>
             </div>
 
-            <button className={styles.btn}>
-                Get free consultation
-            </button>
+            <Popup trigger={ <button className={styles.btn}>Get free consultation</button> } modal>
+                { close => <ContactFormPopup close={close}/> }
+            </Popup>
         </div>
     )
 };
