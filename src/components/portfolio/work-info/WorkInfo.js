@@ -25,7 +25,7 @@ const WorkInfo = ({ activeItem }) => {
                     <a href="#" className='accent-text'>WEB</a>
                     <div className={styles.webIcon}/>
                     <div className={styles.divider}>....</div>
-                    <a href='#' className='accent-text'>Show more details</a>
+                    <a href='/project-details' className='accent-text'>Show more details</a>
                     <div className={styles.eyeIcon}/>
                 </div>
             </div>
