@@ -92,9 +92,10 @@ const ServicesBlock = () => {
                 </div>
 
                 { activeItem &&
-                    <InfoBlock className={styles.infoBlock}
-                               activeItem={ activeItem }
-                               options={{ readMore: true }} />
+                    <div className={styles.infoBlockWrapper}>
+                        <InfoBlock activeItem={ activeItem }
+                                   options={{ readMore: true }} />
+                    </div>
                 }
 
                 <div className={styles.circleWrapper}>

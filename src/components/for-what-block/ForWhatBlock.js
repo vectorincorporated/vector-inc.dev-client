@@ -88,8 +88,11 @@ const ForWhatBlock = () => {
                 </div>
 
                 { activeItem &&
-                    <InfoBlock activeItem={ activeItem }
-                               options={{ isTitle: true, isDivider: true }}/>
+                    <div className={styles.infoBlockWrapper}>
+                        <InfoBlock activeItem={ activeItem }
+                                   options={{ isDivider: true }}/>
+                    </div>
+
                 }
 
                 <div className={styles.circleWrapper}>

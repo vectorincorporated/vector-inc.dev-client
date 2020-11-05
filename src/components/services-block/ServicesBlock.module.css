@@ -28,8 +28,12 @@
     margin-bottom: 100px;
 }
 
-.info-block {
-    height: 800px;
+.info-block-wrapper {
+    margin-left: 64px;
+    margin-right: 64px;
+    padding: 16px;
+    border: 1px solid white;
+    height: 600px;
 }
 
 .items {
