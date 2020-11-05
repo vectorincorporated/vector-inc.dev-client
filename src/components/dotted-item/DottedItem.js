@@ -3,10 +3,10 @@ import classNames from 'classnames';
 
 import styles from "./DottedItem.module.css";
 
-const DottedItem = ({ item }) => {
+const DottedItem = ({ item, isPink }) => {
     return (
-        <div className={ styles.item }>
-            <div className={ styles.circleLeft } />
+        <div className={ isPink ? styles.itemPink : styles.item }>
+            <div className={ isPink ? styles.circleLeftPink: styles.circleLeft }/>
             <div className={ classNames(styles.itemText, 'regular-text') }>
                 { item }
             </div>

@@ -54,13 +54,13 @@ const ProjectDetailsBlock = ({ project }) => {
                 <div className={styles.features}>
                     <DottedItemList items={project.features.items}
                                     title={project.features.title}
-                                    options={{ isDivider: true }}/>
+                                    isPink={false}/>
                 </div>
 
                 <div className={styles.technologies}>
                     <DottedItemList items={project.technologies.items}
                                     title={project.technologies.title}
-                                    options={{ isDivider: true }}/>
+                                    isPink={true}/>
                 </div>
 
             </div>

@@ -12,6 +12,23 @@
     border-left: 1px solid white;
 }
 
+.circle-left-pink {position: absolute;
+    left: -8px;
+    width: 16px;
+    height: 16px;
+    background-color: #d3708e;
+    border-radius: 100%;
+}
+
+.item-pink {
+    height: 100%;
+    border-left: 1px solid #d3708e;
+}
+
+.item-pink:last-child {
+    border-left: none;
+}
+
 .item:last-child {
     border-left: none;
 }
