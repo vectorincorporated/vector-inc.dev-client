@@ -4,7 +4,7 @@ import styles from "./ExpertiseBlock.module.css";
 import BlockHeader from "../block-header/BlockHeader";
 import classNames from "classnames";
 import InfoMenuItem from "../info-menu-item/InfoMenuItem";
-import ExpertiseSubItemList from "../expertise-sub-item-list/ExpertiseSubItemList";
+import DottedItemList from "../dotted-item-list/DottedItemList";
 import SphereAnimation from "../sphere-animation/SphereAnimation";
 
 const items = [
@@ -109,7 +109,7 @@ const ExpertiseBlock = () => {
 
                 { activeItem &&
                     <div className={styles.subItems}>
-                        <ExpertiseSubItemList activeItem={ activeItem }/>
+                        <DottedItemList items={ activeItem.items }/>
                     </div>
                 }
 

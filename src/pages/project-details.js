@@ -50,24 +50,30 @@ const project = {
         Phasellus diam ipsum facilisi mauris sed orci amet, morbi. Ultrices aliquet sed sem sed lobortis libero. Mauris sit mi et arcu amet.`
     },
     screenshots: [img, img, img, img],
-    features: [
-        'Possibility to create a new user;',
-        'Possibility to edit a user’s profile;',
-        'Possibility to create and delete Kafka clusters in a cloud;',
-        'Possibility to maintain Kafka clusters in a cloud;',
-        'Possibility to configure the cluster’s version, cloud configuration;',
-        'Possibility to access brokers using Kafka PLAIN endpoints;',
-        'Possibility to maintain Kafka topics.',
-    ],
-    technologies: [
-        'XML, XHTML, HTML5, CSS2/3;',
-        'Bootstrap, HTML5 Boilerplate, Uikit;',
-        'JavaScript, Alfresco, NodeJs;',
-        'Liferay;',
-        'Velocity, Sass/Scss, Less;',
-        'AJAX, REST, OAuth, SAML, SSO;',
-        'AngularJS, React JS, Backbone JS, Vue Js.'
-    ]
+    features: {
+        title: 'Key Features',
+        items: [
+            'Possibility to create a new user;',
+            'Possibility to edit a user’s profile;',
+            'Possibility to create and delete Kafka clusters in a cloud;',
+            'Possibility to maintain Kafka clusters in a cloud;',
+            'Possibility to configure the cluster’s version, cloud configuration;',
+            'Possibility to access brokers using Kafka PLAIN endpoints;',
+            'Possibility to maintain Kafka topics.',
+        ]
+    },
+    technologies: {
+        title: 'Used technologies',
+        items: [
+            'XML, XHTML, HTML5, CSS2/3;',
+            'Bootstrap, HTML5 Boilerplate, Uikit;',
+            'JavaScript, Alfresco, NodeJs;',
+            'Liferay;',
+            'Velocity, Sass/Scss, Less;',
+            'AJAX, REST, OAuth, SAML, SSO;',
+            'AngularJS, React JS, Backbone JS, Vue Js.'
+        ]
+    }
 };
 
 const ProjectDetails = () => (

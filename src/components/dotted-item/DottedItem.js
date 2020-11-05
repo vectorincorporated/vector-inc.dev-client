@@ -1,17 +1,17 @@
 import React from "react";
 import classNames from 'classnames';
 
-import styles from "./ExpertiseSubItem.module.css";
+import styles from "./DottedItem.module.css";
 
-const ExpertiseSubItem = ({ item }) => {
+const DottedItem = ({ item }) => {
     return (
         <div className={ styles.item }>
             <div className={ styles.circleLeft } />
-            <span className={classNames(styles.itemText, 'regular-text')}>
+            <div className={ classNames(styles.itemText, 'regular-text') }>
                 { item }
-            </span>
+            </div>
         </div>
     )
 };
 
-export default ExpertiseSubItem
+export default DottedItem;
