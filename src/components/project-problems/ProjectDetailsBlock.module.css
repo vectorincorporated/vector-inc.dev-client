@@ -1,0 +1,69 @@
+.project {
+    display: flex;
+    flex-direction: column;
+    margin-top: 130px;
+}
+
+.header {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.info-text {
+    width: 47%;
+}
+
+.web-icon {
+    background: url('../../images/icons/portfolio/web.svg') no-repeat center;
+    width: 24px;
+    height: 24px;
+    margin-left: 5px;
+}
+
+.general-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+
+.image-info {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+}
+
+.web-link {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.secondary-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+
+.screens {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+
+.screen img {
+    max-width: 210px;
+}
+
+.dotted-list-info {
+    display: flex;
+}
+
+.technologies,
+.features {
+    flex: 50%;
+    padding-right: 30px;
+}
+
+.technologies {
+    color: #d3708e;
+}

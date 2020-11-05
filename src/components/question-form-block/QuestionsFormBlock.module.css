@@ -1,7 +1,6 @@
 .questions-wrapper {
     margin-top: 200px;
     margin-bottom: 57px;
-    padding-bottom: 80px;
     background-color: white;
     color: #141515;
     width: 100vw;
@@ -23,6 +22,7 @@
     flex-direction: column;
     align-items: start;
     width: 50%;
+    margin-top: 50px;
 }
 
 .main {
