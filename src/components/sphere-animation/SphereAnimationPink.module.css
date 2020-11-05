@@ -15,6 +15,11 @@
           transform-style: preserve-3d;
 }
 
+.change-plane-size {
+    animation-duration: 1s;
+    animation-name: changeSize;
+}
+
 .plane.main {
   position: absolute;
   top: 0;
@@ -110,5 +115,21 @@
   100% {
     -webkit-transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
             transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+  }
+}
+
+@keyframes changeSize {
+  from {
+      border: 2px solid green;
+      width: 180px;
+      height: 180px;
+      margin: 0;
+  }
+
+  to {
+      border: 2px solid red;
+      width: 60px;
+      height: 60px;
+      margin: 30px;
   }
 }
