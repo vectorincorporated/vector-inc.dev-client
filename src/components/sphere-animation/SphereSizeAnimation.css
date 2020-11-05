@@ -1,0 +1,88 @@
+.change-plane-size {
+    animation-duration: 1s;
+    animation-name: changePlaneSize;
+    transition-timing-function: steps(9, end);
+}
+
+.change-circle-size {
+    animation-duration: 1s;
+    animation-name: changeCircleSize;
+    transition-timing-function: steps(9, end);
+}
+
+.change-circle-size::after {
+    animation-duration: 1s;
+    animation-name: changeCircleSizeAfter;
+    transition-timing-function: steps(9, end);
+}
+
+.change-circle-size::before {
+    animation-duration: 1s;
+    animation-name: changeCircleSizeBefore;
+    transition-timing-function: steps(9, end);
+}
+
+@keyframes changePlaneSize {
+    0% {
+        width: 180px;
+        height: 180px;
+        margin: 0;
+    }
+
+    100% {
+        width: 60px;
+        height: 60px;
+        margin: 30px;
+    }
+}
+
+@keyframes changeCircleSize {
+    0% {
+        width: 180px;
+        height: 180px;
+        margin: 0;
+        box-shadow: 0 0 90px #D3708E, inset 0 0 90px #D3708E;
+    }
+
+    100% {
+        width: 60px;
+        height: 60px;
+        margin: 30px;
+        box-shadow: 0 0 30px #D3708E, inset 0 0 30px #D3708E;
+    }
+}
+
+@keyframes changeCircleSizeAfter {
+    0% {
+        -webkit-transform: translateZ(135px);
+        transform: translateZ(135px);
+    }
+
+    100% {
+        -webkit-transform: translateZ(45px);
+        transform: translateZ(45px);
+    }
+}
+
+@keyframes changeCircleSizeBefore {
+    0% {
+        -webkit-transform: translateZ(-135px);
+        transform: translateZ(-135px);
+    }
+
+    100% {
+        -webkit-transform: translateZ(-45px);
+        transform: translateZ(-45px);
+    }
+}
+
+
+.change-circle-size::before {
+    -webkit-transform: translateZ(-45px);
+    transform: translateZ(-45px);
+}
+
+.change-circle-size::after {
+    -webkit-transform: translateZ(45px);
+    transform: translateZ(45px);
+}
