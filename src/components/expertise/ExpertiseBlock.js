@@ -82,10 +82,12 @@ const header = {
 
 const ExpertiseBlock = () => {
     const [activeItem, setActiveItem] = useState(null);
+    const [smallerSphere, setSmallerSphere] = useState(false);
 
     const toggleInfoBlock = (e, item) => {
         e.stopPropagation();
         setActiveItem(item);
+        setSmallerSphere(true);
     };
 
     return (
@@ -114,7 +116,7 @@ const ExpertiseBlock = () => {
                 }
 
                 <div className={styles.animationWrapper}>
-                    <SphereAnimation color='pink' />
+                    <SphereAnimation color='pink' smallerSphere={smallerSphere}/>
                 </div>
             </div>
         </div>
