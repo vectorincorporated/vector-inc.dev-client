@@ -9,8 +9,11 @@
 }
 
 .plane {
-    width: 120px;
-    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 180px;
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
 }
@@ -29,14 +32,14 @@
 }
 
 .plane.main .circle {
-    width: 120px;
-    height: 120px;
+    width: 180px;
+    height: 180px;
     position: absolute;
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
     border-radius: 100%;
     box-sizing: border-box;
-    box-shadow: 0 0 60px #ffffff, inset 0 0 60px #ffffff;
+    box-shadow: 0 0 90px #ffffff, inset 0 0 90px #ffffff;
 }
 
 .plane.main .circle::before, .plane.main .circle::after {
@@ -53,17 +56,17 @@
     border-radius: 100%;
     background: #ffffff;
     box-sizing: border-box;
-    box-shadow: 0 0 60px 2px #ffffff;
+    box-shadow: 0 0 90px 2px #ffffff;
 }
 
 .plane.main .circle::before {
-    -webkit-transform: translateZ(-90px);
-    transform: translateZ(-90px);
+    -webkit-transform: translateZ(-135px);
+    transform: translateZ(-135px);
 }
 
 .plane.main .circle::after {
-    -webkit-transform: translateZ(90px);
-    transform: translateZ(90px);
+    -webkit-transform: translateZ(135px);
+    transform: translateZ(135px);
 }
 
 .plane.main .circle:nth-child(1) {
