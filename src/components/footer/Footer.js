@@ -1,7 +1,7 @@
 import React from "react";
 import classNames from 'classnames';
 
-import mail from '../../images/icons/mail.svg';
+import mail from '../../images/icons/contacts/mail.svg';
 import styles from './Footer.module.css';
 
 const Footer = () => (

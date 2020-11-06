@@ -38,27 +38,27 @@
 }
 
 .linkedin {
-    background: url('../../images/icons/linkedin.svg') no-repeat;
+    background: url('../../images/icons/contacts/linkedin.svg') no-repeat;
 }
 
 .linkedin:hover {
-    background: url('../../images/icons/linkedin-pink.svg') no-repeat;
+    background: url('../../images/icons/contacts/linkedin-pink.svg') no-repeat;
 }
 
 .facebook {
-    background: url('../../images/icons/facebook.svg') no-repeat;
+    background: url('../../images/icons/contacts/facebook.svg') no-repeat;
 }
 
 .facebook:hover {
-    background: url('../../images/icons/facebook-pink.svg') no-repeat;
+    background: url('../../images/icons/contacts/facebook-pink.svg') no-repeat;
 }
 
 .instagram {
-    background: url('../../images/icons/instagram.svg') no-repeat;
+    background: url('../../images/icons/contacts/instagram.svg') no-repeat;
 }
 
 .instagram:hover {
-    background: url('../../images/icons/instagram-pink.svg') no-repeat;
+    background: url('../../images/icons/contacts/instagram-pink.svg') no-repeat;
 }
 
 .mail-link {
