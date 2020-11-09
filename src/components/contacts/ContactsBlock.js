@@ -1,5 +1,4 @@
 import React, {} from "react";
-import classNames from "classnames";
 
 import styles from './ContactsBlock.module.css';
 import facebook from '../../images/icons/contacts/facebook.svg';
