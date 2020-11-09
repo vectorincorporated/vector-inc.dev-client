@@ -16,6 +16,8 @@ const Contact = ({ contact }) => {
         case 'skype':
             prefix = 'skype:';
             break;
+        default:
+            break;
     }
 
     return (
