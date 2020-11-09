@@ -25,4 +25,5 @@
 .menu img {
     max-width: 40px;
     width: 100%;
+    cursor: pointer;
 }
