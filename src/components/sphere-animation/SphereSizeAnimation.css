@@ -1,0 +1,70 @@
+.change-plane-size {
+    animation: changePlaneSize 1s ease-in;
+    animation-fill-mode: forwards;
+}
+
+.change-circle-size {
+    animation: changeCircleSize 1s ease-in;
+    animation-fill-mode: forwards;
+}
+
+.change-circle-size::after {
+    animation: changeCircleSizeAfter 1s ease-in;
+    animation-fill-mode: forwards;
+}
+
+.change-circle-size::before {
+    animation: changeCircleSizeBefore 1s ease-in;
+    animation-fill-mode: forwards;
+}
+
+@keyframes changePlaneSize {
+    0% {
+        width: 180px;
+        height: 180px;
+        margin: 0;
+    }
+
+    100% {
+        width: 60px;
+        height: 60px;
+        margin: 30px;
+    }
+}
+
+@keyframes changeCircleSize {
+    0% {
+        width: 180px;
+        height: 180px;
+        margin: 0;
+        box-shadow: 0 0 90px #D3708E, inset 0 0 90px #D3708E;
+    }
+
+    100% {
+        width: 60px;
+        height: 60px;
+        margin: 30px;
+        box-shadow: 0 0 30px #D3708E, inset 0 0 30px #D3708E;
+    }
+}
+
+@keyframes changeCircleSizeAfter {
+    0% {
+        transform: translateZ(135px);
+    }
+
+    100% {
+        transform: translateZ(45px);
+    }
+}
+
+@keyframes changeCircleSizeBefore {
+    0% {
+        transform: translateZ(-135px);
+    }
+
+    100% {
+        transform: translateZ(-45px);
+    }
+}
+

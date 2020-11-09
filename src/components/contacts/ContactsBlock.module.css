@@ -1,0 +1,25 @@
+.contacts {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 50px;
+}
+
+.contactItem {
+    display: flex;
+    margin-top: 25px;
+}
+
+.socialItems {
+    display: flex;
+    margin-top: 25px;
+}
+
+.social {
+    margin-right: 30px;
+}
+
+.divider {
+    margin-top: 5px;
+    margin-bottom: 8px;
+    font-size: 24px;
+}

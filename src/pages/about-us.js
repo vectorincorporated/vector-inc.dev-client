@@ -5,6 +5,7 @@ import SEO from "../components/seo"
 import AboutUsBlock from "../components/about-us/AboutUsBlock";
 import OurTeamBlock from "../components/our-team/OurTeamBlock";
 import QuestionsFormBlock from "../components/question-form-block/QuestionsFormBlock";
+import ContactsBlock from "../components/contacts/ContactsBlock";
 
 const AboutUsPage = () => (
     <Layout>
@@ -14,6 +15,9 @@ const AboutUsPage = () => (
         </div>
         <div>
             <OurTeamBlock />
+        </div>
+        <div>
+            <ContactsBlock />
         </div>
         <div>
             <QuestionsFormBlock />
