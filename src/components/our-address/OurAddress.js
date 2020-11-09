@@ -1,9 +1,9 @@
 import React, {} from "react";
-import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps"
+import { compose, withProps } from "recompose";
+import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps";
 
 import styles from './OurAddress.module.css';
-import { compose, withProps } from "recompose";
-import settings from "./map-settings";
+const mapStyles = require("./map-settings.json");
 
 const MyMapComponent = compose(
     withProps({
@@ -18,8 +18,12 @@ const MyMapComponent = compose(
     <GoogleMap
         defaultZoom={8}
         defaultCenter={{ lat: 49.988358, lng: 36.232845 }}
+        options={{ styles: mapStyles }}
     >
-        {props.isMarkerShown && <Marker position={{ lat: 49.988358, lng: 36.232845 }} />}
+        {
+            props.isMarkerShown &&
+            <Marker position={{ lat: 49.988358, lng: 36.232845 }} />
+        }
     </GoogleMap>
 );
 
@@ -35,9 +39,10 @@ const OurAddressBlock = () => {
             <div className={ styles.info }>
                 <div className='accent-text'>{ info.title }</div>
                 <div className={styles.divider}>••••••••••••••••••••••••••••••••••••••</div>
+                <div className='regular-text'>{ info.address }</div>
 
                 <div className={styles.map}>
-                    <MyMapComponent isMarkerShown />
+                    <MyMapComponent isMarkerShown={true} />
                     {/*<GoogleMap />*/}
                 </div>
             </div>
