@@ -8,19 +8,19 @@
 .header {
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
 }
 
 .info-menu {
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
 }
 
 .info {
     display: flex;
-    align-items: start;
+    align-items: flex-start;
     flex-direction: row-reverse;
     height: 570px;
     width: 100%;

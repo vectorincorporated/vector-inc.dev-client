@@ -1,5 +1,4 @@
-import React, {} from "react";
-import classNames from "classnames";
+import React from "react";
 
 import styles from './ProjectDetailsBlock.module.css';
 import InfoBlock from "../info-block/InfoBlock";
