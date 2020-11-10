@@ -73,11 +73,11 @@ const ServicesBlock = () => {
 
     return (
         <div className={ styles.services }>
-            <div className={styles.header}>
-                <BlockHeader header={ header } />
-            </div>
-
             <div className={ styles.info }>
+                <div className={styles.header}>
+                    <BlockHeader header={ header } />
+                </div>
+
                 <div className={classNames( 'accent-text', styles.infoMenu )}>
                     {
                         items.map((item) => {
@@ -90,14 +90,14 @@ const ServicesBlock = () => {
                     }
 
                 </div>
-
-                { activeItem &&
-                    <div className={styles.infoBlockWrapper}>
-                        <InfoBlock activeItem={ activeItem }
-                                   options={{ readMore: true }} />
-                    </div>
-                }
             </div>
+
+            { activeItem &&
+                <div className={styles.infoBlockWrapper}>
+                    <InfoBlock activeItem={ activeItem }
+                               options={{ readMore: true }} />
+                </div>
+            }
         </div>
     )
 };
