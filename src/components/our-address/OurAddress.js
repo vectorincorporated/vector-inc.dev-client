@@ -1,32 +1,7 @@
 import React, {} from "react";
-import { compose, withProps } from "recompose";
-import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps";
+import classNames from 'classnames';
 
 import styles from './OurAddress.module.css';
-const mapStyles = require("./map-settings.json");
-
-const MyMapComponent = compose(
-    withProps({
-        googleMapURL: "https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places",
-        loadingElement: <div style={{ height: `100%` }} />,
-        containerElement: <div style={{ height: `400px` }} />,
-        mapElement: <div style={{ height: `100%` }} />,
-    }),
-    withScriptjs,
-    withGoogleMap
-)(props =>
-    <GoogleMap
-        defaultZoom={8}
-        defaultCenter={{ lat: 49.988358, lng: 36.232845 }}
-        options={{ styles: mapStyles }}
-    >
-        {
-            props.isMarkerShown &&
-            <Marker position={{ lat: 49.988358, lng: 36.232845 }} />
-        }
-    </GoogleMap>
-);
-
 
 const info = {
     title: 'Our Address',
@@ -35,16 +10,20 @@ const info = {
 
 const OurAddressBlock = () => {
     return (
-        <div className={ styles.ourAddress }>
-            <div className={ styles.info }>
-                <div className='accent-text'>{ info.title }</div>
-                <div className={styles.divider}>••••••••••••••••••••••••••••••••••••••</div>
-                <div className='regular-text'>{ info.address }</div>
+        <div>
+            <div className={classNames('accent-text', styles.infoTitle)}>{ info.title }</div>
+            <div className={styles.divider}>••••••••••••••••••••••••••••••••••••••</div>
+            <div className='regular-text'>{ info.address }</div>
 
-                <div className={styles.map}>
-                    <MyMapComponent isMarkerShown={true} />
-                    {/*<GoogleMap />*/}
-                </div>
+            <div className={styles.mapWrapper}>
+                {/* TODO: Replace with custom component <Map/> */}
+                <iframe className={styles.map}
+                        title="myFrame"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199061.3263316799!2d36.12019276463144!3d49.9930992051981!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4127a09f63ab0f8b%3A0x2d4c18681aa4be0a!2z0KXQsNGA0LrRltCyLCDQpdCw0YDQutGW0LLRgdGM0LrQsCDQvtCx0LvQsNGB0YLRjA!5e0!3m2!1suk!2sua!4v1604932839884!5m2!1suk!2sua"
+                        width="100%"
+                        height="400"
+                        allowFullScreen=""
+                        aria-hidden="false" />
             </div>
         </div>
     )
