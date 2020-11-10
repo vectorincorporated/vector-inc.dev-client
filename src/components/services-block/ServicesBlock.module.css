@@ -32,4 +32,13 @@
     border: 1px solid white;
     height: 500px;
     flex: 50;
+    overflow-y: scroll;
+}
+
+.dotted-list {
+    margin-top: 35px;
+}
+
+.tags {
+    margin-top: 35px;
 }

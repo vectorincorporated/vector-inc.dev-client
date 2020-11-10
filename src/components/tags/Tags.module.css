@@ -1,0 +1,15 @@
+.wrapper {
+    display: flex;
+}
+
+.tag {
+    margin-right: 10px;
+    margin-left: 10px;
+    color: #FFBED2;
+    text-transform: uppercase;
+}
+
+.small-divider {
+    margin-right: 10px;
+    margin-left: 10px;
+}

@@ -10,7 +10,7 @@
     cursor: pointer;
 }
 
-.info-item:hover {
+.active {
     background: white;
     color: #111111;
 }

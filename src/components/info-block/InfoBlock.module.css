@@ -5,6 +5,10 @@
     min-width: 300px;
 }
 
+.title {
+    font-size: 40px;
+}
+
 .divider {
     margin-bottom: 8px;
     font-size: 24px;

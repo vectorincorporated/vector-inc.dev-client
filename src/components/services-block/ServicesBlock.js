@@ -2,11 +2,11 @@ import React, {useState} from "react";
 import classNames from "classnames";
 
 import styles from './ServicesBlock.module.css';
-import InfoMenuItem from "../info-menu-item/InfoMenuItem";
 import InfoBlock from "../info-block/InfoBlock";
 import BlockHeader from "../block-header/BlockHeader";
-import CircleAnimation from "../circle-animation/CircleAnimation";
 import ServiceItem from "../service-item/ServiceItem";
+import DottedItemList from "../dotted-item-list/DottedItemList";
+import Tags from "../tags/Tags";
 
 const defaultText = `
         You want to build your product with a team that establishes a clear design process, meets deadlines, and delivers a spot-on end result? 
@@ -14,46 +14,77 @@ const defaultText = `
         Vector design key concepts are flexibility and customer corporate focusing. Here are our design phases...
     `;
 
+const technologies = {
+    title: 'Used technologies',
+    items: [
+        'Possibility to create a new user;',
+        'Possibility to edit a user’s profile;',
+        'Possibility to create and delete Kafka clusters in a cloud;',
+        'Possibility to maintain Kafka clusters in a cloud;',
+        'Possibility to configure the cluster’s version, cloud configuration;',
+        'Possibility to access brokers using Kafka PLAIN endpoints;',
+        'Possibility to maintain Kafka topics.',
+    ]
+};
+
+const tags = ['ux', 'design', 'web', 'codding'];
+
 const items = [
     {
         id: 1,
         title: 'Design',
-        text: defaultText
+        text: defaultText,
+        technologies: technologies,
+        tags: tags,
     },
     {
         id: 2,
         title: 'Development',
-        text: defaultText
+        text: defaultText,
+        technologies: technologies,
+        tags: tags
     },
     {
         id: 3,
         title: 'DevOps',
-        text: defaultText
+        text: defaultText,
+        technologies: technologies,
+        tags: tags
     },
     {
         id: 4,
         title: 'Automatization',
-        text: defaultText
+        text: defaultText,
+        technologies: technologies,
+        tags: tags
     },
     {
         id: 5,
         title: 'Integration',
-        text: defaultText
+        text: defaultText,
+        technologies: technologies,
+        tags: tags
     },
     {
         id: 6,
         title: 'Consultation',
-        text: defaultText
+        text: defaultText,
+        technologies: technologies,
+        tags: tags
     },
     {
         id: 7,
         title: 'Support (Maintain)',
-        text: defaultText
+        text: defaultText,
+        technologies: technologies,
+        tags: tags
     },
     {
         id: 8,
         title: 'Mobile applications',
-        text: defaultText
+        text: defaultText,
+        technologies: technologies,
+        tags: tags
     }
 ];
 
@@ -64,7 +95,7 @@ const header = {
 
 
 const ServicesBlock = () => {
-    const [activeItem, setActiveItem] = useState(null);
+    const [activeItem, setActiveItem] = useState(items[0]);
 
     const toggleInfoBlock = (e, item) => {
         e.stopPropagation();
@@ -82,10 +113,9 @@ const ServicesBlock = () => {
                     {
                         items.map((item) => {
                             return <ServiceItem key={item.id}
-                                                 toggleInfoBlock={toggleInfoBlock}
-                                                 item={item}
-                                                 activeItem={activeItem}
-                            />
+                                                toggleInfoBlock={toggleInfoBlock}
+                                                item={item}
+                                                activeItem={activeItem} />
                         })
                     }
 
@@ -94,8 +124,19 @@ const ServicesBlock = () => {
 
             { activeItem &&
                 <div className={styles.infoBlockWrapper}>
-                    <InfoBlock activeItem={ activeItem }
-                               options={{ readMore: true }} />
+                    <div>
+                        <InfoBlock activeItem={ activeItem }
+                                   options={{ isDivider: true }} />
+                    </div>
+
+                    <div className={styles.dottedList}>
+                        <DottedItemList items={ activeItem.technologies.items }
+                                        title={ activeItem.technologies.title }/>
+                    </div>
+
+                    <div className={styles.tags}>
+                        <Tags tags={activeItem.tags}/>
+                    </div>
                 </div>
             }
         </div>
