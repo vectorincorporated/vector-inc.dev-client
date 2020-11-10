@@ -6,7 +6,6 @@ import InfoMenuItem from "../info-menu-item/InfoMenuItem";
 import InfoBlock from "../info-block/InfoBlock";
 import BlockHeader from "../block-header/BlockHeader";
 import CircleAnimation from "../circle-animation/CircleAnimation";
-import ServiceItem from "../service-item/ServiceItem";
 
 const defaultText = `
         You want to build your product with a team that establishes a clear design process, meets deadlines, and delivers a spot-on end result? 
@@ -81,10 +80,11 @@ const ServicesBlock = () => {
                 <div className={classNames( 'accent-text', styles.infoMenu )}>
                     {
                         items.map((item) => {
-                            return <ServiceItem key={item.id}
+                            return <InfoMenuItem key={item.id}
                                                  toggleInfoBlock={toggleInfoBlock}
                                                  item={item}
                                                  activeItem={activeItem}
+                                                 options={{ mode: 'left' }}
                             />
                         })
                     }
@@ -97,6 +97,10 @@ const ServicesBlock = () => {
                                    options={{ readMore: true }} />
                     </div>
                 }
+
+                <div className={styles.circleWrapper}>
+                    <CircleAnimation />
+                </div>
             </div>
         </div>
     )

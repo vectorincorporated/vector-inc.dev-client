@@ -1,0 +1,16 @@
+.info-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 200px;
+    height: 56px;
+    margin-bottom: 20px;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+.info-item:hover {
+    background: white;
+    color: #111111;
+}
