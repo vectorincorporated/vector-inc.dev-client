@@ -1,5 +1,4 @@
-import React, {} from "react";
-import classNames from "classnames";
+import React from "react";
 
 import styles from './OurTeamBlock.module.css';
 import img1 from '../../images/our-team/future.png';

@@ -23,7 +23,7 @@ const InfoBlock = ({ activeItem, options }) => {
             </span>
 
             { options?.readMore &&
-                <a href='#' className={classNames('link', 'accent-text', styles.readMore)}>
+                <a href="#" className={classNames('link', 'accent-text', styles.readMore)}>
                     read more>
                 </a>
             }
