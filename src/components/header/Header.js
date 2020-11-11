@@ -1,6 +1,7 @@
 import React from "react"
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
+import {Link} from "gatsby";
 
 import logo from '../../images/logo.svg';
 import menu from '../../images/menu-icon.svg';
@@ -17,7 +18,9 @@ const Header = () => (
                 </Popup>
             </div>
 
-            <img src={logo} className={headerStyles.logo} alt="Vector"/>
+            <Link to={'/home'}>
+                <img src={logo} className={headerStyles.logo} alt="Vector"/>
+            </Link>
 
             <Popup trigger={ <button className={headerStyles.contactUsBtn}>contact us</button> } modal>
                 { close => <ContactFormPopup close={close}/> }
