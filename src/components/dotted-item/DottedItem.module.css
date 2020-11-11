@@ -10,6 +10,20 @@
 .item {
     height: 100%;
     border-left: 1px solid white;
+    cursor: pointer;
+}
+
+.item:hover .circle-left {
+    background-color: #d3708e;
+}
+
+.item:hover .item-text {
+    color: #d3708e;
+}
+
+.item-pink {
+    height: 100%;
+    border-left: 1px solid #d3708e;
 }
 
 .circle-left-pink {position: absolute;
@@ -18,11 +32,6 @@
     height: 16px;
     background-color: #d3708e;
     border-radius: 100%;
-}
-
-.item-pink {
-    height: 100%;
-    border-left: 1px solid #d3708e;
 }
 
 .item-pink:last-child {
@@ -35,4 +44,5 @@
 
 .item-text {
     margin-left: 20px;
+    margin-top: -7px;
 }
