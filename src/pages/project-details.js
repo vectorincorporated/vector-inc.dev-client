@@ -4,7 +4,7 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import img from '../images/project-details/project-details.png';
 import QuestionsFormBlock from "../components/question-form-block/QuestionsFormBlock";
-import ProjectDetailsBlock from "../components/project-problems/ProjectDetailsBlock";
+import ProjectDetailsBlock from "../components/project-details/ProjectDetailsBlock";
 
 const project = {
     general: {

@@ -7,7 +7,7 @@ const InfoBlock = ({ activeItem, options }) => {
     return (
         <div className={ styles.infoBlock }>
             { activeItem?.title &&
-                <span className='accent-text'>
+                <span className={classNames('accent-text', styles.title)}>
                     {activeItem?.title}
                 </span>
             }

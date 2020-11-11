@@ -9,7 +9,7 @@ const DottedItemList = ({ items, title, isPink }) => {
             {
                 title &&
                     <div className={styles.header}>
-                        <span className='accent-text'>
+                        <span  className={ styles.title }>
                             { title }
                         </span>
                         <span className={ styles.divider }>
