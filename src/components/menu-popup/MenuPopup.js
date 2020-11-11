@@ -19,14 +19,6 @@ const links = [
     {
         url: '/about-us',
         title: 'about us'
-    },
-    {
-        url: '/contact',
-        title: 'contact'
-    },
-    {
-        url: '/blog',
-        title: 'blog'
     }
 ];
 
