@@ -1,4 +1,6 @@
 .works-wrapper {
+    width: 499px;
+    overflow: hidden;
 }
 
 .header {

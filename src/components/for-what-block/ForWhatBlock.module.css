@@ -21,6 +21,7 @@
     margin-left: 64px;
     margin-right: 64px;
     padding: 16px;
+    height: 336px;
     border: 1px solid white;
 }
 
@@ -36,7 +37,7 @@
     margin-top: 80px;
 }
 
-.circleWrapper {
+.circle-wrapper {
     display: flex;
     justify-content: center;
     height: 100%;

@@ -10,17 +10,20 @@ const works = [
     {
         id: 1,
         title: 'Project_1',
-        text: 'Lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron'
+        text: 'Lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron',
+        link: '#'
     },
     {
         id: 2,
         title: 'Project_2',
-        text: 'Lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron'
+        text: 'Lorem 2 oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron',
+        link: '#'
     },
     {
         id: 3,
         title: 'Project_3',
-        text: 'Lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron'
+        text: 'Lorem (3) oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron',
+        link: '#'
     }
 ];
 
