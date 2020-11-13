@@ -5,6 +5,10 @@ import styles from './MenuPopup.module.css';
 
 const links = [
     {
+        url: '/home',
+        title: 'home'
+    },
+    {
         url: '/services',
         title: 'services'
     },
@@ -19,6 +23,10 @@ const links = [
     {
         url: '/about-us',
         title: 'about us'
+    },
+    {
+        url: '/blog',
+        title: 'blog'
     }
 ];
 
