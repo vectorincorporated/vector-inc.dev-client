@@ -22,11 +22,15 @@ const WorkInfo = ({ activeItem }) => {
             <div className={styles.footer}>
                 <div className='accent-text'>{ activeItem.title }</div>
                 <div className={styles.footerItems}>
-                    <a href="#" className='accent-text'>WEB</a>
-                    <div className={styles.webIcon}/>
-                    <div className={styles.divider}>....</div>
-                    <a href='/project-details' className='accent-text'>Show more details</a>
-                    <div className={styles.eyeIcon}/>
+                    <a href={activeItem.link} className={styles.linkWrapper}>
+                        <div className={classNames('accent-text', styles.webLink)}>WEB</div>
+                        <div className={styles.webIcon}/>
+                    </a>
+                    <div className={styles.smallDivider}>....</div>
+                    <a href='/project-details' className={classNames('accent-text', styles.detailsLink)}>
+                        <div>Show more details</div>
+                        <div className={styles.eyeIcon}/>
+                    </a>
                 </div>
             </div>
         </div>

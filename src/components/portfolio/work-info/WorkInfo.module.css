@@ -8,6 +8,12 @@
 
 .divider {
     margin-bottom: 12px;
+    font-size: 24px;
+}
+
+.small-divider {
+    margin-right: 15px;
+    font-size: 24px;
 }
 
 .work {
@@ -16,8 +22,9 @@
 }
 
 .work-info {
-    margin: 10px;
+    padding: 10px;
     height: 100%;
+    box-sizing: border-box;
 }
 
 .work-title {
@@ -36,22 +43,35 @@
     background: white;
     height: 64px;
     padding: 10px;
+    box-sizing: border-box;
 }
 
 .footer-items {
     display: flex;
 }
 
+.link-wrapper {
+    display: flex;
+}
+
+.web-link {
+    margin-right: 8px;
+}
+
 .web-icon {
     background: url('../../../images/icons/portfolio/web.svg') no-repeat center;
     width: 24px;
     height: 24px;
-    margin-left: 5px;
+    margin-right: 15px;
+}
+
+.details-link {
+    display: flex;
 }
 
 .eye-icon {
     background: url('../../../images/icons/portfolio/eye.svg') no-repeat center;
     width: 24px;
     height: 24px;
-    margin-left: 5px;
+    margin-left: 8px;
 }
