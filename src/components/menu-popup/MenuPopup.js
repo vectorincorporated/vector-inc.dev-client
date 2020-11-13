@@ -5,6 +5,10 @@ import styles from './MenuPopup.module.css';
 
 const links = [
     {
+        url: '/home',
+        title: 'home'
+    },
+    {
         url: '/services',
         title: 'services'
     },
@@ -19,6 +23,10 @@ const links = [
     {
         url: '/about-us',
         title: 'about us'
+    },
+    {
+        url: '/blog',
+        title: 'blog'
     }
 ];
 
@@ -31,7 +39,11 @@ const MenuPopup = ({ close }) => (
         <div className={styles.links}>
             {
                 links.map((link) => {
-                    return <Link to={link.url} key={link.url} className={styles.link}>
+                    return <Link to={link.url}
+                                 key={link.url}
+                                 className={styles.link}
+                                 activeStyle={{ color: '#d3708e' }}
+                                 onClick={close}>
                         { link.title }
                     </Link>
                 })
