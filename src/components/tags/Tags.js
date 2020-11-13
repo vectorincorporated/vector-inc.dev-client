@@ -8,7 +8,7 @@ const Tags = ({tags}) => {
             <div>TAGS</div>
             <div className={styles.smallDivider}>....</div>
             {
-                tags?.map(tag => <spam className={styles.tag}>{tag};</spam>)
+                tags?.map(tag => <span className={styles.tag} key={tag}>{tag};</span>)
             }
         </div>
     )

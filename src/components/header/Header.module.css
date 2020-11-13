@@ -7,7 +7,8 @@
 }
 
 .contactUsBtn {
-    width: 188px;
+    max-width: 188px;
+    width: 100%;
     color: white;
     background-color: #d3708e;
 }
@@ -15,6 +16,7 @@
 .logo {
     max-height: 56px;
     width: 100%;
+    cursor: pointer;
 }
 
 .menu {
