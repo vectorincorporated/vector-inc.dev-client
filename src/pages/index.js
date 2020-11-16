@@ -12,6 +12,7 @@ import QuestionsFormBlock from "../components/question-form-block/QuestionsFormB
 import OurClientsBlock from "../components/our-clients-block/OurClientsBlock";
 
 const IndexPage = () => (
+    // TODO: clear and make redirect to Home component
     <Layout>
         <SEO title="Home" />
 
