@@ -114,3 +114,7 @@ a {
 .link {
     color: #d3708e;
 }
+
+.block {
+    height: 100vh;
+}
