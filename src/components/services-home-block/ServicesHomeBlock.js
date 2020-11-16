@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import classNames from "classnames";
 
-import styles from './ServicesBlock.module.css';
+import styles from './ServicesHomeBlock.module.css';
 import InfoMenuItem from "../info-menu-item/InfoMenuItem";
 import InfoBlock from "../info-block/InfoBlock";
 import BlockHeader from "../block-header/BlockHeader";
@@ -62,7 +62,7 @@ const header = {
 };
 
 
-const ServicesBlock = () => {
+const ServicesHomeBlock = () => {
     const [activeItem, setActiveItem] = useState(null);
 
     const toggleInfoBlock = (e, item) => {
@@ -106,4 +106,4 @@ const ServicesBlock = () => {
     )
 };
 
-export default ServicesBlock;
+export default ServicesHomeBlock;

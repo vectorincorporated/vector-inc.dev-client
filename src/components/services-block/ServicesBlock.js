@@ -94,8 +94,10 @@ const header = {
 };
 
 
-const ServicesBlock = () => {
-    const [activeItem, setActiveItem] = useState(items[0]);
+const ServicesBlock = ({ location }) => {
+    const [activeItem, setActiveItem] = useState(
+        location?.state?.activeItem ? location?.state?.activeItem : items[0]
+    );
 
     const toggleInfoBlock = (e, item) => {
         e.stopPropagation();

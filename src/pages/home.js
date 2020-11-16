@@ -7,7 +7,7 @@ import Layout from "../components/layout"
 import HomeBlock from "../components/home-block/HomeBlock";
 import ForWhatBlock from "../components/for-what-block/ForWhatBlock";
 import HowWeWorkBlock from "../components/how-we-work/HowWeWorkBlock";
-import ServicesBlock from "../components/services-main-block/ServicesBlock";
+import ServicesHomeBlock from "../components/services-home-block/ServicesHomeBlock";
 import QuestionsFormBlock from "../components/question-form-block/QuestionsFormBlock";
 import OurClientsBlock from "../components/our-clients-block/OurClientsBlock";
 
@@ -21,7 +21,7 @@ const HomePage = () => (
 
         <HomeBlock />
         <ForWhatBlock />
-        <ServicesBlock />
+        <ServicesHomeBlock />
         <HowWeWorkBlock />
         <OurClientsBlock />
         <QuestionsFormBlock />

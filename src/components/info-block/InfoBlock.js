@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "gatsby";
 import classNames from 'classnames';
 
 import styles from "./InfoBlock.module.css";
@@ -23,9 +24,12 @@ const InfoBlock = ({ activeItem, options }) => {
             </span>
 
             { options?.readMore &&
-                <a href="#" className={classNames('link', 'accent-text', styles.readMore)}>
-                    read more>
-                </a>
+                <Link to='../services'
+                      className={classNames('link', 'accent-text', styles.readMore)}
+                      state={{ activeItem: activeItem }}>
+                        read more>
+                </Link>
+
             }
         </div>
     )
