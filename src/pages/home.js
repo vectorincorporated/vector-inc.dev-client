@@ -13,18 +13,30 @@ import OurClientsBlock from "../components/our-clients-block/OurClientsBlock";
 
 const HomePage = () => (
     <Layout>
-        <SEO title="Home" />
+            <SEO title="Home" />
 
-        <div className="particles-container">
-            <Particles id="tsparticles" options={options} />
-        </div>
+            <div className="particles-container">
+                    <Particles id="tsparticles" options={options} />
+            </div>
 
-        <HomeBlock />
-        <ForWhatBlock />
-        <ServicesHomeBlock />
-        <HowWeWorkBlock />
-        <OurClientsBlock />
-        <QuestionsFormBlock />
+            <div className='full-view-height'>
+                    <HomeBlock />
+            </div>
+            <div className='full-view-height'>
+                    <ForWhatBlock />
+            </div>
+            <div className='full-view-height'>
+                    <ServicesHomeBlock />
+            </div>
+            <div>
+                    <HowWeWorkBlock />
+            </div>
+            <div>
+                    <OurClientsBlock />
+            </div>
+            <div>
+                    <QuestionsFormBlock />
+            </div>
     </Layout>
 );
 
