@@ -19,13 +19,13 @@ const HomePage = () => (
                     <Particles id="tsparticles" options={options} />
             </div>
 
-            <div className='full-view-height'>
+            <div className='full-height-view'>
                     <HomeBlock />
             </div>
-            <div className='full-view-height'>
+            <div className='full-height-view'>
                     <ForWhatBlock />
             </div>
-            <div className='full-view-height'>
+            <div className='full-height-view'>
                     <ServicesHomeBlock />
             </div>
             <div>
