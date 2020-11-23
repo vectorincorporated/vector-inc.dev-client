@@ -3,14 +3,39 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    width: 200px;
+    max-width: 200px;
+    width: 100%;
     height: 56px;
     margin-bottom: 20px;
     border: 1px solid white;
     cursor: pointer;
 }
 
+.info-item span {
+    text-align: center;
+}
+
 .active {
     background: white;
     color: #111111;
 }
+
+@media (max-width: 960px) {
+    .info-item {
+        max-width: 24%;
+    }
+}
+
+@media (max-width: 720px) {
+    .info-item {
+        max-width: 48%;
+    }
+}
+
+
+@media (max-width: 540px) {
+    .info-item {
+        max-width: 100%;
+    }
+}
+
