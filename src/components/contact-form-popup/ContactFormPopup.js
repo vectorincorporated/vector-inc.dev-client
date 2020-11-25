@@ -20,14 +20,15 @@ const ContactFormPopup = ({ close }) => (
             <span className={styles.closeBtn} onClick={close}>X</span>
         </div>
 
-        <div className={ styles.header }>
-            <BlockHeader header={ header } />
-        </div>
+        <div className={styles.content}>
+            <div className={ styles.header }>
+                <BlockHeader header={ header } />
+            </div>
 
-        <div className={styles.form}>
-            <Form options={formOptions} />
+            <div className={styles.form}>
+                <Form options={formOptions} />
+            </div>
         </div>
-
     </div>
 );
 
