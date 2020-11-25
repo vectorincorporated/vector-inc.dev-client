@@ -1,17 +1,14 @@
 import React from "react";
 
 import styles from "./FormBtn.module.css";
-import ThanksPopup from "../../thanks-popup/ThanksPopup";
-import Popup from "reactjs-popup";
 
-const FormBtn = ({ options }) => {
+const FormBtn = React.forwardRef(({ ...props }, ref ) => {
     return (
-        <Popup trigger={
-            <button className={options?.isBtnPink ? styles.btnPink : styles.btn}>send</button>
-        } modal>
-            { close => <ThanksPopup close={close}/> }
-        </Popup>
+        <button className={ props?.options?.isBtnPink ? styles.btnPink : styles.btn }
+                ref={ref}>
+            send
+        </button>
     )
-}
+});
 
 export default FormBtn;
