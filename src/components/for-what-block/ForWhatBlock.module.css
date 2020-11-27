@@ -53,5 +53,16 @@
 }
 
 .circle-wrapper-shifted svg {
-    width: 100px;
+    animation: changeSize 500ms ease-in;
+    animation-fill-mode: forwards;
+}
+
+@keyframes changeSize {
+    0% {
+        width: 100%;
+    }
+
+    100% {
+        width: 100px;
+    }
 }
