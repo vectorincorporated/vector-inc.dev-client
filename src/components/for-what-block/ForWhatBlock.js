@@ -69,7 +69,7 @@ const ForWhatBlock = () => {
     };
 
     return (
-        <div className={classNames(styles.forWhat) }>
+        <div className={styles.forWhat}>
             <div className={styles.header}>
                 <BlockHeader header={ header } />
             </div>

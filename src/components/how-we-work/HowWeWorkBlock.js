@@ -46,7 +46,7 @@ const header = {
 
 const HowWeWorkBlock = () => {
     return (
-        <div className={classNames(styles.howWeWork)} >
+        <div className={styles.howWeWork} >
             <div className={styles.header}>
                 <BlockHeader header={ header } />
             </div>

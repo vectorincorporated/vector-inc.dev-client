@@ -71,7 +71,7 @@ const ServicesHomeBlock = () => {
     };
 
     return (
-        <div className={classNames(styles.services)}>
+        <div className={styles.services}>
             <div className={styles.header}>
                 <BlockHeader header={ header } />
             </div>
