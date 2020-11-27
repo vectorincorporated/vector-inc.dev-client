@@ -15,7 +15,7 @@ const InfoBlock = ({ activeItem, options }) => {
 
             { options?.isDivider &&
                 <span className={ styles.divider }>
-                    ••••••••••••••••••••••••••••••••••••••
+                    •••••••••••••••••••••••••••••••
                 </span>
             }
 

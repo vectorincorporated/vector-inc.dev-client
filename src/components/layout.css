@@ -18,6 +18,10 @@
     font-style: normal;
 }
 
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
 html {
     font-family: VT323, sans-serif;
     -ms-text-size-adjust: 100%;
@@ -46,10 +50,6 @@ header {
     left: 0;
     right: 0;
     z-index: 1;
-}
-
-main {
-    padding: 0 calc(50% - 600px);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -101,7 +101,7 @@ a {
 
 .accent-text {
     text-transform: uppercase;
-    font-size: 24px;
+    font-size: 22px;
 }
 
 .regular-text {
@@ -125,4 +125,8 @@ a {
     -moz-user-select: none; /* Old versions of Firefox */
     -ms-user-select: none; /* Internet Explorer/Edge */
     user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
+.container {
+    padding: 0 9%;
 }

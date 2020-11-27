@@ -6,6 +6,7 @@ import ibm from '../../images/our-clients/IBM.png';
 import google from '../../images/our-clients/google.png';
 import ClientCard from "../client-card/ClientCard";
 import BlockHeader from "../block-header/BlockHeader";
+import classNames from "classnames";
 
 const OurClientsBlock = () => {
     const clientList = [
@@ -44,7 +45,7 @@ const OurClientsBlock = () => {
     };
 
     return (
-        <div className={ styles.ourClients }>
+        <div className={ classNames(styles.ourClients, 'container') }>
             <div className={styles.header}>
                 <BlockHeader header={ header } />
             </div>
