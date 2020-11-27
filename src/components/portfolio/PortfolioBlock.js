@@ -6,7 +6,27 @@ import WorkList from "./work-list/WorkList";
 import WorkInfo from "./work-info/WorkInfo";
 import SphereAnimation from "../sphere-animation/SphereAnimation";
 
-const works = [
+const newWorks = [
+    {
+        id: 1,
+        title: 'Project_1',
+        text: 'Lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron',
+        link: '#'
+    },
+    {
+        id: 2,
+        title: 'Project_2',
+        text: 'Lorem 2 oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron',
+        link: '#'
+    },
+    {
+        id: 3,
+        title: 'Project_3',
+        text: 'Lorem (3) oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron',
+        link: '#'
+    }
+];
+const oldWorks = [
     {
         id: 1,
         title: 'Project_1',
@@ -49,29 +69,29 @@ const PortfolioBlock = () => {
                     </div>
 
                     <div>
-                        <WorkList works={works}
+                        <WorkList works={newWorks}
                                   toggleInfoBlock={toggleInfoBlock}
                                   activeItem={activeItem}
                                   latest={true}/>
                     </div>
 
                     <div>
-                        <WorkList works={works}
+                        <WorkList works={oldWorks}
                                   toggleInfoBlock={toggleInfoBlock}
                                   activeItem={activeItem}/>
                     </div>
                 </div>
 
-                { !activeItem &&
-                    <div className={styles.animationWrapper}>
-                        <SphereAnimation color='white'/>
-                    </div>
+                { activeItem &&
+                <div className={styles.workInfoWrapper}>
+                    <WorkInfo activeItem={activeItem}/>
+                </div>
                 }
             </div>
 
-            { activeItem &&
-                <div className={styles.workInfoWrapper}>
-                    <WorkInfo activeItem={activeItem}/>
+            { !activeItem &&
+                <div className={styles.animationWrapper}>
+                    <SphereAnimation color='white'/>
                 </div>
             }
         </div>
