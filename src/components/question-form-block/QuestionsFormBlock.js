@@ -13,7 +13,7 @@ const header = {
 
 const QuestionsFormBlock = () => {
     return (
-        <div className={ classNames(styles.questionsWrapper, 'container') }>
+        <div className={ classNames(styles.questionsWrapper) }>
             <div className={styles.questions}>
                 <div className={ styles.header }>
                     <BlockHeader header={ header } />

@@ -45,7 +45,7 @@ const OurClientsBlock = () => {
     };
 
     return (
-        <div className={ classNames(styles.ourClients, 'container') }>
+        <div className={ classNames(styles.ourClients) }>
             <div className={styles.header}>
                 <BlockHeader header={ header } />
             </div>
