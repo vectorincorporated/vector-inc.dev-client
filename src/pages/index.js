@@ -20,22 +20,22 @@ const IndexPage = () => (
             <Particles id="tsparticles" options={options} />
         </div>
 
-        <div className='full-height-view'>
+        <div className='full-height-view container'>
             <HomeBlock />
         </div>
-        <div className='full-height-view'>
+        <div className='full-height-view container'>
             <ForWhatBlock />
         </div>
-        <div className='full-height-view'>
+        <div className='full-height-view container'>
             <ServicesHomeBlock />
         </div>
-        <div>
+        <div className='container'>
             <HowWeWorkBlock />
         </div>
-        <div>
+        <div className='container'>
             <OurClientsBlock />
         </div>
-        <div>
+        <div className='container'>
             <QuestionsFormBlock />
         </div>
     </Layout>

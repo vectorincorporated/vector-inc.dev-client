@@ -8,7 +8,7 @@ const ServicesPage = () => (
     <Layout>
         <SEO title="Services Page" />
 
-        <div>
+        <div className='container'>
             <ServicesBlock />
         </div>
     </Layout>

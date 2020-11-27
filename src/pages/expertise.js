@@ -8,7 +8,7 @@ const ExpertisePage = () => (
     <Layout>
         <SEO title="Expertise Page" />
 
-        <div>
+        <div className='container'>
             <ExpertiseBlock />
         </div>
     </Layout>

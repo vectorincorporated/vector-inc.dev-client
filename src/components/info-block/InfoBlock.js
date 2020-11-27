@@ -7,7 +7,7 @@ import styles from "./InfoBlock.module.css";
 const InfoBlock = ({ activeItem, options }) => {
     return (
         <div className={ styles.infoBlock }>
-            { activeItem?.title &&
+            { options?.isTitle &&
                 <span className={classNames('accent-text', styles.title)}>
                     {activeItem?.title}
                 </span>

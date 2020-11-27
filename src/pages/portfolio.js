@@ -7,7 +7,7 @@ import PortfolioBlock from "../components/portfolio/PortfolioBlock";
 const PortfolioPage = () => (
     <Layout>
         <SEO title="Portfolio Page" />
-        <div>
+        <div className='container'>
             <PortfolioBlock />
         </div>
     </Layout>

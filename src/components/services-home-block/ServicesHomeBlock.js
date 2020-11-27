@@ -71,34 +71,37 @@ const ServicesHomeBlock = () => {
     };
 
     return (
-        <div className={classNames(styles.services, 'container')}>
+        <div className={classNames(styles.services)}>
             <div className={styles.header}>
                 <BlockHeader header={ header } />
             </div>
 
-            <div className={ styles.info }>
-                <div className={classNames( 'accent-text', styles.infoMenu )}>
-                    {
-                        items.map((item) => {
-                            return <InfoMenuItem key={item.id}
-                                                 toggleInfoBlock={toggleInfoBlock}
-                                                 item={item}
-                                                 activeItem={activeItem}
-                                                 options={{ mode: 'left' }}
-                            />
-                        })
-                    }
+            <div className={styles.content}>
 
-                </div>
+                <div className={ styles.info }>
+                    <div className={classNames( 'accent-text', styles.infoMenu )}>
+                        {
+                            items.map((item) => {
+                                return <InfoMenuItem key={item.id}
+                                                     toggleInfoBlock={toggleInfoBlock}
+                                                     item={item}
+                                                     activeItem={activeItem}
+                                                     options={{ mode: 'left' }}
+                                />
+                            })
+                        }
 
-                { activeItem &&
+                    </div>
+
+                    { activeItem &&
                     <div className={styles.infoBlockWrapper}>
                         <InfoBlock activeItem={ activeItem }
                                    options={{ readMore: true }} />
                     </div>
-                }
+                    }
 
-                <div className={styles.circleWrapper}>
+                </div>
+                <div className={classNames(styles.circleWrapper, activeItem ? styles.circleWrapperShifted : '')}>
                     <CircleAnimation />
                 </div>
             </div>

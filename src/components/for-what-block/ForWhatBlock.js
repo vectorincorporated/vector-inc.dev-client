@@ -69,7 +69,7 @@ const ForWhatBlock = () => {
     };
 
     return (
-        <div className={classNames(styles.forWhat, 'container') }>
+        <div className={classNames(styles.forWhat) }>
             <div className={styles.header}>
                 <BlockHeader header={ header } />
             </div>
@@ -91,7 +91,7 @@ const ForWhatBlock = () => {
                     { activeItem &&
                         <div className={styles.infoBlockWrapper}>
                             <InfoBlock activeItem={ activeItem }
-                                       options={{ isDivider: true }}/>
+                                       options={{ isDivider: true, isTitle: true }}/>
                         </div>
                     }
                 </div>
