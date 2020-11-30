@@ -128,7 +128,7 @@ const ServicesBlock = ({ location }) => {
                 <div className={styles.infoBlockWrapper}>
                     <div>
                         <InfoBlock activeItem={ activeItem }
-                                   options={{ isDivider: true }} />
+                                   options={{ isDivider: true, isTitle: true }} />
                     </div>
 
                     <div className={styles.dottedList}>

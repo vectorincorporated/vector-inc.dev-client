@@ -94,10 +94,10 @@ const ServicesHomeBlock = () => {
                     </div>
 
                     { activeItem &&
-                    <div className={styles.infoBlockWrapper}>
-                        <InfoBlock activeItem={ activeItem }
-                                   options={{ readMore: true }} />
-                    </div>
+                        <div className={styles.infoBlockWrapper}>
+                            <InfoBlock activeItem={ activeItem }
+                                       options={{ readMore: true }} />
+                        </div>
                     }
 
                 </div>
