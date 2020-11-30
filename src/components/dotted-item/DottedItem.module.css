@@ -8,7 +8,9 @@
 }
 
 .item {
+    position: relative;
     height: 100%;
+    margin-left: 8px;
     border-left: 1px solid white;
     cursor: pointer;
 }
