@@ -69,33 +69,34 @@ const ForWhatBlock = () => {
     };
 
     return (
-        <div className={ styles.forWhat }>
+        <div className={styles.forWhat}>
             <div className={styles.header}>
                 <BlockHeader header={ header } />
             </div>
 
-            <div className={ styles.info }>
-                <div className={classNames( 'accent-text', styles.infoMenu )}>
-                    {
-                        items.map((item) => {
-                            return <InfoMenuItem key={item.id}
-                                                 toggleInfoBlock={toggleInfoBlock}
-                                                 activeItem={activeItem}
-                                                 item={item}/>
-                        })
-                    }
+            <div className={ styles.content }>
+                <div className={ styles.info }>
+                    <div className={classNames( 'accent-text', styles.infoMenu )}>
+                        {
+                            items.map((item) => {
+                                return <InfoMenuItem key={item.id}
+                                                     toggleInfoBlock={toggleInfoBlock}
+                                                     activeItem={activeItem}
+                                                     item={item}/>
+                            })
+                        }
 
-                </div>
-
-                { activeItem &&
-                    <div className={styles.infoBlockWrapper}>
-                        <InfoBlock activeItem={ activeItem }
-                                   options={{ isDivider: true }}/>
                     </div>
 
-                }
+                    { activeItem &&
+                        <div className={styles.infoBlockWrapper}>
+                            <InfoBlock activeItem={ activeItem }
+                                       options={{ isDivider: true, isTitle: true }}/>
+                        </div>
+                    }
+                </div>
 
-                <div className={styles.circleWrapper}>
+                <div className={classNames(styles.circleWrapper, activeItem ? styles.circleWrapperShifted : '')}>
                     <CircleAnimation />
                 </div>
             </div>

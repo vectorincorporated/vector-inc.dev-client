@@ -18,7 +18,7 @@ const Header = () => (
                 </Popup>
             </div>
 
-            <Link to={'/home'}>
+            <Link to={'/'}>
                 <img src={logo} className={headerStyles.logo} alt="Vector"/>
             </Link>
 

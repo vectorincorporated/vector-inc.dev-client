@@ -1,12 +1,12 @@
 .wrapper {
     display: flex;
     justify-content: center;
-    height: 450px;
+    height: 100vh;
 }
 
 .title {
     position: absolute;
-    top: 200px;
+    top: 35%;
 }
 
 .btn {
@@ -15,5 +15,5 @@
     position: absolute;
     justify-content: center;
     width: 608px;
-    top: 400px;
+    top: 60%;
 }

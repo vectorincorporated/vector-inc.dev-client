@@ -1,7 +1,7 @@
 .for-what {
     display: flex;
     flex-direction: column;
-    margin-top: 300px;
+    margin-top: 100px;
 }
 
 .header {
@@ -18,19 +18,23 @@
 }
 
 .info-block-wrapper {
-    margin-left: 64px;
-    margin-right: 64px;
+    margin-left: 45px;
+    margin-right: 20px;
     padding: 16px;
-    height: 336px;
+    min-height: 360px;
     border: 1px solid white;
 }
 
-.info {
+.content {
     display: flex;
     align-items: flex-start;
     height: 337px;
     margin-top: 80px;
     margin-bottom: 100px;
+}
+
+.info {
+    display: flex;
 }
 
 .items {
@@ -42,4 +46,12 @@
     justify-content: center;
     height: 100%;
     width: 100%;
+}
+
+.circle-wrapper-shifted {
+    justify-content: flex-end;
+}
+
+.circle-wrapper-shifted svg {
+    width: 100px;
 }

@@ -2,12 +2,19 @@
     display: flex;
     align-items: center;
     position: relative;
-    width: 400px;
+    max-width: 336px;
+    width: 100%;
+    min-width: 330px;
     height: 56px;
-    padding-left: 30px;
     margin-bottom: 20px;
     border: 1px solid white;
     cursor: pointer;
+    box-sizing: content-box;
+}
+
+.info-item span {
+    white-space: nowrap;
+    margin: 0 15px;
 }
 
 .info-item:hover {
@@ -17,13 +24,13 @@
 
 .line-right {
     position: absolute;
-    width: 65px;
-    right: -65px;
+    width: 45px;
+    right: -45px;
     border-top: 1px solid white;
 }
 .line-left {
     position: absolute;
-    width: 65px;
-    left: -65px;
+    width: 45px;
+    left: -45px;
     border-top: 1px solid white;
 }

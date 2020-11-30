@@ -9,12 +9,12 @@ const HomeBlock = () => {
     return (
         <div className={styles.wrapper}>
             <div className={classNames(styles.title, 'wrap')}>
-                <h1 className='glitch' data-text="WE USE THE BEST TECHNOLOGIES TO ENHANCE YOUR PRODUCT">
+                <h1 className='glitch no-select' data-text="WE USE THE BEST TECHNOLOGIES TO ENHANCE YOUR PRODUCT">
                     We use the best technologies <br/>to enhance your product
                 </h1>
             </div>
 
-            <Popup trigger={ <button className={styles.btn}>Get free consultation</button> } modal>
+            <Popup trigger={ <button className={classNames(styles.btn, 'no-select')}>Get free consultation</button> } modal>
                 { close => <ContactFormPopup close={close}/> }
             </Popup>
         </div>

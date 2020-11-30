@@ -1,44 +1,39 @@
 import React, {} from "react";
 
 import styles from './OurClientsBlock.module.css';
-import amd from '../../images/our-clients/amd.svg';
-import aset from '../../images/our-clients/aset.svg';
-import acer from '../../images/our-clients/acer.svg';
-import hulu from '../../images/our-clients/hulu.svg';
-import cbs from '../../images/our-clients/cbs.svg';
-import ps from '../../images/our-clients/ps.svg';
-import ea from '../../images/our-clients/ea.svg';
-import dropbox from '../../images/our-clients/Dropbox_logo.svg';
-import billboard from '../../images/our-clients/billboard.svg';
+import dropbox from '../../images/our-clients/dropbox.png';
+import ibm from '../../images/our-clients/IBM.png';
+import google from '../../images/our-clients/google.png';
 import ClientCard from "../client-card/ClientCard";
 import BlockHeader from "../block-header/BlockHeader";
+import classNames from "classnames";
 
 const OurClientsBlock = () => {
     const clientList = [
         {
             id: 0,
-            img: amd
+            img: ibm
         }, {
             id: 1,
-            img: ea
+            img: google
         }, {
             id: 2,
-            img: ps
+            img: dropbox
         }, {
             id: 3,
-            img: billboard
+            img: dropbox
         }, {
             id: 4,
-            img: aset
+            img: ibm
         }, {
             id: 5,
-            img: cbs
+            img: google
         }, {
             id: 6,
-            img: hulu
+            img: ibm
         }, {
             id: 7,
-            img: acer
+            img: google
         }, {
             id: 8,
             img: dropbox

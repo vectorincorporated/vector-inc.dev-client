@@ -21,7 +21,7 @@
 }
 
 .right-simple {
-    width: 100%;
+    width: 100vh;
     left: 400px;
 }
 
@@ -31,7 +31,7 @@
 }
 
 .left-simple {
-    width: 100%;
+    width: 100vh;
     right: 400px;
 }
 

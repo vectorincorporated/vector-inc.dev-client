@@ -80,10 +80,10 @@ const ProjectDetails = () => (
     <Layout>
         <SEO title="Project Details Page" />
 
-        <div>
+        <div className='container'>
             <ProjectDetailsBlock project={project} />
         </div>
-        <div>
+        <div className='container'>
             <QuestionsFormBlock />
         </div>
     </Layout>

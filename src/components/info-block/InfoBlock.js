@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "gatsby";
 import classNames from 'classnames';
 
 import styles from "./InfoBlock.module.css";
@@ -6,7 +7,7 @@ import styles from "./InfoBlock.module.css";
 const InfoBlock = ({ activeItem, options }) => {
     return (
         <div className={ styles.infoBlock }>
-            { activeItem?.title &&
+            { options?.isTitle &&
                 <span className={classNames('accent-text', styles.title)}>
                     {activeItem?.title}
                 </span>
@@ -14,7 +15,7 @@ const InfoBlock = ({ activeItem, options }) => {
 
             { options?.isDivider &&
                 <span className={ styles.divider }>
-                    ••••••••••••••••••••••••••••••••••••••
+                    •••••••••••••••••••••••••••••••
                 </span>
             }
 
@@ -23,9 +24,12 @@ const InfoBlock = ({ activeItem, options }) => {
             </span>
 
             { options?.readMore &&
-                <a href="#" className={classNames('link', 'accent-text', styles.readMore)}>
-                    read more>
-                </a>
+                <Link to='../services'
+                      className={classNames('link', 'accent-text', styles.readMore)}
+                      state={{ activeItem: activeItem }}>
+                        read more>
+                </Link>
+
             }
         </div>
     )

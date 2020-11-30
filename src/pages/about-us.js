@@ -11,19 +11,19 @@ import OurAddressBlock from "../components/our-address/OurAddress";
 const AboutUsPage = () => (
     <Layout>
         <SEO title="AboutUs Page" />
-        <div>
+        <div className='container'>
             <AboutUsBlock />
         </div>
-        <div>
+        <div className='container'>
             <OurTeamBlock />
         </div>
-        <div>
+        <div className='container'>
             <ContactsBlock />
         </div>
-        <div>
+        <div className='container'>
             <OurAddressBlock />
         </div>
-        <div>
+        <div className='container'>
             <QuestionsFormBlock />
         </div>
     </Layout>

@@ -8,6 +8,7 @@ import testing from '../../images/icons/how-we-work/testing.svg'
 import launch from '../../images/icons/how-we-work/launch.svg'
 import WorkStep from "../work-step/WorkStep";
 import BlockHeader from "../block-header/BlockHeader";
+import classNames from "classnames";
 
 const stepList = [
     {
@@ -45,7 +46,7 @@ const header = {
 
 const HowWeWorkBlock = () => {
     return (
-        <div className={ styles.howWeWork }>
+        <div className={styles.howWeWork} >
             <div className={styles.header}>
                 <BlockHeader header={ header } />
             </div>

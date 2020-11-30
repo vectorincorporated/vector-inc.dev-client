@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import classNames from "classnames";
 
-import styles from './ServicesBlock.module.css';
+import styles from './ServicesHomeBlock.module.css';
 import InfoMenuItem from "../info-menu-item/InfoMenuItem";
 import InfoBlock from "../info-block/InfoBlock";
 import BlockHeader from "../block-header/BlockHeader";
@@ -62,7 +62,7 @@ const header = {
 };
 
 
-const ServicesBlock = () => {
+const ServicesHomeBlock = () => {
     const [activeItem, setActiveItem] = useState(null);
 
     const toggleInfoBlock = (e, item) => {
@@ -71,34 +71,37 @@ const ServicesBlock = () => {
     };
 
     return (
-        <div className={ styles.services }>
+        <div className={styles.services}>
             <div className={styles.header}>
                 <BlockHeader header={ header } />
             </div>
 
-            <div className={ styles.info }>
-                <div className={classNames( 'accent-text', styles.infoMenu )}>
-                    {
-                        items.map((item) => {
-                            return <InfoMenuItem key={item.id}
-                                                 toggleInfoBlock={toggleInfoBlock}
-                                                 item={item}
-                                                 activeItem={activeItem}
-                                                 options={{ mode: 'left' }}
-                            />
-                        })
-                    }
+            <div className={styles.content}>
 
-                </div>
+                <div className={ styles.info }>
+                    <div className={classNames( 'accent-text', styles.infoMenu )}>
+                        {
+                            items.map((item) => {
+                                return <InfoMenuItem key={item.id}
+                                                     toggleInfoBlock={toggleInfoBlock}
+                                                     item={item}
+                                                     activeItem={activeItem}
+                                                     options={{ mode: 'left' }}
+                                />
+                            })
+                        }
 
-                { activeItem &&
+                    </div>
+
+                    { activeItem &&
                     <div className={styles.infoBlockWrapper}>
                         <InfoBlock activeItem={ activeItem }
                                    options={{ readMore: true }} />
                     </div>
-                }
+                    }
 
-                <div className={styles.circleWrapper}>
+                </div>
+                <div className={classNames(styles.circleWrapper, activeItem ? styles.circleWrapperShifted : '')}>
                     <CircleAnimation />
                 </div>
             </div>
@@ -106,4 +109,4 @@ const ServicesBlock = () => {
     )
 };
 
-export default ServicesBlock;
+export default ServicesHomeBlock;
