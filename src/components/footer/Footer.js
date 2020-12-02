@@ -10,7 +10,7 @@ const Footer = () => (
             <div className={styles.mailWrapper}>
                 <img src={mail} alt="mail"/>
                 <div className={styles.smallDivider}>....</div>
-                <a className='link' href='mailto:vector@mail.com'>vector@mail.com</a>
+                <a className='link' href='mailto:info@vector-inc.dev'>info@vector-inc.dev</a>
             </div>
 
             <span className={styles.divider}>........................</span>
@@ -18,9 +18,10 @@ const Footer = () => (
             <div className={styles.socialsWrapper}>
                 <span>follow us</span>
                 <div className={styles.smallDivider}>....</div>
-                <a href="#" className={classNames(styles.linkedin, styles.icon)} />
-                <a href="#" className={classNames(styles.facebook, styles.icon)} />
-                <a href="#" className={classNames(styles.instagram, styles.icon)} />
+                <a href="https://www.linkedin.com/company/llc-vector-incorporated"
+                   className={classNames(styles.linkedin, styles.icon)} />
+                <a href="https://www.facebook.com/VectorIncorporated"
+                   className={classNames(styles.facebook, styles.icon)} />
             </div>
         </div>
     </footer>
