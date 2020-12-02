@@ -34,8 +34,11 @@ const Form = ({ options, close }) => {
                     <input className={styles.formField}
                            type='text'
                            name='phone'
-                           placeholder='YOUR PHONE (Optional)'
-                           ref={register({ pattern: phonePattern })} />
+                           placeholder='YOUR PHONE *'
+                           ref={register({ required: true, pattern: phonePattern })} />
+                    { errors.phone && errors.phone?.type === "required" &&
+                        <ErrorMsg msg={'This field is required'} />
+                    }
                     { errors.phone && errors.phone?.type === "pattern" &&
                         <ErrorMsg msg={'Phone is incorrect'} />
                     }
@@ -59,8 +62,11 @@ const Form = ({ options, close }) => {
             <div className={styles.fieldWrapper}>
                 <textarea className={styles.formField}
                           name='message'
-                          placeholder='LEAVE YOUR MESSAGE HERE... (optional)'
-                          ref={register} />
+                          placeholder='LEAVE YOUR MESSAGE HERE *'
+                          ref={register({ required: true })} />
+                { errors.message && errors.message?.type === "required" &&
+                    <ErrorMsg msg={'This field is required'} />
+                }
             </div>
 
             <FormBtn options={options} />
