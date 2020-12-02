@@ -23,7 +23,9 @@ const Form = ({ options, close }) => {
                        name='name'
                        placeholder='YOUR NAME *'
                        ref={register({ required: true })}/>
-                { errors.name && errors.name?.type === "required" && <ErrorMsg msg={'This field is required'} /> }
+                { errors.name && errors.name?.type === "required" &&
+                    <ErrorMsg msg={'This field is required'} />
+                }
             </div>
 
             {
@@ -34,7 +36,9 @@ const Form = ({ options, close }) => {
                            name='phone'
                            placeholder='YOUR PHONE (Optional)'
                            ref={register({ pattern: phonePattern })} />
-                    { errors.phone && errors.phone?.type === "pattern" && <ErrorMsg msg={'Phone is incorrect'} /> }
+                    { errors.phone && errors.phone?.type === "pattern" &&
+                        <ErrorMsg msg={'Phone is incorrect'} />
+                    }
                 </div>
             }
 
@@ -44,8 +48,12 @@ const Form = ({ options, close }) => {
                        name='email'
                        placeholder='YOUR E-MAIL *'
                        ref={register({ required: true, pattern: emailPattern })}/>
-                { errors.email && errors.email?.type === "required" && <ErrorMsg msg={'This field is required'} /> }
-                { errors.email && errors.email?.type === "pattern" && <ErrorMsg msg={'Email is incorrect'} /> }
+                { errors.email && errors.email?.type === "required" &&
+                    <ErrorMsg msg={'This field is required'} />
+                }
+                { errors.email && errors.email?.type === "pattern" &&
+                    <ErrorMsg msg={'Email is incorrect'} />
+                }
             </div>
 
             <div className={styles.fieldWrapper}>
