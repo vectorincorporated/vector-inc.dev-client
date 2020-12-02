@@ -1,71 +1,63 @@
 import React from "react";
+import { useForm } from "react-hook-form";
 
 import styles from "./From.module.css";
 import FormBtn from "./form-btn/FormBtn";
+import ErrorMsg from "./error-msg/ErrorMsg";
 
-class Form extends React.Component {
-    constructor(props) {
-        super(props);
+const Form = ({ options, close }) => {
+    const emailPattern = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+    const phonePattern = /^[0-9\-\+]{5,15}$/;
+    const { register, handleSubmit, errors } = useForm();
 
-        this.state = {
-            name: '',
-            email: '',
-            message: '',
-            phone: null
-        };
-
-        this.handleInputChange = this.handleInputChange.bind(this);
-    }
-
-    handleInputChange(event) {
-        const target = event.target;
-        const name = target.name;
-        const value = target.value;
-
-        this.setState({
-            [name]: value
-        });
-    }
-
-    onSubmit = e => {
+    const onSubmit = e => {
+        if (close) close();
         // TODO: implement with BE
     };
 
-    render() {
-        return (
-            <form className={styles.form} onSubmit={this.onSubmit}>
+    return (
+        <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
+            <div className={styles.fieldWrapper}>
                 <input className={styles.formField}
                        type='text'
                        name='name'
                        placeholder='YOUR NAME *'
-                       onChange={this.handleInputChange}
-                       required={true} />
+                       ref={register({ required: true })}/>
+                { errors.name && errors.name?.type === "required" && <ErrorMsg msg={'This field is required'} /> }
+            </div>
 
-                {
-                    this.props?.options?.isPhone &&
+            {
+                options?.isPhone &&
+                <div className={styles.fieldWrapper}>
                     <input className={styles.formField}
                            type='text'
                            name='phone'
-                           onChange={this.handleInputChange}
-                           placeholder='YOUR PHONE (Optional)' />
-                }
+                           placeholder='YOUR PHONE (Optional)'
+                           ref={register({ pattern: phonePattern })} />
+                    { errors.phone && errors.phone?.type === "pattern" && <ErrorMsg msg={'Phone is incorrect'} /> }
+                </div>
+            }
 
+            <div className={styles.fieldWrapper}>
                 <input className={styles.formField}
                        type='text'
                        name='email'
-                       onChange={this.handleInputChange}
                        placeholder='YOUR E-MAIL *'
-                       required={true} />
+                       ref={register({ required: true, pattern: emailPattern })}/>
+                { errors.email && errors.email?.type === "required" && <ErrorMsg msg={'This field is required'} /> }
+                { errors.email && errors.email?.type === "pattern" && <ErrorMsg msg={'Email is incorrect'} /> }
+            </div>
 
+            <div className={styles.fieldWrapper}>
                 <textarea className={styles.formField}
                           name='message'
-                          onChange={this.handleInputChange}
-                          placeholder='LEAVE YOUR MESSAGE HERE... (optional)' />
+                          placeholder='LEAVE YOUR MESSAGE HERE... (optional)'
+                          ref={register} />
+            </div>
 
-                <FormBtn options={this.props.options} />
-            </form>
-        )
-    }
-}
+            <FormBtn options={options} />
+        </form>
+    )
+};
 
 export default Form;

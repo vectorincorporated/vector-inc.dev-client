@@ -26,7 +26,7 @@ const ContactFormPopup = ({ close }) => (
             </div>
 
             <div className={styles.form}>
-                <Form options={formOptions} />
+                <Form options={formOptions} close={close} />
             </div>
         </div>
     </div>
