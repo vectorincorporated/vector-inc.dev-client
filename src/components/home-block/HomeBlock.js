@@ -5,6 +5,19 @@ import styles from './HomeBlock.module.css';
 import ContactFormPopup from "../contact-form-popup/ContactFormPopup";
 import Popup from "reactjs-popup";
 
+const formOptions = {
+    isBtnPink: true,
+    isPhone: true,
+    placeholders: {
+        message: 'One place to get all your questions answered *'
+    }
+};
+
+const popupHeaderOptions = {
+    title: 'Get Your Free Consultation Now',
+    description: 'WE WILL CONTACT WITH YOU AS SOON AS POSIBLE'
+};
+
 const HomeBlock = () => {
     return (
         <div className={styles.wrapper}>
@@ -15,7 +28,7 @@ const HomeBlock = () => {
             </div>
 
             <Popup trigger={ <button className={classNames(styles.btn, 'no-select')}>Get free consultation</button> } modal>
-                { close => <ContactFormPopup close={close}/> }
+                { close => <ContactFormPopup close={close} formOptions={formOptions} headerOptions={popupHeaderOptions} /> }
             </Popup>
         </div>
     )

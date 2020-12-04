@@ -9,6 +9,11 @@ import headerStyles from './Header.module.css';
 import MenuPopup from "../menu-popup/MenuPopup";
 import ContactFormPopup from "../contact-form-popup/ContactFormPopup";
 
+const headerOptions = {
+    title: 'LEAVE YOUR CONTACTS',
+    description: 'WE WILL CONTACT WITH YOU AS SOON AS POSSIBLE'
+};
+
 const Header = () => (
     <header>
         <div className={headerStyles.wrapper}>
@@ -23,7 +28,7 @@ const Header = () => (
             </Link>
 
             <Popup trigger={ <button className={headerStyles.contactUsBtn}>contact us</button> } modal>
-                { close => <ContactFormPopup close={close}/> }
+                { close => <ContactFormPopup close={close} headerOptions={headerOptions} /> }
             </Popup>
 
         </div>

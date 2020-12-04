@@ -21,7 +21,7 @@ const Form = ({ options, close }) => {
                 <input className={styles.formField}
                        type='text'
                        name='name'
-                       placeholder='YOUR NAME *'
+                       placeholder={options?.placeholders?.name || 'YOUR NAME *'}
                        ref={register({ required: true })}/>
                 { errors.name && errors.name?.type === "required" &&
                     <ErrorMsg msg={'This field is required'} />
@@ -34,7 +34,7 @@ const Form = ({ options, close }) => {
                     <input className={styles.formField}
                            type='text'
                            name='phone'
-                           placeholder='YOUR PHONE *'
+                           placeholder={options?.placeholders?.phone || 'YOUR PHONE *'}
                            ref={register({ required: true, pattern: phonePattern })} />
                     { errors.phone && errors.phone?.type === "required" &&
                         <ErrorMsg msg={'This field is required'} />
@@ -49,7 +49,7 @@ const Form = ({ options, close }) => {
                 <input className={styles.formField}
                        type='text'
                        name='email'
-                       placeholder='YOUR E-MAIL *'
+                       placeholder={options?.placeholders?.email || 'YOUR E-MAIL *'}
                        ref={register({ required: true, pattern: emailPattern })}/>
                 { errors.email && errors.email?.type === "required" &&
                     <ErrorMsg msg={'This field is required'} />
@@ -62,7 +62,7 @@ const Form = ({ options, close }) => {
             <div className={styles.fieldWrapper}>
                 <textarea className={styles.formField}
                           name='message'
-                          placeholder='LEAVE YOUR MESSAGE HERE *'
+                          placeholder={options?.placeholders?.message || 'LEAVE YOUR MESSAGE HERE *'}
                           ref={register({ required: true })} />
                 { errors.message && errors.message?.type === "required" &&
                     <ErrorMsg msg={'This field is required'} />
