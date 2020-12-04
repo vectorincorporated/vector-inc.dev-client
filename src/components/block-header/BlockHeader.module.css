@@ -4,6 +4,10 @@
     align-items: baseline;
 }
 
+.centralized {
+    align-items: center;
+}
+
 .title {
     margin-bottom: 10px;
     margin-top: 0px;
