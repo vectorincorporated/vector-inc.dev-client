@@ -10,7 +10,7 @@ const InfoMenuItem = ({ toggleInfoBlock, item, activeItem, options }) => (
         <span>{ item.title }</span>
 
         { item === activeItem &&
-            <div className={ options?.mode === 'left' ? styles.lineLeft : styles.lineRight } />
+            <div className={options?.mode === 'left' ? styles.horizontalLineLeft : styles.horizontalLineRight } />
         }
     </div>
 );

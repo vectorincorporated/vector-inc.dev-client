@@ -12,39 +12,34 @@ const items = [
         id: 1,
         title: 'Enterprise solutions',
         items: [
-            'XML, XHTML, HTML5, CSS2/3',
-            'Bootstrap, HTML5 Boilerplate, Uikit;',
+            'XML1, XHTML, CSS2/3',
+            'Bootstrap2, HTML5 Boilerplate, Uikit;',
             'JavaScript, Alfresco, NodeJs;',
-            'Liferay;',
-            'Velocity, Sass/Scss, Less;',
-            'AJAX, REST, OAuth, SAML, SSO;',
-            'AngularJS, React JS, Backbone JS, Vue Js.'
+            'AngularJS2, React JS, Backbone JS, Vue Js.'
         ]
     },
     {
         id: 2,
         title: 'Full Stack Web Apps',
         items: [
-            'XML, XHTML, HTML5, CSS2/3',
-            'Bootstrap, HTML5 Boilerplate, Uikit;',
-            'JavaScript, Alfresco, NodeJs;',
-            'Liferay;',
-            'Velocity, Sass/Scss, Less;',
-            'AJAX, REST, OAuth, SAML, SSO;',
-            'AngularJS, React JS, Backbone JS, Vue Js.'
+            'XML3, XHTML, HTML5, CSS2/3',
+            'Bootstrap3, HTML5 Boilerplate, Uikit;',
+            'JavaScript, NodeJs;',
+            'AJAX, REST3, OAuth, SAML, SSO;',
+            'AngularJS, React JS, Backbone JS, Vue Js. '
         ]
     },
     {
         id: 3,
         title: 'Cloud Storage',
         items: [
-            'XML, XHTML, HTML5, CSS2/3',
-            'Bootstrap, HTML5 Boilerplate, Uikit;',
-            'JavaScript, Alfresco, NodeJs;',
-            'Liferay;',
-            'Velocity, Sass/Scss, Less;',
-            'AJAX, REST, OAuth, SAML, SSO;',
-            'AngularJS, React JS, Backbone JS, Vue Js.'
+            'ХML, XHTML, HTML5, CSS2/3',
+            'Bootstrap, HTML5, Boilerplate, Uikit;',
+            'JavaScript, Alfresco, NodeJs; ',
+            'Lifeгаy;',
+            'Velocty, Sass/Scss, Less;',
+            'AJAX, REST0, OAuth, SAML, SSO;',
+            'AngularJS, React JS, Backbone- JS, Vue Js.'
         ]
     },
     {
@@ -52,10 +47,6 @@ const items = [
         title: 'DevOps',
         items: [
             'XML, XHTML, HTML5, CSS2/3',
-            'Bootstrap, HTML5 Boilerplate, Uikit;',
-            'JavaScript, Alfresco, NodeJs;',
-            'Liferay;',
-            'Velocity, Sass/Scss, Less;',
             'AJAX, REST, OAuth, SAML, SSO;',
             'AngularJS, React JS, Backbone JS, Vue Js.'
         ]
@@ -64,13 +55,12 @@ const items = [
         id: 5,
         title: 'UI/UX Design',
         items: [
-            'XML, XHTML, HTML5, CSS2/3',
+            'XML, XHTML, HTML5, CSS2/1',
             'Bootstrap, HTML5 Boilerplate, Uikit;',
             'JavaScript, Alfresco, NodeJs;',
-            'Liferay;',
             'Velocity, Sass/Scss, Less;',
             'AJAX, REST, OAuth, SAML, SSO;',
-            'AngularJS, React JS, Backbone JS, Vue Js.'
+            'AngularJS, React JS, Backbone JS , Vue Js.'
         ]
     }
 ];
@@ -82,11 +72,13 @@ const header = {
 
 const ExpertiseBlock = () => {
     const [activeItem, setActiveItem] = useState(null);
+    const [activeItemIndex, setActiveItemIndex] = useState(null);
     const [smallerSphere, setSmallerSphere] = useState(false);
 
     const toggleInfoBlock = (e, item) => {
         e.stopPropagation();
         setActiveItem(item);
+        setActiveItemIndex(items.indexOf(item));
         setSmallerSphere(true);
     };
 
@@ -99,19 +91,18 @@ const ExpertiseBlock = () => {
             <div className={ styles.info }>
                 <div className={classNames( 'accent-text', styles.infoMenu )}>
                     {
-                        items.map((item) => {
-                            return <InfoMenuItem key={item.id}
+                        items.map((item, i) => {
+                            return <InfoMenuItem key={i}
                                                  toggleInfoBlock={toggleInfoBlock}
                                                  activeItem={activeItem}
                                                  item={item}/>
                         })
                     }
-
                 </div>
 
                 { activeItem &&
                     <div className={styles.subItems}>
-                        <DottedItemList items={ activeItem.items }/>
+                        <DottedItemList dottedItems={ activeItem.items } activeItemIndex={activeItemIndex}/>
                     </div>
                 }
 

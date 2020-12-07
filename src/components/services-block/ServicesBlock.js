@@ -132,7 +132,7 @@ const ServicesBlock = ({ location }) => {
                     </div>
 
                     <div className={styles.dottedList}>
-                        <DottedItemList items={ activeItem.technologies.items }
+                        <DottedItemList dottedItems={ activeItem.technologies.items }
                                         title={ activeItem.technologies.title }/>
                     </div>
 
