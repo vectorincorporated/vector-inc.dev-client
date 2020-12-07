@@ -22,15 +22,34 @@
     color: #111111;
 }
 
-.line-right {
+.horizontal-line-right {
     position: absolute;
-    width: 45px;
-    right: -45px;
-    border-top: 1px solid white;
+    right: -42px;
+    width: 41px;
+    height: 1500px;
+    background-image: linear-gradient(white, white);
+    background-size: 1px 0;
+    background-position: center left;
+    background-repeat:no-repeat;
+    animation: increase 0.5s;
+    animation-fill-mode: forwards;
 }
-.line-left {
+
+.horizontal-line-left {
     position: absolute;
-    width: 45px;
-    left: -45px;
-    border-top: 1px solid white;
+    left: -42px;
+    width: 41px;
+    height: 1500px;
+    background-image: linear-gradient(white, white);
+    background-size: 1px 0;
+background-position: center right;
+    background-repeat:no-repeat;
+    animation: increase 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes increase {
+    100% {
+        background-size: 100% 1px;
+    }
 }

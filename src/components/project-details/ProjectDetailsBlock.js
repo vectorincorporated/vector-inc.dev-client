@@ -51,13 +51,13 @@ const ProjectDetailsBlock = ({ project }) => {
 
             <div className={styles.dottedListInfo}>
                 <div className={styles.features}>
-                    <DottedItemList items={project.features.items}
+                    <DottedItemList dottedItems={project.features.items}
                                     title={project.features.title}
                                     isPink={false}/>
                 </div>
 
                 <div className={styles.technologies}>
-                    <DottedItemList items={project.technologies.items}
+                    <DottedItemList dottedItems={project.technologies.items}
                                     title={project.technologies.title}
                                     isPink={true}/>
                 </div>

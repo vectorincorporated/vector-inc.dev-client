@@ -1,4 +1,8 @@
-.expertise-item {
+.item-list-wrapper {
+    height: 100%;
+}
+
+.item-list {
     display: flex;
     flex-direction: column;
     position: relative;
