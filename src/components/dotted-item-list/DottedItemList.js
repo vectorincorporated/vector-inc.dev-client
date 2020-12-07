@@ -5,7 +5,7 @@ import DottedItem from "../dotted-item/DottedItem";
 import calculateShift from "../../utils/expertise-dotted-items/calculate-items-shift.helper";
 
 const DottedItemList = ({ dottedItems, title, isPink, activeItemIndex }) => {
-    const shift = activeItemIndex !== null && activeItemIndex !== undefined ?
+    const shift = activeItemIndex || activeItemIndex === 0 ?
         {
             position: 'absolute',
             top: calculateShift(dottedItems, activeItemIndex) + 'px'
