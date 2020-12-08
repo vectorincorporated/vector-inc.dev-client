@@ -15,12 +15,12 @@ const calculateShift = (dottedItems, activeItemIndex) => {
         dottedItemPositionList.push(i * dottedItemHeight);
     });
 
-    // find closest dot position to center of activeItem
+    // find closest dot position to horizontal line
     const closestDot = dottedItemPositionList?.reduce((a, b) => {
         return Math.abs(b - activeItemPosition) < Math.abs(a - activeItemPosition) ? b : a;
     });
 
-    // return shift of block with items
+    // return shift of block with items to put closest dot to line
     const dotRadius = 8;
     return activeItemPosition - closestDot - dotRadius;
 };
