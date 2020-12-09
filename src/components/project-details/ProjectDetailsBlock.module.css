@@ -10,6 +10,7 @@
 }
 
 .info-text {
+    display: flex;
     width: 47%;
 }
 
@@ -29,7 +30,16 @@
 .image-info {
     display: flex;
     flex-direction: column;
-    max-width: 400px;
+    margin-left: 20px;
+    width: 50%;
+}
+
+.image-info img {
+    height: auto;
+}
+
+.info-block {
+    width: 50%;
 }
 
 .web-link {
@@ -44,14 +54,8 @@
     margin-bottom: 100px;
 }
 
-.screens {
-    display: flex;
-    justify-content: space-between;
+.slider-wrapper {
     margin-bottom: 100px;
-}
-
-.screen img {
-    max-width: 210px;
 }
 
 .dotted-list-info {
