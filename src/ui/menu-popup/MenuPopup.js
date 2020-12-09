@@ -39,7 +39,7 @@ const MenuPopup = ({ close }) => (
         <div className={styles.links}>
             {
                 links.map((link) => {
-                    return <Link to={link.url}
+                    return <Link to ={link.url}
                                  key={link.url}
                                  className={styles.link}
                                  activeStyle={{ color: '#d3708e' }}

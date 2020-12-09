@@ -1,0 +1,8 @@
+.slider-item {
+    display: flex !important;
+    justify-content: center;
+}
+
+.slider-item img {
+    width: 95%;
+}

@@ -1,3 +1,7 @@
+@import '~@brainhubeu/react-carousel/lib/style.css';
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
 @import "../styles/lines-animation.css";
 @import "../styles/particles-animation.css";
 @import "../styles/title-animation.css";
@@ -130,3 +134,4 @@ a {
 .container {
     padding: 0 9%;
 }
+

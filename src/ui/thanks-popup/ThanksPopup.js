@@ -2,7 +2,7 @@ import React from "react";
 
 import styles from './ThanksPopup.module.css';
 import logo from "../../images/logo.svg";
-import headerStyles from "../header/Header.module.css";
+import headerStyles from "../../components/header/Header.module.css";
 
 const header = {
     title: 'Hi [Name] \n' +
