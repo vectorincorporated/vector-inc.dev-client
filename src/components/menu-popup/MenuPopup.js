@@ -5,7 +5,7 @@ import styles from './MenuPopup.module.css';
 
 const links = [
     {
-        url: '/home',
+        url: '/',
         title: 'home'
     },
     {
