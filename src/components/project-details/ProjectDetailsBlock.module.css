@@ -30,16 +30,17 @@
 .image-info {
     display: flex;
     flex-direction: column;
-    margin-left: 20px;
-    width: 50%;
+    width: 47%;
 }
 
 .image-info img {
     height: auto;
+    width: 100%;
+    margin-top: 8px;
 }
 
 .info-block {
-    width: 50%;
+    width: 47%;
 }
 
 .web-link {

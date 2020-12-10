@@ -1,8 +1,8 @@
-.slider-item {
-    display: flex !important;
-    justify-content: center;
+.slider-wrapper {
 }
 
 .slider-item img {
-    width: 95%;
+    height: 266px;
+    padding-right: 40px;
+    cursor: pointer;
 }

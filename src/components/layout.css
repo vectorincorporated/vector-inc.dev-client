@@ -6,6 +6,7 @@
 @import "../styles/title-animation.css";
 @import "../styles/menu-popup.css";
 @import "../styles/scrollbar.css";
+@import "../styles/slick-slider.css";
 
 @font-face {
     font-family: 'VT323';
