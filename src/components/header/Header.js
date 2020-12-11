@@ -6,8 +6,8 @@ import {Link} from "gatsby";
 import logo from '../../images/logo.svg';
 import menu from '../../images/menu-icon.svg';
 import headerStyles from './Header.module.css';
-import MenuPopup from "../menu-popup/MenuPopup";
-import ContactFormPopup from "../contact-form-popup/ContactFormPopup";
+import MenuPopup from "../../ui/menu-popup/MenuPopup";
+import ContactFormPopup from "../../ui/contact-form-popup/ContactFormPopup";
 
 const headerOptions = {
     title: 'LEAVE YOUR CONTACTS',

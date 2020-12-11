@@ -1,8 +1,12 @@
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
 @import "../styles/lines-animation.css";
 @import "../styles/particles-animation.css";
 @import "../styles/title-animation.css";
 @import "../styles/menu-popup.css";
 @import "../styles/scrollbar.css";
+@import "../styles/slick-slider.css";
 
 @font-face {
     font-family: 'VT323';
@@ -130,3 +134,4 @@ a {
 .container {
     padding: 0 9%;
 }
+

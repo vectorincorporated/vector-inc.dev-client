@@ -4,6 +4,7 @@ import styles from './ProjectDetailsBlock.module.css';
 import InfoBlock from "../info-block/InfoBlock";
 import BlockHeader from "../block-header/BlockHeader";
 import DottedItemList from "../dotted-item-list/DottedItemList";
+import CustomSlider from "../../ui/custom-slider/CustomSlider";
 
 const header = {
     title: 'Project name'
@@ -12,13 +13,13 @@ const header = {
 const ProjectDetailsBlock = ({ project }) => {
     return (
         <div className={ styles.project }>
-            <div className={styles.generalInfo}>
-                <div className={styles.infoText}>
-                    <div className={ styles.header }>
-                        <BlockHeader header={ header } />
-                    </div>
+            <div className={ styles.header }>
+                <BlockHeader header={ header } />
+            </div>
 
-                    <InfoBlock activeItem={project.general} options={{ isDivider: true }}/>
+            <div className={styles.generalInfo}>
+                <div className={styles.infoBlock}>
+                    <InfoBlock activeItem={project.general} options={{ isTitle: true, isDivider: true }}/>
                 </div>
 
                 <div className={styles.imageInfo}>
@@ -32,32 +33,26 @@ const ProjectDetailsBlock = ({ project }) => {
 
             <div className={styles.secondaryInfo}>
                 <div className={styles.infoText}>
-                    <InfoBlock activeItem={project.problems} options={{ isDivider: true }}/>
+                    <InfoBlock activeItem={project.problems} options={{ isTitle: true, isDivider: true }} />
                 </div>
                 <div className={styles.infoText}>
-                    <InfoBlock activeItem={project.solutions} options={{ isDivider: true }}/>
+                    <InfoBlock activeItem={project.solutions} options={{ isTitle: true, isDivider: true }} />
                 </div>
             </div>
 
-            <div className={styles.screens}>
-                {
-                    project?.screenshots.map((img, i) => {
-                        return <div key={i + 'img'} className={styles.screen}>
-                            <img src={img} alt=""/>
-                        </div>
-                    })
-                }
+            <div className={styles.sliderWrapper}>
+                <CustomSlider imgList={project?.screenshots} />
             </div>
 
             <div className={styles.dottedListInfo}>
                 <div className={styles.features}>
-                    <DottedItemList items={project.features.items}
+                    <DottedItemList dottedItems={project.features.items}
                                     title={project.features.title}
                                     isPink={false}/>
                 </div>
 
                 <div className={styles.technologies}>
-                    <DottedItemList items={project.technologies.items}
+                    <DottedItemList dottedItems={project.technologies.items}
                                     title={project.technologies.title}
                                     isPink={true}/>
                 </div>
