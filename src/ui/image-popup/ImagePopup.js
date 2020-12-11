@@ -20,16 +20,18 @@ const ImagePopup = ({ close, imageList, imageIndex }) => {
                 <span className={styles.closeBtn} onClick={close}>X</span>
             </div>
 
-            <div className={styles.sliderWrapperChild}>
-                <Slider {...settings}>
-                    {
-                        imageList?.map((img) => {
-                            return <div key={imageIndex} className={styles.sliderItem}>
-                                <img src={img} alt=''/>
-                            </div>
-                        })
-                    }
-                </Slider>
+            <div className={styles.sliderWrapper}>
+                <div className={styles.sliderWrapperChild}>
+                    <Slider {...settings}>
+                        {
+                            imageList?.map((img) => {
+                                return <div key={imageIndex} className={styles.sliderItem}>
+                                    <img src={img} alt=''/>
+                                </div>
+                            })
+                        }
+                    </Slider>
+                </div>
             </div>
         </div>
     )
