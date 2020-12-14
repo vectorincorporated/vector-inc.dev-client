@@ -2,14 +2,10 @@ import React, {} from "react";
 import classNames from 'classnames';
 
 import styles from './ContactsBlock.module.css';
-import facebook from '../../images/icons/contacts/facebook.svg';
-import instagram from '../../images/icons/contacts/instagram.svg';
-import linkedin from '../../images/icons/contacts/linkedin.svg';
 import mail from '../../images/icons/contacts/mail.svg';
 import phone from '../../images/icons/contacts/phone.svg';
 import skype from '../../images/icons/contacts/skype.svg';
 import Contact from "./contact/Contact";
-import Social from "./social/Social";
 
 const contacts = {
     main: {
@@ -38,27 +34,7 @@ const contacts = {
             }]
     },
     socials: {
-        title: 'WE IN SOCIAL',
-        items: [
-            {
-                id: 14,
-                icon: facebook,
-                label: 'Facebook',
-                link: 'google.com'
-            },
-            {
-                id: 15,
-                icon: instagram,
-                label: 'Instagram',
-                link: 'google.com'
-            },
-            {
-                id: 16,
-                icon: linkedin,
-                label: 'Linked-in',
-                link: 'google.com'
-            }
-        ]
+        title: 'WE IN SOCIAL'
     }
 };
 
@@ -85,13 +61,10 @@ const ContactsBlock = () => {
                 <div className={styles.divider}>••••••••••••••••••••••••••••••••••••••</div>
 
                 <div className={styles.socialItems}>
-                    {
-                        contacts?.socials?.items?.map((social) => {
-                            return <div className={styles.social} key={social.id}>
-                                <Social social={social}/>
-                            </div>
-                        })
-                    }
+                    <a href="https://www.linkedin.com/company/llc-vector-incorporated"
+                       className={classNames(styles.linkedin, styles.icon)} />
+                    <a href="https://www.facebook.com/VectorIncorporated"
+                       className={classNames(styles.facebook, styles.icon)} />
                 </div>
 
             </div>
