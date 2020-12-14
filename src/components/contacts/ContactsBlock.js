@@ -1,4 +1,5 @@
 import React, {} from "react";
+import classNames from 'classnames';
 
 import styles from './ContactsBlock.module.css';
 import facebook from '../../images/icons/contacts/facebook.svg';
@@ -66,7 +67,7 @@ const ContactsBlock = () => {
         <div className={ styles.contacts }>
 
             <div>
-                <div className='accent-text'>{ contacts?.main?.title }</div>
+                <div className={classNames('accent-text', styles.title)}>{ contacts?.main?.title }</div>
                 <div className={styles.divider}>••••••••••••••••••••••••••••••••••••••</div>
 
                     {
@@ -80,7 +81,7 @@ const ContactsBlock = () => {
             </div>
 
             <div>
-                <div className='accent-text'>{ contacts?.socials?.title }</div>
+                <div className={classNames('accent-text', styles.title)}>{ contacts?.socials?.title }</div>
                 <div className={styles.divider}>••••••••••••••••••••••••••••••••••••••</div>
 
                 <div className={styles.socialItems}>
