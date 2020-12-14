@@ -2,7 +2,8 @@ body {
     background-color: #323133;
 }
 
-body:after {
+body:after,
+body .falling-lines:after {
     content: '';
     position: fixed;
     bottom: 0;

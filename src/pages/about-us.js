@@ -1,4 +1,5 @@
-import React from "react"
+import React from "react";
+import Helmet from "react-helmet";
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -25,6 +26,23 @@ const AboutUsPage = () => (
         </div>
         <div className='container'>
             <QuestionsFormBlock />
+        </div>
+
+        <div className='vhr-filter-helpers'>
+            <svg>
+                <filter id="r">
+                    <feColorMatrix type="matrix" values="1 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0 "/>
+                </filter>
+                <filter id="g">
+                    <feColorMatrix type="matrix" values="0 0 0 0 0  0 1 0 0 0  0 0 0 0 0  0 0 0 1 0 "/>
+                </filter>
+                <filter id="b">
+                    <feColorMatrix type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 1 0 0  0 0 0 1 0 "/>
+                </filter>
+            </svg>
+            <Helmet>
+                <script src={'./vhs-script.js'} type="text/javascript" />
+            </Helmet>
         </div>
     </Layout>
 );
