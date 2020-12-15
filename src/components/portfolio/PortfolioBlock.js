@@ -6,7 +6,7 @@ import WorkList from "./work-list/WorkList";
 import WorkInfo from "./work-info/WorkInfo";
 import SphereAnimation from "../sphere-animation/SphereAnimation";
 
-const newWorks = [
+const works = [
     {
         id: 1,
         title: 'Project_1',
@@ -24,25 +24,23 @@ const newWorks = [
         title: 'Project_3',
         text: 'Lorem (3) oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron',
         link: '#'
-    }
-];
-const oldWorks = [
+    },
     {
-        id: 1,
-        title: 'Project_1',
-        text: 'Lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron',
+        id: 4,
+        title: 'Project_4',
+        text: 'Lorem no oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron',
         link: '#'
     },
     {
-        id: 2,
-        title: 'Project_2',
-        text: 'Lorem 2 oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron',
+        id: 5,
+        title: 'Project_5',
+        text: 'Lorem tye oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron',
         link: '#'
     },
     {
-        id: 3,
-        title: 'Project_3',
-        text: 'Lorem (3) oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron',
+        id: 6,
+        title: 'Project_6',
+        text: 'Lorem sasha gray oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron',
         link: '#'
     }
 ];
@@ -61,35 +59,21 @@ const PortfolioBlock = () => {
 
     return (
         <div className={styles.portfolio}>
-
-            <div className={ styles.works }>
-                <div className={ styles.worksWrapper }>
-                    <div className={ styles.header }>
-                        <BlockHeader header={ header } />
-                    </div>
-
-                    <div>
-                        <WorkList works={newWorks}
-                                  toggleInfoBlock={toggleInfoBlock}
-                                  activeItem={activeItem}
-                                  latest={true}/>
-                    </div>
-
-                    <div>
-                        <WorkList works={oldWorks}
-                                  toggleInfoBlock={toggleInfoBlock}
-                                  activeItem={activeItem}/>
-                    </div>
+            <div className={styles.worksWrapper}>
+                <div className={ styles.header }>
+                    <BlockHeader header={ header } />
                 </div>
 
-                { activeItem &&
+                <WorkList works={works}
+                          toggleInfoBlock={toggleInfoBlock}
+                          activeItem={activeItem}/>
+            </div>
+
+            { activeItem ?
                 <div className={styles.workInfoWrapper}>
                     <WorkInfo activeItem={activeItem}/>
                 </div>
-                }
-            </div>
-
-            { !activeItem &&
+                :
                 <div className={styles.animationWrapper}>
                     <SphereAnimation color='white'/>
                 </div>

@@ -1,23 +1,25 @@
 .works-wrapper {
     overflow: hidden;
+    width: 100%;
 }
 
 .header {
     display: flex;
     flex-direction: row;
-    max-width: 365px;
+    max-width: 100%;
     font-size: 32px;
     white-space: nowrap;
     overflow: hidden;
 }
 
-.divider {
-    margin-left: 10px;
-}
+.divider {}
 
 .works {
     display: flex;
     flex-direction: row;
     margin-top: 10px;
     margin-bottom: 15px;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -ms-flex-pack: justify;
 }

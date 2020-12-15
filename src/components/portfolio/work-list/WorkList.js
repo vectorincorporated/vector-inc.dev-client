@@ -3,15 +3,12 @@ import React from "react";
 import styles from './WorkList.module.css';
 import PortfolioWorkItem from "../portfolio-work-item/PortfolioWorkItem";
 
-const WorkList = ({ works, toggleInfoBlock, latest, activeItem }) => {
+const WorkList = ({ works, toggleInfoBlock, activeItem }) => {
     return (
         <div className={styles.worksWrapper}>
             <div className={styles.header}>
-                <div>
-                    { latest ? 'Last month' : 'Long time ago'}
-                </div>
                 <div className={styles.divider}>
-                    ••••••••••••••••••••••••••••
+                    ••••••••••••••••••••••••••••••••••••••••••
                 </div>
             </div>
 
