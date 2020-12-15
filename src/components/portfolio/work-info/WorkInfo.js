@@ -20,7 +20,7 @@ const WorkInfo = ({ activeItem }) => {
             </div>
 
             <div className={styles.footer}>
-                <div className='accent-text'>{ activeItem.title }</div>
+                <div className={classNames('accent-text', styles.projectName)}>{ activeItem.title }</div>
                 <div className={styles.footerItems}>
                     <a href={activeItem.link} className={styles.linkWrapper}>
                         <div className={classNames('accent-text', styles.webLink)}>WEB</div>
@@ -28,7 +28,7 @@ const WorkInfo = ({ activeItem }) => {
                     </a>
                     <div className={styles.smallDivider}>....</div>
                     <a href='/project-details' className={classNames('accent-text', styles.detailsLink)}>
-                        <div>Show more details</div>
+                        <div>more details</div>
                         <div className={styles.eyeIcon}/>
                     </a>
                 </div>
