@@ -8,7 +8,7 @@ const WorkList = ({ works, toggleInfoBlock, activeItem }) => {
         <div className={styles.worksWrapper}>
             <div className={styles.header}>
                 <div className={styles.divider}>
-                    ••••••••••••••••••••••••••••••••••••••••••
+                    •••••••••••••••••••••••••••••••••••••••••••••
                 </div>
             </div>
 
