@@ -6,9 +6,8 @@
     background-color: rgba(33, 30, 32, 0.8);
 }
 
-.contactUsBtn {
-    max-width: 188px;
-    width: 100%;
+.contact-us-btn {
+    width: 20%;
     color: white;
     background-color: #d3708e;
 }
@@ -20,8 +19,7 @@
 }
 
 .menu {
-    max-width: 188px;
-    width: 100%;
+    width: 20%;
 }
 
 .menu img {
