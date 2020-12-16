@@ -24,6 +24,24 @@ const works = [
         title: 'Project_3',
         text: 'Lorem (3) oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron',
         link: '#'
+    },
+    {
+        id: 4,
+        title: 'Project_4',
+        text: 'Lorem no oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron',
+        link: '#'
+    },
+    {
+        id: 5,
+        title: 'Project_5',
+        text: 'Lorem tye oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron',
+        link: '#'
+    },
+    {
+        id: 6,
+        title: 'Project_6',
+        text: 'Lorem sasha gray oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron lorem oxxxymiron',
+        link: '#'
     }
 ];
 
@@ -41,37 +59,23 @@ const PortfolioBlock = () => {
 
     return (
         <div className={styles.portfolio}>
-
-            <div className={ styles.works }>
-                <div className={ styles.worksWrapper }>
-                    <div className={ styles.header }>
-                        <BlockHeader header={ header } />
-                    </div>
-
-                    <div>
-                        <WorkList works={works}
-                                  toggleInfoBlock={toggleInfoBlock}
-                                  activeItem={activeItem}
-                                  latest={true}/>
-                    </div>
-
-                    <div>
-                        <WorkList works={works}
-                                  toggleInfoBlock={toggleInfoBlock}
-                                  activeItem={activeItem}/>
-                    </div>
+            <div className={styles.worksWrapper}>
+                <div className={ styles.header }>
+                    <BlockHeader header={ header } />
                 </div>
 
-                { !activeItem &&
-                    <div className={styles.animationWrapper}>
-                        <SphereAnimation color='white'/>
-                    </div>
-                }
+                <WorkList works={works}
+                          toggleInfoBlock={toggleInfoBlock}
+                          activeItem={activeItem}/>
             </div>
 
-            { activeItem &&
+            { activeItem ?
                 <div className={styles.workInfoWrapper}>
                     <WorkInfo activeItem={activeItem}/>
+                </div>
+                :
+                <div className={styles.animationWrapper}>
+                    <SphereAnimation color='white'/>
                 </div>
             }
         </div>

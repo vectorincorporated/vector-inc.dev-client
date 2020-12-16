@@ -1,6 +1,8 @@
-import React from "react";
+import React, {useState} from "react";
 import { useForm } from "react-hook-form";
+import Popup from "reactjs-popup";
 
+import ThanksPopup from "../../ui/thanks-popup/ThanksPopup";
 import styles from "./From.module.css";
 import FormBtn from "./form-btn/FormBtn";
 import ErrorMsg from "./error-msg/ErrorMsg";
@@ -9,8 +11,12 @@ const Form = ({ options, close }) => {
     const emailPattern = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
     const phonePattern = /^[0-9\-\+]{5,15}$/;
     const { register, handleSubmit, errors } = useForm();
+    const [ formValues, setFormValues ] = useState({});
+    const [ openPopup, setOpenPopup ] = useState(false);
 
     const onSubmit = e => {
+        setFormValues(e);
+        setOpenPopup(true);
         if (close) close();
         // TODO: implement with BE
     };
@@ -69,7 +75,11 @@ const Form = ({ options, close }) => {
                 }
             </div>
 
-            <FormBtn options={options} />
+            <FormBtn options={options}/>
+
+            <Popup open={openPopup} onClose={() => setOpenPopup(false)} modal>
+                { close => <ThanksPopup close={close} userName={formValues?.name}/> }
+            </Popup>
         </form>
     )
 };

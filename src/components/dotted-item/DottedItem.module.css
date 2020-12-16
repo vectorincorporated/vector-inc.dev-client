@@ -8,12 +8,13 @@
     border-left: 1px solid white;
 }
 
-.item:hover .circle-left {
+.item:hover.hover-effect .circle-left {
     background-color: #d3708e;
 }
 
-.item:hover .item-text {
+.item:hover.hover-effect .item-text {
     color: #d3708e;
+    cursor: pointer;
 }
 
 .item-pink {
