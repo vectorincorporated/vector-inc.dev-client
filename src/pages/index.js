@@ -10,6 +10,7 @@ import HowWeWorkBlock from "../components/how-we-work/HowWeWorkBlock";
 import ServicesHomeBlock from "../components/services-home-block/ServicesHomeBlock";
 import QuestionsFormBlock from "../components/question-form-block/QuestionsFormBlock";
 import OurClientsBlock from "../components/our-clients-block/OurClientsBlock";
+import Helmet from "react-helmet";
 
 const IndexPage = () => (
     // TODO: clear and make redirect to Home component
@@ -38,6 +39,10 @@ const IndexPage = () => (
         <div className='container'>
             <QuestionsFormBlock />
         </div>
+
+        <Helmet>
+            <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+        </Helmet>
     </Layout>
 );
 
