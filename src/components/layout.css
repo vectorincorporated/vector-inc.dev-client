@@ -117,6 +117,7 @@ a {
 
 .link {
     color: #d3708e;
+    white-space: nowrap;
 }
 
 .full-height-view {
