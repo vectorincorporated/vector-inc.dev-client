@@ -12,8 +12,8 @@ const HeaderMobile = () => {
     return (
         <header>
             <div className={styles.wrapper}>
-                <Link to={'/'}>
-                    <img src={logo} className={styles.logo} alt="Vector"/>
+                <Link to={'/'} className={styles.logoWrapper}>
+                    <img src={logo} className={styles.logoMobile} alt="Vector"/>
                 </Link>
 
                 <Popup trigger={ <img src={menu} alt="menu"/> } modal>
