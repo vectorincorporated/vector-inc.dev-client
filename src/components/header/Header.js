@@ -11,10 +11,10 @@ const Header = () => {
     return (
         <header>
                 {
-                    windowWidth > 768 ?
-                        <HeaderDesktop />
-                        :
+                    windowWidth <= 768 ?
                         <HeaderMobile />
+                        :
+                        <HeaderDesktop />
                 }
         </header>
     );
