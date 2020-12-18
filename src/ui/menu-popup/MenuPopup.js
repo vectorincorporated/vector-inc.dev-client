@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
+import classNames from 'classnames';
 
 import styles from './MenuPopup.module.css';
 
@@ -31,7 +32,7 @@ const links = [
 ];
 
 const MenuPopup = ({ close }) => (
-    <div className={styles.wrapper}>
+    <div className={classNames(styles.wrapper, 'falling-lines')}>
         <div className={styles.header}>
             <span className={styles.closeBtn} onClick={close}>X</span>
         </div>
