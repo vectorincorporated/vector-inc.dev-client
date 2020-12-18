@@ -1,0 +1,29 @@
+.wrapper {
+    display: flex;
+    height: 58px;
+    margin-bottom: 20px;
+}
+
+.horizontal-line {
+    width: 100%;
+    background-image: linear-gradient(white, white);
+    background-size: 1px 0;
+    background-position: center left;
+    background-repeat:no-repeat;
+    animation: increase 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.horizontal-line-right {
+    background-position: center left;
+}
+
+.horizontal-line-left {
+    background-position: center right;
+}
+
+@keyframes increase {
+    100% {
+        background-size: 100% 1px;
+    }
+}

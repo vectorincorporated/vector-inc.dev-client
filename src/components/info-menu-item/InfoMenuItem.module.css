@@ -1,3 +1,10 @@
+.wrapper {
+    position: relative;
+    display: flex;
+    height: 100%;
+    margin-bottom: 20px;
+}
+
 .info-item {
     display: flex;
     align-items: center;
@@ -6,7 +13,6 @@
     width: 100%;
     min-width: 330px;
     height: 56px;
-    margin-bottom: 20px;
     border: 1px solid white;
     cursor: pointer;
     box-sizing: content-box;
@@ -20,36 +26,4 @@
 .info-item:hover {
     background: white;
     color: #111111;
-}
-
-.horizontal-line-right {
-    position: absolute;
-    right: -42px;
-    width: 41px;
-    height: 100%;
-    background-image: linear-gradient(white, white);
-    background-size: 1px 0;
-    background-position: center left;
-    background-repeat:no-repeat;
-    animation: increase 0.5s;
-    animation-fill-mode: forwards;
-}
-
-.horizontal-line-left {
-    position: absolute;
-    left: -42px;
-    width: 41px;
-    height: 1500px;
-    background-image: linear-gradient(white, white);
-    background-size: 1px 0;
-background-position: center right;
-    background-repeat:no-repeat;
-    animation: increase 0.5s;
-    animation-fill-mode: forwards;
-}
-
-@keyframes increase {
-    100% {
-        background-size: 100% 1px;
-    }
 }

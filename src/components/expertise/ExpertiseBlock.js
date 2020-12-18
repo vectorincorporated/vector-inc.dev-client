@@ -6,6 +6,7 @@ import classNames from "classnames";
 import InfoMenuItem from "../info-menu-item/InfoMenuItem";
 import DottedItemList from "../dotted-item-list/DottedItemList";
 import SphereAnimation from "../sphere-animation/SphereAnimation";
+import AnimatedLine from "../animated-line/AnimatedLine";
 
 const items = [
     {
@@ -91,11 +92,23 @@ const ExpertiseBlock = () => {
             <div className={ styles.info }>
                 <div className={classNames( 'accent-text', styles.infoMenu )}>
                     {
-                        items.map((item, i) => {
-                            return <InfoMenuItem key={i}
+                        items.map((item) => {
+                            return <InfoMenuItem key={item.id}
                                                  toggleInfoBlock={toggleInfoBlock}
                                                  activeItem={activeItem}
                                                  item={item}/>
+                        })
+                    }
+                </div>
+
+                <div className={styles.animatedLine}>
+                    {
+                        items.map((item) => {
+                            return <AnimatedLine key={item.id}
+                                                 toggleInfoBlock={toggleInfoBlock}
+                                                 activeItem={activeItem}
+                                                 mode={'right'}
+                                                 item={item} />
                         })
                     }
                 </div>
