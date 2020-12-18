@@ -11,7 +11,7 @@ import MenuPopup from "../menu-popup/MenuPopup";
 const HeaderMobile = () => {
     return (
         <div className={styles.wrapper}>
-            <Link to={'/'} className={styles.logoWrapper}>
+            <Link to={'/'}>
                 <img src={logo} className={styles.logoMobile} alt="Vector"/>
             </Link>
 

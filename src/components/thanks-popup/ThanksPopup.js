@@ -2,7 +2,7 @@ import React from "react";
 
 import styles from './ThanksPopup.module.css';
 import logo from "../../images/logo.svg";
-import headerStyles from "../header/Header.module.css";
+import headerStyles from "../header/HeaderDesktop.module.css";
 
 
 const ThanksPopup = ({ close, userName }) => {
