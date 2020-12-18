@@ -61,12 +61,12 @@
 
 .dotted-list-info {
     display: flex;
+    justify-content: space-between;
 }
 
 .technologies,
 .features {
-    flex: 50%;
-    padding-right: 30px;
+    width: 47%;
 }
 
 .technologies {
