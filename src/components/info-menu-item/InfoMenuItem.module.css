@@ -1,7 +1,7 @@
 .wrapper {
     position: relative;
     display: flex;
-    height: 100%;
+    width: 100%;
     margin-bottom: 20px;
 }
 
@@ -9,7 +9,6 @@
     display: flex;
     align-items: center;
     position: relative;
-    max-width: 336px;
     width: 100%;
     min-width: 330px;
     height: 56px;
@@ -19,11 +18,16 @@
 }
 
 .info-item span {
-    white-space: nowrap;
     margin: 0 15px;
 }
 
 .info-item:hover {
     background: white;
     color: #111111;
+}
+
+@media screen and (min-width: 992px) {
+    .info-item span {
+        white-space: nowrap;
+    }
 }

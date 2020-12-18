@@ -18,11 +18,9 @@
 }
 
 .info-block-wrapper {
-    margin-left: 45px;
-    margin-right: 20px;
     padding: 16px;
-    min-height: 360px;
     border: 1px solid white;
+    width: 47%;
 }
 
 .content {
@@ -31,6 +29,12 @@
     height: 337px;
     margin-top: 80px;
     margin-bottom: 100px;
+}
+
+.animated-line {
+    display: block;
+    max-width: 50px;
+    width: 100%;
 }
 
 .info {

@@ -6,6 +6,7 @@ import InfoMenuItem from "../info-menu-item/InfoMenuItem";
 import InfoBlock from "../info-block/InfoBlock";
 import BlockHeader from "../block-header/BlockHeader";
 import CircleAnimation from "../circle-animation/CircleAnimation";
+import AnimatedLine from "../animated-line/AnimatedLine";
 
 const defaultText = `
         You want to build your product with a team that establishes a clear design process, meets deadlines, and delivers a spot-on end result? 
@@ -90,7 +91,18 @@ const ServicesHomeBlock = () => {
                                 />
                             })
                         }
+                    </div>
 
+                    <div className={styles.animatedLine}>
+                        {
+                            items.map((item) => {
+                                return <AnimatedLine key={item.id}
+                                                     toggleInfoBlock={toggleInfoBlock}
+                                                     activeItem={activeItem}
+                                                     mode={'left'}
+                                                     item={item} />
+                            })
+                        }
                     </div>
 
                     { activeItem &&

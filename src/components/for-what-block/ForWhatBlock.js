@@ -6,6 +6,7 @@ import InfoMenuItem from "../info-menu-item/InfoMenuItem";
 import InfoBlock from "../info-block/InfoBlock";
 import BlockHeader from "../block-header/BlockHeader";
 import CircleAnimation from "../circle-animation/CircleAnimation";
+import AnimatedLine from "../animated-line/AnimatedLine";
 
 const items = [
     {
@@ -86,6 +87,18 @@ const ForWhatBlock = () => {
                             })
                         }
 
+                    </div>
+
+                    <div className={styles.animatedLine}>
+                        {
+                            items.map((item) => {
+                                return <AnimatedLine key={item.id}
+                                                     toggleInfoBlock={toggleInfoBlock}
+                                                     activeItem={activeItem}
+                                                     mode={'right'}
+                                                     item={item} />
+                            })
+                        }
                     </div>
 
                     { activeItem &&
