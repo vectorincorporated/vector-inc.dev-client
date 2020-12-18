@@ -1,5 +1,6 @@
 import React from "react"
 import Particles from "react-tsparticles";
+import Helmet from "react-helmet";
 
 import { options } from '../utils/particles/particles-options';
 import SEO from "../components/seo";
@@ -38,6 +39,10 @@ const IndexPage = () => (
         <div className='container'>
             <QuestionsFormBlock />
         </div>
+
+        <Helmet>
+            <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+        </Helmet>
     </Layout>
 );
 
