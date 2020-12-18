@@ -42,7 +42,7 @@
     height: 1500px;
     background-image: linear-gradient(white, white);
     background-size: 1px 0;
-background-position: center right;
+    background-position: center right;
     background-repeat:no-repeat;
     animation: increase 0.5s;
     animation-fill-mode: forwards;

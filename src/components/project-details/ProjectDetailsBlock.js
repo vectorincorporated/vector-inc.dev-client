@@ -4,7 +4,7 @@ import styles from './ProjectDetailsBlock.module.css';
 import InfoBlock from "../info-block/InfoBlock";
 import BlockHeader from "../block-header/BlockHeader";
 import DottedItemList from "../dotted-item-list/DottedItemList";
-import CustomSlider from "../../ui/custom-slider/CustomSlider";
+import CustomSlider from "../custom-slider/CustomSlider";
 
 const header = {
     title: 'Project name'
