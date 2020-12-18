@@ -13,7 +13,7 @@ const DottedItemList = ({ dottedItems, title, isPink, activeItemIndex }) => {
         : null;
 
     return (
-        <div className={styles.itemListWrapper} style={shift}>
+        <div style={shift}>
             <div className={ styles.itemList }>
                 {
                     title &&
