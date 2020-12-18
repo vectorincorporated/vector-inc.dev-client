@@ -13,7 +13,7 @@ const HeaderMobile = () => {
         <header>
             <div className={styles.wrapper}>
                 <Link to={'/'}>
-                    <img src={logo} className={styles.logoMobile} alt="Vector"/>
+                    <img src={logo} id='mobile-logo' className={styles.logoMobile} alt="Vector"/>
                 </Link>
 
                 <Popup trigger={ <img src={menu} alt="menu"/> } modal>

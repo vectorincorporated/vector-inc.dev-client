@@ -26,7 +26,7 @@ const HeaderDesktop = () => {
                 </div>
 
                 <Link to={'/'}>
-                    <img src={logo} className={headerStyles.logo} alt="Vector"/>
+                    <img src={logo} id='desktop-logo' className={headerStyles.logo} alt="Vector"/>
                 </Link>
 
                 <Popup trigger={ <button className={headerStyles.contactUsBtn}>contact us</button> } modal>
