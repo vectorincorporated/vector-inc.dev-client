@@ -7,6 +7,7 @@ import HeaderDesktop from "./HeaderDesktop";
 
 const Header = () => {
     const windowWidth = useWindowWidth();
+    console.log(windowWidth);
     return (
         <header>
                 {
