@@ -21,8 +21,8 @@ const Header = () => {
     const windowWidth = useWindowWidth();
     return (
         <>
-            { windowWidth > 768 ?
-                <header>
+            <header>
+                { windowWidth > 768 ?
                     <div className={headerStyles.wrapper}>
                         <div className={headerStyles.menu}>
                             <Popup trigger={ <img src={menu} alt="menu"/> } modal>
@@ -38,10 +38,10 @@ const Header = () => {
                             { close => <ContactFormPopup close={close} headerOptions={headerOptions} /> }
                         </Popup>
                     </div>
-                </header>
-                :
-                <HeaderMobile />
-            }
+                    :
+                    <HeaderMobile />
+                }
+            </header>
         </>
     );
 };
