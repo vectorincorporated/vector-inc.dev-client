@@ -13,9 +13,8 @@
 
 .content {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     flex-direction: row-reverse;
-    height: 570px;
     width: 100%;
     margin-top: 80px;
     margin-bottom: 100px;
@@ -28,17 +27,20 @@
     align-items: flex-start;
 }
 
+.animated-line {
+    display: block;
+    max-width: 50px;
+    width: 100%;
+}
+
 .info {
     display: flex;
     flex-direction: row-reverse;
 }
 
 .info-block-wrapper {
-    margin-left: 44px;
-    margin-right: 44px;
     padding: 16px;
     border: 1px solid white;
-    height: 600px;
 }
 
 .items {
