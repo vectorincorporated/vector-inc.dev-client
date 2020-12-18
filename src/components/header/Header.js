@@ -8,14 +8,14 @@ import HeaderDesktop from "./HeaderDesktop";
 const Header = () => {
     const windowWidth = useWindowWidth();
     return (
-        <div>
+        <header>
                 {
                     windowWidth > 768 ?
                         <HeaderDesktop />
                         :
                         <HeaderMobile />
                 }
-        </div>
+        </header>
     );
 };
 
