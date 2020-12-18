@@ -4,6 +4,7 @@
     align-items: center;
     padding: 16px 6%;
     background-color: rgba(33, 30, 32, 0.8);
+    z-index: 3;
 }
 
 .logo-wrapper {

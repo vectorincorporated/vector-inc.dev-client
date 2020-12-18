@@ -6,6 +6,10 @@ import InfoMenuItem from "../info-menu-item/InfoMenuItem";
 import InfoBlock from "../info-block/InfoBlock";
 import BlockHeader from "../block-header/BlockHeader";
 import CircleAnimation from "../circle-animation/CircleAnimation";
+import InfoMenuItemMobile from "../info-menu-item/InfoMenuItemMobile";
+import ThanksPopup from "../thanks-popup/ThanksPopup";
+import Popup from "reactjs-popup";
+import ForWhatPopup from "../for-what-popup/ForWhatPopup";
 
 const items = [
     {
@@ -60,16 +64,24 @@ const header = {
     description: 'we use the best technologies to enhance your product'
 };
 
-const ForWhatBlock = () => {
+const ForWhatBlock = ({ windowWidth }) => {
     const [activeItem, setActiveItem] = useState(null);
 
     const toggleInfoBlock = (e, item) => {
         e.stopPropagation();
         setActiveItem(item);
+        if (windowWidth <= 992) setOpenPopup(true);
     };
 
+    const [openPopup, setOpenPopup] = useState(false);
+
     return (
-        <div className={styles.forWhat}>
+        <div className={
+            classNames(
+                styles.forWhat,
+                windowWidth <= 992 ? styles.forWhatMobile : ''
+            )
+        }>
             <div className={styles.header}>
                 <BlockHeader header={ header } />
             </div>
@@ -79,10 +91,16 @@ const ForWhatBlock = () => {
                     <div className={classNames( 'accent-text', styles.infoMenu )}>
                         {
                             items.map((item) => {
-                                return <InfoMenuItem key={item.id}
-                                                     toggleInfoBlock={toggleInfoBlock}
-                                                     activeItem={activeItem}
-                                                     item={item}/>
+                                return windowWidth > 992 ?
+                                    <InfoMenuItem key={item.id}
+                                                  toggleInfoBlock={toggleInfoBlock}
+                                                  activeItem={activeItem}
+                                                  item={item} />
+                                                  :
+                                    <InfoMenuItemMobile key={item.id}
+                                                        toggleInfoBlock={toggleInfoBlock}
+                                                        activeItem={activeItem}
+                                                        item={item} />
                             })
                         }
 
@@ -100,6 +118,10 @@ const ForWhatBlock = () => {
                     <CircleAnimation />
                 </div>
             </div>
+
+            <Popup open={openPopup} onClose={() => setOpenPopup(false)} modal>
+                { close => <ForWhatPopup close={close} activeItem={activeItem} /> }
+            </Popup>
         </div>
     )
 };

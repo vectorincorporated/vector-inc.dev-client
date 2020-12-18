@@ -6,7 +6,7 @@ import {Link} from "gatsby";
 import logo from '../../images/logo.svg';
 import menu from '../../images/menu-icon-mobile.svg';
 import styles from './HeaderMobile.module.css';
-import MenuPopup from "../../ui/menu-popup/MenuPopup";
+import MenuPopup from "../menu-popup/MenuPopup";
 
 const HeaderMobile = () => {
     return (

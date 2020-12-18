@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import { useForm } from "react-hook-form";
 import Popup from "reactjs-popup";
 
-import ThanksPopup from "../../ui/thanks-popup/ThanksPopup";
+import ThanksPopup from "../thanks-popup/ThanksPopup";
 import styles from "./From.module.css";
 import FormBtn from "./form-btn/FormBtn";
 import ErrorMsg from "./error-msg/ErrorMsg";

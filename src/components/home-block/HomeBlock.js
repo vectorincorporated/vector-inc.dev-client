@@ -2,7 +2,7 @@ import React from "react";
 import classNames from 'classnames';
 
 import styles from './HomeBlock.module.css';
-import ContactFormPopup from "../../ui/contact-form-popup/ContactFormPopup";
+import ContactFormPopup from "../contact-form-popup/ContactFormPopup";
 import Popup from "reactjs-popup";
 
 const formOptions = {
