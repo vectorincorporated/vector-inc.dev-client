@@ -10,15 +10,18 @@ import MenuPopup from "../menu-popup/MenuPopup";
 
 const HeaderMobile = () => {
     return (
-        <div className={styles.wrapper}>
-            <Link to={'/'}>
-                <img src={logo} className={styles.logoMobile} alt="Vector"/>
-            </Link>
+        <header>
+            <div className={styles.wrapper}>
+                <Link to={'/'}>
+                    <img src={logo} className={styles.logoMobile} alt="Vector"/>
+                </Link>
 
-            <Popup trigger={ <img src={menu} alt="menu"/> } modal>
-                { close => <MenuPopup close={close}/> }
-            </Popup>
-        </div>
+                <Popup trigger={ <img src={menu} alt="menu"/> } modal>
+                    { close => <MenuPopup close={close}/> }
+                </Popup>
+            </div>
+        </header>
+
     );
 };
 
