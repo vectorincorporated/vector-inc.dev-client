@@ -102,9 +102,11 @@ const ForWhatBlock = () => {
                     </div>
 
                     { activeItem &&
-                        <div className={styles.infoBlockWrapper}>
-                            <InfoBlock activeItem={ activeItem }
-                                       options={{ isDivider: true, isTitle: true }}/>
+                        <div className={classNames(styles.infoBlockWrapper, 'right-directed-border-appearance')}>
+                            <div className={'content-appearance'}>
+                                <InfoBlock activeItem={ activeItem }
+                                           options={{ isDivider: true, isTitle: true }}/>
+                            </div>
                         </div>
                     }
                 </div>

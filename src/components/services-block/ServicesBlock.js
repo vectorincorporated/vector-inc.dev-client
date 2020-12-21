@@ -125,19 +125,21 @@ const ServicesBlock = ({ location }) => {
             </div>
 
             { activeItem &&
-                <div className={styles.infoBlockWrapper}>
-                    <div>
-                        <InfoBlock activeItem={ activeItem }
-                                   options={{ isDivider: true, isTitle: true }} />
-                    </div>
+                <div className={classNames(styles.infoBlockWrapper, 'right-directed-border-appearance')}>
+                    <div className={classNames(styles.infoBlockContent,'content-appearance')}>
+                        <div>
+                            <InfoBlock activeItem={ activeItem }
+                                       options={{ isDivider: true, isTitle: true }} />
+                        </div>
 
-                    <div className={styles.dottedList}>
-                        <DottedItemList dottedItems={ activeItem.technologies.items }
-                                        title={ activeItem.technologies.title }/>
-                    </div>
+                        <div className={styles.dottedList}>
+                            <DottedItemList dottedItems={ activeItem.technologies.items }
+                                            title={ activeItem.technologies.title }/>
+                        </div>
 
-                    <div className={styles.tags}>
-                        <Tags tags={activeItem.tags}/>
+                        <div className={styles.tags}>
+                            <Tags tags={activeItem.tags}/>
+                        </div>
                     </div>
                 </div>
             }

@@ -29,10 +29,13 @@
 
 .info-block-wrapper {
     margin-left: 64px;
-    padding: 16px;
-    border: 1px solid white;
     height: 500px;
     flex: 50;
+}
+
+.info-block-content {
+    padding: 16px;
+    height: 100%;
     overflow-y: scroll;
 }
 

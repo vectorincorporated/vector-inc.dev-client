@@ -1,0 +1,76 @@
+.right-directed-border-appearance {
+    background-image:
+            linear-gradient(white, white),
+            linear-gradient(white, white),
+            linear-gradient(white, white),
+            linear-gradient(white, white);
+    background-size: 0 0, 0 0, 0 0, 0 0;
+    background-position: center left, top left, 0 0, bottom left;
+    background-repeat: no-repeat;
+    animation: rightDirectedIncrease 1.5s;
+    animation-fill-mode: forwards;
+    overflow: hidden;
+}
+
+.left-directed-border-appearance {
+    background-image:
+            linear-gradient(white, white),
+            linear-gradient(white, white),
+            linear-gradient(white, white),
+            linear-gradient(white, white);
+    background-size: 0 0, 0 0, 0 0, 0 0;
+    background-position:  100% 0, top right, center right, bottom right;
+    background-repeat: no-repeat;
+    animation: leftDirectedIncrease 1.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes leftDirectedIncrease {
+    30% {
+        background-size: 0 0, 0 0, 0 0, 0 0;
+    }
+    45% {
+        background-size: 1px 100%, 0 0, 1px 100%, 0 0;
+        background-position:  center right, top right, center right, bottom right;
+    }
+    100% {
+        background-size: 1px 100%, 100% 1px, 1px 100%, 100% 1px;
+        background-position: 0 100%, top right, center right, bottom right;
+        overflow: unset;
+    }
+}
+
+@keyframes rightDirectedIncrease {
+    30% {
+        background-size: 0 0, 0 0, 0 0, 0 0;
+    }
+    45% {
+        background-size: 1px 100%, 0 0, 1px 100%, 0 0;
+        background-position: center left, top left, center left, bottom left;
+    }
+    100% {
+        background-size: 1px 100%, 100% 1px, 1px 100%, 100% 1px;
+        background-position: center left, top left, 100% 0, bottom left;
+        overflow: unset;
+    }
+}
+
+.content-appearance {
+    opacity: 0;
+    animation: showContent 3s ease-in;
+    animation-fill-mode: forwards;
+}
+
+@keyframes showContent {
+    0% {
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
