@@ -24,10 +24,6 @@ const links = [
     {
         url: '/about-us',
         title: 'about us'
-    },
-    {
-        url: '/blog',
-        title: 'blog'
     }
 ];
 
