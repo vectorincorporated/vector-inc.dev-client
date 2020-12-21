@@ -1,8 +1,8 @@
 import React from "react";
 
 import styles from './ContactFormPopup.module.css';
-import Form from "../../components/form/Form";
-import BlockHeader from "../../components/block-header/BlockHeader";
+import Form from "../form/Form";
+import BlockHeader from "../block-header/BlockHeader";
 
 const ContactFormPopup = ({ close, headerOptions, formOptions }) => {
     const formProps = formOptions || {
