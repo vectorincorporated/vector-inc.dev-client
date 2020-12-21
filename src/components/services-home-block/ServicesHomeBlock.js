@@ -106,9 +106,12 @@ const ServicesHomeBlock = () => {
                     </div>
 
                     { activeItem &&
-                        <div className={styles.infoBlockWrapper}>
-                            <InfoBlock activeItem={ activeItem }
-                                       options={{ readMore: true }} />
+                        <div className={classNames(styles.infoBlockWrapper, 'left-directed-border-appearance')}>
+                            <div className={'content-appearance'}>
+                                <InfoBlock activeItem={ activeItem }
+                                           options={{ readMore: true }} />
+                            </div>
+
                         </div>
                     }
 

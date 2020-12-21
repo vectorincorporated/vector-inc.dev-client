@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import classNames from "classnames";
 
 import styles from './PortfolioBlock.module.css';
 import BlockHeader from "../block-header/BlockHeader";
@@ -70,8 +71,10 @@ const PortfolioBlock = () => {
             </div>
 
             { activeItem ?
-                <div className={styles.workInfoWrapper}>
-                    <WorkInfo activeItem={activeItem}/>
+                <div className={classNames(styles.workInfoWrapper, 'right-directed-border-appearance')} >
+                    <div className={classNames(styles.workInfoContent,'content-appearance')}>
+                        <WorkInfo activeItem={activeItem}/>
+                    </div>
                 </div>
                 :
                 <div className={styles.animationWrapper}>

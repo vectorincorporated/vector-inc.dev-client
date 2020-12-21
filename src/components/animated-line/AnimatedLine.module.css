@@ -9,7 +9,7 @@
     background-image: linear-gradient(white, white);
     background-size: 1px 0;
     background-position: center left;
-    background-repeat:no-repeat;
+    background-repeat: no-repeat;
     animation: increase 0.5s;
     animation-fill-mode: forwards;
 }
