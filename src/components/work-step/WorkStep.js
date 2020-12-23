@@ -5,7 +5,9 @@ import styles from './WorkStep.module.css';
 
 const WorkStep = ({ step }) => {
     return (
-        <div>
+        <div data-sal="fade"
+             data-sal-delay="300"
+             data-sal-easing="ease-in">
             {
                 step.order %2 === 0 ?
 
