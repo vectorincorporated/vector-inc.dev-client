@@ -105,20 +105,29 @@ const ServicesHomeBlock = () => {
                         }
                     </div>
 
-                    { activeItem &&
-                        <div className={classNames(styles.infoBlockWrapper, 'left-directed-border-appearance')}>
-                            <div className={'content-appearance'}>
-                                <InfoBlock activeItem={ activeItem }
-                                           options={{ readMore: true }} />
-                            </div>
-
+                    <div className={classNames(
+                        styles.infoBlockWrapper,
+                        activeItem ? styles.widthTransition : '',
+                        activeItem ? styles.opacityTransition : ''
+                    )}>
+                        <div className={classNames(
+                            styles.infoBlockContent,
+                            activeItem ? styles.opacityTransition : ''
+                        )}>
+                            <InfoBlock activeItem={ activeItem }
+                                       options={{ readMore: true }} />
                         </div>
-                    }
+                    </div>
 
                 </div>
-                <div className={classNames(styles.circleWrapper, activeItem ? styles.circleWrapperShifted : '')}>
+
+                <div className={classNames(
+                    styles.circleWrapper,
+                    activeItem ? styles.circleWrapperShifted : ''
+                )}>
                     <CircleAnimation />
                 </div>
+
             </div>
         </div>
     )

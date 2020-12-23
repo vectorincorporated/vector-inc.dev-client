@@ -29,8 +29,7 @@
 
 .animated-line {
     display: block;
-    max-width: 50px;
-    width: 100%;
+    width: 50px;
 }
 
 .info {
@@ -39,21 +38,46 @@
 }
 
 .info-block-wrapper {
+    width: 1px;
+    transition: width 1s, opacity 0.5s;
+    transition-delay: .5s;
+    opacity: 0;
+    height: 624px;
+    border: 1px solid white;
+    overflow: hidden;
+}
+
+.info-block-content {
     padding: 16px;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s;
+    transition-delay: 1.5s;
+}
+
+.width-transition {
+    width: 400px;
+}
+
+.opacity-transition {
+    opacity: 1;
 }
 
 .items {
     margin-top: 80px;
 }
 
-.circleWrapper {
+.circle-wrapper {
     display: flex;
     justify-content: center;
     height: 100%;
     width: 100%;
 }
-.circle-wrapper-shifted {
-    justify-content: flex-start;
+
+.circle-wrapper svg {
+    width: 270px;
+    transition: width 1s ease-in;
+    transition-delay: .5s;
 }
 
 .circle-wrapper-shifted svg {

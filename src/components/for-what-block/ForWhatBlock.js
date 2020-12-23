@@ -101,17 +101,25 @@ const ForWhatBlock = () => {
                         }
                     </div>
 
-                    { activeItem &&
-                        <div className={classNames(styles.infoBlockWrapper, 'right-directed-border-appearance')}>
-                            <div className={'content-appearance'}>
-                                <InfoBlock activeItem={ activeItem }
-                                           options={{ isDivider: true, isTitle: true }}/>
-                            </div>
+                    <div className={classNames(
+                        styles.infoBlockWrapper,
+                        activeItem ? styles.widthTransition : '',
+                        activeItem ? styles.opacityTransition : ''
+                    )}>
+                        <div className={classNames(
+                            styles.infoBlockContent,
+                            activeItem ? styles.opacityTransition : ''
+                        )}>
+                            <InfoBlock activeItem={ activeItem }
+                                       options={{ isDivider: true, isTitle: true }}/>
                         </div>
-                    }
+                    </div>
                 </div>
 
-                <div className={classNames(styles.circleWrapper, activeItem ? styles.circleWrapperShifted : '')}>
+                <div className={classNames(
+                    styles.circleWrapper,
+                    activeItem ? styles.circleWrapperShifted : ''
+                )}>
                     <CircleAnimation />
                 </div>
             </div>
