@@ -12,6 +12,10 @@
     overflow: hidden;
 }
 
+.memberPhoto img {
+    width: 100%;
+}
+
 .name {
     margin-top: 15px;
 }

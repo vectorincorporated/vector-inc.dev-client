@@ -3,17 +3,16 @@ import classNames from 'classnames';
 
 import styles from './OurAddress.module.css';
 
-const info = {
-    title: 'Our Address',
-    address: 'UKRAINE, Kharkiv, Centre stree 1\\11, office 533'
-};
+const title = 'Our Address';
 
-const OurAddressBlock = () => {
+const OurAddressBlock = ({address}) => {
     return (
         <div>
-            <div className={classNames('accent-text', styles.infoTitle)}>{ info.title }</div>
+            <div className={classNames('accent-text', styles.infoTitle)}>{ title }</div>
+
             <div className={styles.divider}>••••••••••••••••••••••••••••••••••••••</div>
-            <div className='regular-text'>{ info.address }</div>
+
+            <div className='regular-text'>{ address?.address }</div>
 
             <div className={styles.mapWrapper}>
                 {/* TODO: Replace with custom component <Map/> */}

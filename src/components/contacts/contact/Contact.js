@@ -22,9 +22,9 @@ const Contact = ({ contact }) => {
 
     return (
         <div className={ styles.contact }>
-            <img src={ contact.icon } className={ styles.icon } alt={ contact.label }/>
+            <img src={ contact?.icon?.url } className={ styles.icon } alt={ contact?.label }/>
             <div className={ styles.divider }> .... </div>
-            <a href={ prefix + contact.link } className={ styles.link }>{ contact.label }</a>
+            <a href={ prefix + contact?.link } className={ styles.link }>{ contact?.value }</a>
         </div>
     )
 };
