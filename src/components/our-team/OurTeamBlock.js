@@ -1,4 +1,4 @@
-import React from "react";
+import React, {} from "react";
 
 import styles from './OurTeamBlock.module.css';
 import img1 from '../../images/our-team/future.png';
@@ -38,7 +38,7 @@ const ourTeam = [
     },
 ];
 
-const OurTeamBlock = () => {
+const OurTeamBlock = ({ data }) => {
     return (
         <div className={ styles.ourTeam }>
             <div className={ styles.info }>
@@ -48,14 +48,14 @@ const OurTeamBlock = () => {
                     <div className={styles.line} />
                     <div className={styles.dots}>
                         {
-                            ourTeam.map((member) => {
+                            data?.team_members?.map((member) => {
                                 return <div className={styles.dot} key={member.id} />
                             })
                         }
                     </div>
 
                     {
-                        ourTeam.map((member) => {
+                        data?.team_members?.map((member) => {
                             return <MemberTeam member={member} key={member.id}/>
                         })
                     }

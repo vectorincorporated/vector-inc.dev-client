@@ -1,0 +1,18 @@
+.contacts {
+}
+
+.title {
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+.contact-item {
+    display: flex;
+    margin-top: 25px;
+}
+
+.divider {
+    margin-top: 5px;
+    margin-bottom: 8px;
+    font-size: 24px;
+}
