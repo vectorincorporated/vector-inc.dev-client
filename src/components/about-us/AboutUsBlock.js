@@ -22,7 +22,7 @@ const AboutUsBlock = ({ data }) => {
                     <div className={styles.divider}>••••••••••••••••••••••••••••••••••••••</div>
                     <div className={classNames('regular-text')}>{ data?.description }</div>
                     <div className={styles.qoutation}>{ data?.motivation }</div>
-                    <div className={styles.author}>{ data?.motivationAuthor }</div>
+                    <div className={styles.author}>{ data?.motivationAutor }</div>
                 </div>
 
                 <div className={styles.logoAnimation}>
