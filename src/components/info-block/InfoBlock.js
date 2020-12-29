@@ -20,7 +20,7 @@ const InfoBlock = ({ activeItem, options }) => {
             }
 
             <span className='regular-text'>
-                {activeItem?.text}
+                {activeItem?.description}
             </span>
 
             { options?.readMore &&

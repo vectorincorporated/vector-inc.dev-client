@@ -63,7 +63,7 @@ const header = {
 };
 
 
-const ServicesHomeBlock = () => {
+const ServicesHomeBlock = ({services}) => {
     const [activeItem, setActiveItem] = useState(null);
 
     const toggleInfoBlock = (e, item) => {
@@ -82,8 +82,10 @@ const ServicesHomeBlock = () => {
                 <div className={ styles.info }>
                     <div className={classNames( 'accent-text', styles.infoMenu )}>
                         {
-                            items.map((item) => {
-                                return <InfoMenuItem key={item.id}
+
+                            services?.length &&
+                            services[0]?.services?.map((item) => {
+                                return <InfoMenuItem key={item?.id}
                                                      toggleInfoBlock={toggleInfoBlock}
                                                      item={item}
                                                      activeItem={activeItem}
@@ -95,8 +97,10 @@ const ServicesHomeBlock = () => {
 
                     <div className={styles.animatedLine}>
                         {
-                            items.map((item) => {
-                                return <AnimatedLine key={item.id}
+
+                            services?.length &&
+                            services[0]?.services?.map((item) => {
+                                return <AnimatedLine key={item?.id}
                                                      toggleInfoBlock={toggleInfoBlock}
                                                      activeItem={activeItem}
                                                      mode={'left'}
