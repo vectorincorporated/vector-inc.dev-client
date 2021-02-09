@@ -5,14 +5,12 @@ import styles from './WorkStep.module.css';
 
 const WorkStep = ({ step }) => {
     return (
-        <div data-sal="fade"
-             data-sal-delay="300"
-             data-sal-easing="ease-in">
+        <div>
             {
                 step.order %2 === 0 ?
 
                     <div className={ styles.step }>
-                        <img src={ step.img } alt=""/>
+                        <img src={ step.image.url } alt=""/>
                         <div className={ styles.item }>
                             <div className={ styles.circleLeft } />
                             <div className={ classNames(styles.line, styles.leftWithCircle) } />
@@ -30,7 +28,7 @@ const WorkStep = ({ step }) => {
                             <div className={ classNames(styles.line, styles.rightWithCircle) } />
                             <div className={ styles.circleRight } />
                         </div>
-                        <img src={ step.img } alt=""/>
+                        <img src={ step.image.url } alt=""/>
                     </div>
             }
         </div>

@@ -45,7 +45,7 @@ const IndexPage = () => {
             </div>
 
             <div className='container'>
-                <HowWeWorkBlock />
+                <HowWeWorkBlock stepList={homeData?.howWeWorkBlock.work_steps}/>
             </div>
 
             <div className='container'>
