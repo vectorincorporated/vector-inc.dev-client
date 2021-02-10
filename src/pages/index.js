@@ -45,8 +45,7 @@ const IndexPage = () => {
             </div>
 
             <div className='container'>
-                {/*TODO: rename stepList*/}
-                <HowWeWorkBlock stepList={homeData?.howWeWorkBlock.work_steps}/>
+                <HowWeWorkBlock workSteps={homeData?.howWeWorkBlock.work_steps}/>
             </div>
 
             <div className='container'>

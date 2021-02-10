@@ -11,27 +11,26 @@ const header = {
 };
 
 
-const HowWeWorkBlock = ({stepList}) => {
+const HowWeWorkBlock = ({workSteps}) => {
 
     const sortByOrder = (a, b) => {
         return a.order - b.order;
     };
 
-    return (
-        <div className={styles.howWeWork} >
+    return (<>
+        { workSteps?.length && <div className={styles.howWeWork} >
             <div className={styles.header}>
                 <BlockHeader header={ header } />
             </div>
 
             {
-                stepList?.length &&
-                stepList
+                workSteps
                     .sort(sortByOrder)
                     .map(step => <WorkStep key={step.id} step={step}/>)
             }
 
-        </div>
-    )
+        </div> }
+    </>)
 };
 
 export default HowWeWorkBlock;
