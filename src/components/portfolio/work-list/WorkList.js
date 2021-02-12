@@ -3,7 +3,7 @@ import React from "react";
 import styles from './WorkList.module.css';
 import PortfolioWorkItem from "../portfolio-work-item/PortfolioWorkItem";
 
-const WorkList = ({ works, toggleInfoBlock, activeItem }) => {
+const WorkList = ({ works = [], toggleInfoBlock, activeItem }) => {
     return (
         <div className={styles.worksWrapper}>
             <div className={styles.header}>
@@ -28,4 +28,3 @@ const WorkList = ({ works, toggleInfoBlock, activeItem }) => {
 };
 
 export default WorkList;
-    

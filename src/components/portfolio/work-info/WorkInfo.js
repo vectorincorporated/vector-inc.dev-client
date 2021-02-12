@@ -13,7 +13,7 @@ const WorkInfo = ({ activeItem }) => {
                     </div>
                     <div className={styles.divider}>••••••••••••••••••••••••••••••••••••••</div>
                     <div className={classNames(styles.text, 'regular-text')}>
-                        { activeItem.text }
+                        { activeItem.generalDescription }
                     </div>
                 </div>
 
@@ -22,7 +22,7 @@ const WorkInfo = ({ activeItem }) => {
             <div className={styles.footer}>
                 <div className={classNames('accent-text', styles.projectName)}>{ activeItem.title }</div>
                 <div className={styles.footerItems}>
-                    <a href={activeItem.link} className={styles.linkWrapper}>
+                    <a href={activeItem.projectUrl} className={styles.linkWrapper}>
                         <div className={classNames('accent-text', styles.webLink)}>WEB</div>
                         <div className={styles.webIcon}/>
                     </a>
@@ -38,4 +38,3 @@ const WorkInfo = ({ activeItem }) => {
 };
 
 export default WorkInfo;
-    
