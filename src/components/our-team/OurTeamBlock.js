@@ -1,44 +1,14 @@
 import React, {} from "react";
 
 import styles from './OurTeamBlock.module.css';
-import img1 from '../../images/our-team/future.png';
-import img2 from '../../images/our-team/kurt.png';
-import img3 from '../../images/our-team/star-wars.png';
-import img4 from '../../images/our-team/robocop.png';
 import MemberTeam from "./member-team/MemberTeam";
 
 const info = {
     title: 'Our Team'
 };
 
-const ourTeam = [
-    {
-        id: 10,
-        name: 'OLEG OLEGOVICH',
-        position: 'BACKEND DEVELOPER',
-        photo: img1
-    },
-    {
-        id: 11,
-        name: 'OLEG OLEGOVICH',
-        position: 'BACKEND DEVELOPER',
-        photo: img2
-    },
-    {
-        id: 12,
-        name: 'OLEG OLEGOVICH',
-        position: 'BACKEND DEVELOPER',
-        photo: img3
-    },
-    {
-        id: 13,
-        name: 'OLEG OLEGOVICH',
-        position: 'BACKEND DEVELOPER',
-        photo: img4
-    },
-];
 
-const OurTeamBlock = ({ data }) => {
+const OurTeamBlock = ({ data, filterRolesById }) => {
     return (
         <div className={ styles.ourTeam }>
             <div className={ styles.info }>
@@ -56,7 +26,7 @@ const OurTeamBlock = ({ data }) => {
 
                     {
                         data?.team_members?.map((member) => {
-                            return <MemberTeam member={member} key={member.id}/>
+                            return <MemberTeam filterRolesById={filterRolesById} member={member} key={member.id}/>
                         })
                     }
                 </div>
