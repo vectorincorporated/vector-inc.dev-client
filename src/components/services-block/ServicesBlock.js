@@ -14,7 +14,7 @@ const header = {
     description: "Here are the details of our services",
 };
 
-const ServicesBlock = ({ tags }) => {
+const ServicesBlock = ({ tags, technologyAreas }) => {
     // TODO set default value for activeItem
     let [activeItem, setActiveItem] = useState(null);
     let [servicesData, setServicesData] = useState(null);
@@ -76,13 +76,14 @@ const ServicesBlock = ({ tags }) => {
                             />
                         </div>
 
-                        {/* TODO add query for technologies
                         <div className={styles.dottedList}>
                             <DottedItemList
-                                dottedItems={activeItem.technologies.items}
-                                title={activeItem.technologies.title}
+                                technologies={technologyAreas}
+                                selectedTechnologiesIds={
+                                    activeItem.technologyAreas
+                                }
                             />
-                        </div> */}
+                        </div>
 
                         <div className={styles.tags}>
                             <Tags
