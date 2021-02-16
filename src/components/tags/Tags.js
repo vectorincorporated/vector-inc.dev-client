@@ -3,7 +3,7 @@ import React from "react";
 import styles from "./Tags.module.css";
 
 const Tags = ({ tags, selectedTagsIds }) => {
-    let selectedTagsNames = tags.reduce((accumulator, currentValue) => {
+    let selectedTagsNames = tags?.reduce((accumulator, currentValue) => {
         if (selectedTagsIds.find(item => item === currentValue.id)) {
             accumulator.push(currentValue.title);
         }
