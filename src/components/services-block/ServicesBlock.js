@@ -18,7 +18,6 @@ const ServicesBlock = ({ tags, technologyAreas }) => {
     // TODO set default value for activeItem
     let [activeItem, setActiveItem] = useState(null);
     let [servicesData, setServicesData] = useState(null);
-    console.log(tags);
 
     useEffect(() => {
         ServicesService.getServices().then(result => {
