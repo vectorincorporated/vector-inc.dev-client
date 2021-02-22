@@ -12,13 +12,22 @@ import AboutUsService from "../api/AboutUs.service";
 
 const AboutUsPage = () => {
     const [data, setData] = useState(null);
+    const [roles, setRoles] = useState([]);
 
     useEffect(() => {
         AboutUsService.getAboutUs()
             .then((result) => {
                     setData(result);
-                })
+                });
+        AboutUsService.teamMemberRoles()
+            .then((result)=> {
+                setRoles(result);
+            })
     }, []);
+
+    const filterRolesById = (roleId) => {
+        return roles.find(role => role.id === roleId);
+    };
 
     return (
         <Layout>
@@ -27,7 +36,7 @@ const AboutUsPage = () => {
                 <AboutUsBlock data={data} />
             </div>
             <div className='container'>
-                <OurTeamBlock data={ data?.ourTeamBlock } />
+                <OurTeamBlock data={ data?.ourTeamBlock } filterRolesById={filterRolesById} />
             </div>
             <div className='container'>
                 <div>
