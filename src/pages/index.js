@@ -45,11 +45,11 @@ const IndexPage = () => {
             </div>
 
             <div className='container'>
-                <HowWeWorkBlock stepList={homeData?.howWeWorkBlock.work_steps}/>
+                <HowWeWorkBlock workSteps={homeData?.howWeWorkBlock.work_steps}/>
             </div>
 
             <div className='container'>
-                <OurClientsBlock />
+                <OurClientsBlock clients={homeData?.ourClientsBlock.clients} />
             </div>
 
             <div className='container'>

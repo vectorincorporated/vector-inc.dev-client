@@ -5,7 +5,7 @@ import styles from "./ClientCard.module.css";
 const ClientCard = ({ client }) => {
     return (
         <div className={ styles.client }>
-            <img src={ client.img } alt=''/>
+            <img src={ client.image.url } alt=''/>
         </div>
     )
 };
