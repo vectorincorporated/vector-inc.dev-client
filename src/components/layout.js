@@ -12,6 +12,8 @@ import { useStaticQuery, graphql } from "gatsby"
 import "./layout.css"
 import Header from "./header/Header"
 import Footer from "./footer/Footer";
+import {ApolloProvider} from "@apollo/client";
+import client from "../configuration/ApolloClient";
 
 const Layout = ({ children }) => {
     const data = useStaticQuery(graphql`
@@ -26,9 +28,11 @@ const Layout = ({ children }) => {
 
     return (
         <>
-            <Header siteTitle={data.site.siteMetadata.title} />
-            <main>{children}</main>
-            <Footer />
+            <ApolloProvider client={client}>
+                <Header siteTitle={data.site.siteMetadata.title} />
+                <main>{children}</main>
+                <Footer />
+            </ApolloProvider>
         </>
     )
 };
