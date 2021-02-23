@@ -4,20 +4,24 @@ import classNames from "classnames";
 import styles from "./ServicesBlock.module.css";
 import InfoBlock from "../info-block/InfoBlock";
 import BlockHeader from "../block-header/BlockHeader";
-import ServiceItem from "../service-item/ServiceItem";
 import DottedItemList from "../dotted-item-list/DottedItemList";
-import Tags from "../tags/Tags";
+import ServiceItem from "../service-item/ServiceItem";
 import ServicesService from "../../api/Services.service";
+import Tags from "../tags/Tags";
+import TagsService from "../../api/Tags.service";
+import TechnologyAreasService from "../../api/TechnologyAreas.service";
 
 const header = {
     title: "Services",
     description: "Here are the details of our services",
 };
 
-const ServicesBlock = ({ tags, technologyAreas }) => {
+const ServicesBlock = () => {
     // TODO set default value for activeItem
     let [activeItem, setActiveItem] = useState(null);
     let [servicesData, setServicesData] = useState(null);
+    const [tags, setTagsData] = useState(null);
+    const [technologyAreas, setTechnologyAreasData] = useState(null);
 
     useEffect(() => {
         ServicesService.getServices().then(result => {
@@ -25,6 +29,12 @@ const ServicesBlock = ({ tags, technologyAreas }) => {
             if (!activeItem) {
                 setActiveItem(result?.services[0].services[0]);
             }
+        });
+        TechnologyAreasService.getTechnologyAreas().then(result => {
+            setTechnologyAreasData(result);
+        });
+        TagsService.getTags().then(result => {
+            setTagsData(result);
         });
     }, []);
 
@@ -78,17 +88,12 @@ const ServicesBlock = ({ tags, technologyAreas }) => {
                         <div className={styles.dottedList}>
                             <DottedItemList
                                 technologies={technologyAreas}
-                                selectedTechnologiesIds={
-                                    activeItem.technologyAreas
-                                }
+                                selectedTechnologiesIds={activeItem.technologyAreas}
                             />
                         </div>
 
                         <div className={styles.tags}>
-                            <Tags
-                                tags={tags}
-                                selectedTagsIds={activeItem.tags}
-                            />
+                            <Tags tags={tags} selectedTagsIds={activeItem.tags} />
                         </div>
                     </div>
                 </div>
