@@ -1,130 +1,87 @@
-import React, {useState} from "react";
+import React, {useState} from "react"
 
-import styles from "./ExpertiseBlock.module.css";
-import BlockHeader from "../block-header/BlockHeader";
-import classNames from "classnames";
-import InfoMenuItem from "../info-menu-item/InfoMenuItem";
-import DottedItemList from "../dotted-item-list/DottedItemList";
-import SphereAnimation from "../sphere-animation/SphereAnimation";
-import AnimatedLine from "../animated-line/AnimatedLine";
-
-const items = [
-    {
-        id: 1,
-        title: 'Enterprise solutions',
-        items: [
-            'XML1, XHTML, CSS2/3',
-            'Bootstrap2, HTML5 Boilerplate, Uikit;',
-            'JavaScript, Alfresco, NodeJs;',
-            'AngularJS2, React JS, Backbone JS, Vue Js.'
-        ]
-    },
-    {
-        id: 2,
-        title: 'Full Stack Web Apps',
-        items: [
-            'XML3, XHTML, HTML5, CSS2/3',
-            'Bootstrap3, HTML5 Boilerplate, Uikit;',
-            'JavaScript, NodeJs;',
-            'AJAX, REST3, OAuth, SAML, SSO;',
-            'AngularJS, React JS, Backbone JS, Vue Js. '
-        ]
-    },
-    {
-        id: 3,
-        title: 'Cloud Storage',
-        items: [
-            'ХML, XHTML, HTML5, CSS2/3',
-            'Bootstrap, HTML5, Boilerplate, Uikit;',
-            'JavaScript, Alfresco, NodeJs; ',
-            'Lifeгаy;',
-            'Velocty, Sass/Scss, Less;',
-            'AJAX, REST0, OAuth, SAML, SSO;',
-            'AngularJS, React JS, Backbone- JS, Vue Js.'
-        ]
-    },
-    {
-        id: 4,
-        title: 'DevOps',
-        items: [
-            'XML, XHTML, HTML5, CSS2/3',
-            'AJAX, REST, OAuth, SAML, SSO;',
-            'AngularJS, React JS, Backbone JS, Vue Js.'
-        ]
-    },
-    {
-        id: 5,
-        title: 'UI/UX Design',
-        items: [
-            'XML, XHTML, HTML5, CSS2/1',
-            'Bootstrap, HTML5 Boilerplate, Uikit;',
-            'JavaScript, Alfresco, NodeJs;',
-            'Velocity, Sass/Scss, Less;',
-            'AJAX, REST, OAuth, SAML, SSO;',
-            'AngularJS, React JS, Backbone JS , Vue Js.'
-        ]
-    }
-];
+import styles from "./ExpertiseBlock.module.css"
+import BlockHeader from "../block-header/BlockHeader"
+import classNames from "classnames"
+import InfoMenuItem from "../info-menu-item/InfoMenuItem"
+import SphereAnimation from "../sphere-animation/SphereAnimation"
+import AnimatedLine from "../animated-line/AnimatedLine"
+import {useQuery} from "@apollo/client";
+import FETCH_EXPERTISE_PAGE from "../../api/ExpertisePage.servise";
+import DottedItemListExpertise from "../dotted-item-list-expertise/dotted-item-list-expertise";
 
 const header = {
-    title: 'Expertise',
-    description: 'Technologies We Use'
+    title: "Expertise",
+    description: "Technologies We Use",
 };
 
 const ExpertiseBlock = () => {
+    const {loading, error, data} = useQuery(FETCH_EXPERTISE_PAGE);
+    const items = data?.expertisePage?.expertise_types || [];
+
     const [activeItem, setActiveItem] = useState(null);
     const [activeItemIndex, setActiveItemIndex] = useState(null);
     const [smallerSphere, setSmallerSphere] = useState(false);
 
     const toggleInfoBlock = (e, item) => {
         e.stopPropagation();
-        setActiveItem(item);
-        setActiveItemIndex(items.indexOf(item));
-        setSmallerSphere(true);
+        if (!!item.technologyAreas.length) {
+            setActiveItem(item);
+            setActiveItemIndex(items.indexOf(item));
+            setSmallerSphere(true)
+        }
     };
 
     return (
-        <div className={ styles.expertise }>
-            <div className={ styles.header }>
-                <BlockHeader header={ header } />
+        <div className={styles.expertise}>
+            <div className={styles.header}>
+                <BlockHeader header={header}/>
             </div>
-
-            <div className={ styles.info }>
-                <div className={classNames( 'accent-text', styles.infoMenu )}>
-                    {
-                        items.map((item) => {
-                            return <InfoMenuItem key={item.id}
-                                                 toggleInfoBlock={toggleInfoBlock}
-                                                 activeItem={activeItem}
-                                                 item={item}/>
-                        })
-                    }
+            <div className={styles.info}>
+                <div className={classNames("accent-text", styles.infoMenu)}>
+                    {items.map(item => {
+                        return (
+                            <InfoMenuItem
+                                key={item.id}
+                                toggleInfoBlock={toggleInfoBlock}
+                                activeItem={activeItem}
+                                item={item}
+                            />
+                        )
+                    })}
                 </div>
 
                 <div className={styles.animatedLine}>
-                    {
-                        items.map((item) => {
-                            return <AnimatedLine key={item.id}
-                                                 toggleInfoBlock={toggleInfoBlock}
-                                                 activeItem={activeItem}
-                                                 mode={'right'}
-                                                 item={item} />
-                        })
-                    }
+                    {items.map(item => {
+                        return (
+                            <AnimatedLine
+                                key={item.id}
+                                toggleInfoBlock={toggleInfoBlock}
+                                activeItem={activeItem}
+                                mode={"right"}
+                                item={item}
+                            />
+                        )
+                    })}
                 </div>
 
-                { activeItem &&
+                {activeItem && (
                     <div className={styles.subItems}>
-                        <DottedItemList dottedItems={ activeItem.items } activeItemIndex={activeItemIndex}/>
+                        {activeItem.technologyAreas.length ? (
+                            <DottedItemListExpertise
+                                dottedItems={activeItem.technologyAreas}
+                                activeItemIndex={activeItemIndex}
+                            />
+                        ) : null}
                     </div>
-                }
+                )}
 
                 <div className={styles.animationWrapper}>
-                    <SphereAnimation color='pink' smallerSphere={smallerSphere}/>
+                    <SphereAnimation color="pink" smallerSphere={smallerSphere}/>
                 </div>
             </div>
         </div>
     )
 };
 
-export default ExpertiseBlock;
+export default ExpertiseBlock
