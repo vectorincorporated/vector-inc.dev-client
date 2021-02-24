@@ -2,13 +2,13 @@ import React from "react";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import img from '../images/project-details/project-details.png';
+import img from "../images/project-details/project-details.png";
 import QuestionsFormBlock from "../components/question-form-block/QuestionsFormBlock";
 import ProjectDetailsBlock from "../components/project-details/ProjectDetailsBlock";
 
 const project = {
     general: {
-        title: 'General description',
+        title: "General description",
         text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Turpis vitae convallis nisl enim. 
         Fermentum orci libero tellus, massa odio at ut sodales in. Quisque auctor amet, erat enim malesuada id eu, volutpat. 
         Adipiscing nulla egestas egestas massa. Eu nisl tellus nam eget tempor ultricies malesuada id nunc. Quis massa nam tortor sodales purus. 
@@ -25,9 +25,9 @@ const project = {
         Dui pharetra convallis tellus blandit. Tincidunt quam nulla mattis leo imperdiet nisl vulputate ultricies.`,
     },
     image: img,
-    link: 'https://gooooooogle.com',
+    link: "https://gooooooogle.com",
     problems: {
-        title: 'Project challenges and problems',
+        title: "Project challenges and problems",
         text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit ornare ut nunc, dolor augue nisi mattis at tincidunt. 
         Nibh interdum justo, enim, maecenas molestie praesent elit. Augue platea porttitor varius est pharetra, vehicula enim. 
         Vulputate sit sit sit enim tincidunt quam metus. Pellentesque orci vitae auctor nec phasellus netus accumsan dolor. 
@@ -35,10 +35,10 @@ const project = {
         Risus sed quam tortor consequat posuere at vehicula hac. Sagittis commodo fringilla diam ipsum elit laoreet sed sollicitudin eu. 
         Volutpat in consectetur fermentum molestie. Cursus mi aliquam ut risus porttitor id arcu, etiam. 
         A vel facilisi pharetra bibendum eu. A viverra tellus lacus pharetra, volutpat blandit nisl tincidunt lorem. 
-        Morbi adipiscing nunc, nulla ultrices pellentesque est.`
+        Morbi adipiscing nunc, nulla ultrices pellentesque est.`,
     },
     solutions: {
-        title: 'Our solutions',
+        title: "Our solutions",
         text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, urna vel ut morbi at. 
         Dis orci, maecenas purus ultricies massa, aliquet quam. Porta feugiat hendrerit nunc risus augue mauris. 
         Egestas justo libero nullam mi non, elit massa. Et senectus mauris in pharetra. 
@@ -47,43 +47,35 @@ const project = {
         Vulputate euismod urna, mi scelerisque egestas tincidunt. Mauris aliquet neque, risus consequat bibendum amet posuere. 
         Porta orci odio nisl ullamcorper porttitor. Commodo maecenas nisl, urna, sed turpis ac diam a eget. Sit metus sit enim enim. 
         Sed massa volutpat ipsum volutpat odio aliquet. Ornare feugiat ut pellentesque sit dui donec. 
-        Phasellus diam ipsum facilisi mauris sed orci amet, morbi. Ultrices aliquet sed sem sed lobortis libero. Mauris sit mi et arcu amet.`
+        Phasellus diam ipsum facilisi mauris sed orci amet, morbi. Ultrices aliquet sed sem sed lobortis libero. Mauris sit mi et arcu amet.`,
     },
     screenshots: [img, img, img, img],
     features: {
-        title: 'Key Features',
+        title: "Key Features",
         items: [
-            'Possibility to create a new user;',
-            'Possibility to edit a user’s profile;',
-            'Possibility to create and delete Kafka clusters in a cloud;',
-            'Possibility to maintain Kafka clusters in a cloud;',
-            'Possibility to configure the cluster’s version, cloud configuration;',
-            'Possibility to access brokers using Kafka PLAIN endpoints;',
-            'Possibility to maintain Kafka topics.',
-        ]
+            "Possibility to create a new user;",
+            "Possibility to edit a user’s profile;",
+            "Possibility to create and delete Kafka clusters in a cloud;",
+            "Possibility to maintain Kafka clusters in a cloud;",
+            "Possibility to configure the cluster’s version, cloud configuration;",
+            "Possibility to access brokers using Kafka PLAIN endpoints;",
+            "Possibility to maintain Kafka topics.",
+        ],
     },
     technologies: {
-        title: 'Used technologies',
-        items: [
-            'XML, XHTML, HTML5, CSS2/3;',
-            'Bootstrap, HTML5 Boilerplate, Uikit;',
-            'JavaScript, Alfresco, NodeJs;',
-            'Liferay;',
-            'Velocity, Sass/Scss, Less;',
-            'AJAX, REST, OAuth, SAML, SSO;',
-            'AngularJS, React JS, Backbone JS, Vue Js.'
-        ]
-    }
+        title: "Used technologies",
+        items: ["60253f85dd157e00173d7843", "60253f9bdd157e00173d7844", "602be152fe7a2b0017b91672"],
+    },
 };
 
 const ProjectDetails = () => (
     <Layout>
         <SEO title="Project Details Page" />
 
-        <div className='container'>
+        <div className="container">
             <ProjectDetailsBlock project={project} />
         </div>
-        <div className='container'>
+        <div className="container">
             <QuestionsFormBlock />
         </div>
     </Layout>

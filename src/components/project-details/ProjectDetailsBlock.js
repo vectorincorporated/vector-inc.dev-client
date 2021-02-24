@@ -1,32 +1,43 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
-import styles from './ProjectDetailsBlock.module.css';
+import styles from "./ProjectDetailsBlock.module.css";
 import InfoBlock from "../info-block/InfoBlock";
 import BlockHeader from "../block-header/BlockHeader";
 import DottedItemList from "../dotted-item-list/DottedItemList";
 import CustomSlider from "../custom-slider/CustomSlider";
+import TechnologyAreasService from "../../api/TechnologyAreas.service";
 
 const header = {
-    title: 'Project name'
+    title: "Project name",
 };
 
 const ProjectDetailsBlock = ({ project }) => {
+    const [technologyAreas, setTechnologyAreasData] = useState(null);
+
+    useEffect(() => {
+        TechnologyAreasService.getTechnologyAreas().then(result => {
+            setTechnologyAreasData(result);
+        });
+    }, []);
+
     return (
-        <div className={ styles.project }>
-            <div className={ styles.header }>
-                <BlockHeader header={ header } />
+        <div className={styles.project}>
+            <div className={styles.header}>
+                <BlockHeader header={header} />
             </div>
 
             <div className={styles.generalInfo}>
                 <div className={styles.infoBlock}>
-                    <InfoBlock activeItem={project.general} options={{ isTitle: true, isDivider: true }}/>
+                    <InfoBlock activeItem={project.general} options={{ isTitle: true, isDivider: true }} />
                 </div>
 
                 <div className={styles.imageInfo}>
-                    <img src={project.image} alt=""/>
+                    <img src={project.image} alt="" />
                     <div className={styles.webLink}>
-                        <a href={project.link} className='accent-text'>WEB</a>
-                        <div className={styles.webIcon}/>
+                        <a href={project.link} className="accent-text">
+                            WEB
+                        </a>
+                        <div className={styles.webIcon} />
                     </div>
                 </div>
             </div>
@@ -46,20 +57,24 @@ const ProjectDetailsBlock = ({ project }) => {
 
             <div className={styles.dottedListInfo}>
                 <div className={styles.features}>
-                    <DottedItemList dottedItems={project.features.items}
-                                    title={project.features.title}
-                                    isPink={false} />
+                    <DottedItemList
+                        dottedItems={project.features.items}
+                        title={project.features.title}
+                        isPink={false}
+                    />
                 </div>
 
                 <div className={styles.technologies}>
-                    <DottedItemList dottedItems={project.technologies.items}
-                                    title={project.technologies.title}
-                                    isPink={true} />
+                    <DottedItemList
+                        technologies={technologyAreas}
+                        selectedTechnologiesIds={project.technologies.items}
+                        title={project.technologies.title}
+                        isPink={true}
+                    />
                 </div>
-
             </div>
         </div>
-    )
+    );
 };
 
 export default ProjectDetailsBlock;
