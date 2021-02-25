@@ -1,4 +1,4 @@
-import {gql} from "graphql-tag";
+import gql from "graphql-tag";
 
 const FETCH_EXPERTISE_PAGE = gql`
           query ExpertisePage {
