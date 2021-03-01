@@ -3,7 +3,7 @@ import classNames from 'classnames';
 
 import styles from './MemberTeam.module.css';
 
-const MemberTeam = ({ member, filterRolesById }) => {
+const MemberTeam = ({ member }) => {
     return (
         <div className={styles.member}>
 
@@ -12,7 +12,7 @@ const MemberTeam = ({ member, filterRolesById }) => {
             </div>
 
             <span className={classNames('accent-text', styles.name)}>{ member?.name }</span>
-            <span className={classNames('accent-text', styles.position)}>{ member?.teamMemberRole && filterRolesById(member.teamMemberRole)?.title }</span>
+            <span className={classNames('accent-text', styles.position)}>{ member?.teamMemberRole?.title }</span>
 
         </div>
     )
