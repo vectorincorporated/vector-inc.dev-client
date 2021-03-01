@@ -48,23 +48,23 @@ const HomeBlock = () => {
                                                 headerOptions={popupHeaderOptions}/>}
                 </Popup>
             </div>
-            <div className='full-height-view container'>
+            <div className='full-height-view'>
                 <ForWhatBlock forWhat={homeData?.forWhatBlock}/>
             </div>
 
-            <div className='full-height-view container'>
+            <div className='full-height-view'>
                 <ServicesHomeBlock services={homeData?.servicesBlock}/>
             </div>
 
-            <div className='container'>
+            <div>
                 <HowWeWorkBlock workSteps={homeData?.howWeWorkBlock.work_steps}/>
             </div>
 
-            <div className='container'>
+            <div>
                 <OurClientsBlock clients={homeData?.ourClientsBlock.clients}/>
             </div>
 
-            <div className='container'>
+            <div>
                 <QuestionsFormBlock/>
             </div>
 
