@@ -24,7 +24,7 @@ const HowWeWorkBlock = ({workSteps}) => {
             </div>
 
             {
-                workSteps
+                [...workSteps]
                     .sort(sortByOrder)
                     .map(step => <WorkStep key={step.id} step={step}/>)
             }
