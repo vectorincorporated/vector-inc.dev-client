@@ -1,10 +1,42 @@
-import environment from '../environments/environment';
+import gql from "graphql-tag";
 
-const PortfolioService = {
-    getPortfolios: () => {
-        return fetch(environment.apiUrl + '/portfolio-page')
-            .then(res => res.json());
+const FETCH_PORTFOLIO_PAGE = gql`
+    query PortfolioPage {
+        portfolioPage {
+            title
+            projects {
+                id
+                title
+                specialTitle
+                generalDescription
+                problemDescription
+                solutionDescription
+                problemDescription
+                projectUrl
+                screenshots {
+                    id
+                    url
+                }
+                technologyAreas {
+                    id
+                    title
+                    technologyItems {
+                        id
+                        title
+                    }
+                }
+                keyFeatures {
+                    id
+                    title
+                }
+                ChallengesAndProblems {
+                    id
+                    title
+                    description
+                }
+            }
+        }
     }
-};
+`;
 
-export default PortfolioService;
+export default FETCH_PORTFOLIO_PAGE;
