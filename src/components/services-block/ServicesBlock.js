@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, {useEffect, useState} from "react";
 import classNames from "classnames";
 
 import styles from "./ServicesBlock.module.css";
@@ -8,37 +8,33 @@ import ServiceItem from "../service-item/ServiceItem";
 import DottedItemList from "../dotted-item-list/DottedItemList";
 import Tags from "../tags/Tags";
 import ServicesService from "../../api/Services.service";
+import {useQuery} from "@apollo/client";
 
 const header = {
     title: "Services",
     description: "Here are the details of our services",
 };
 
-const ServicesBlock = ({ tags, technologyAreas }) => {
-    // TODO set default value for activeItem
-    let [activeItem, setActiveItem] = useState(null);
-    let [servicesData, setServicesData] = useState(null);
+const ServicesBlock = () => {
+    const {loading, error, data} = useQuery(ServicesService);
+    const servicesData = data?.servicesPage || null;
+    const services = servicesData?.services[0].services || [];
+    const [activeItem, setActiveItem] = useState(null);
 
     useEffect(() => {
-        ServicesService.getServices().then(result => {
-            setServicesData(result);
-            if (!activeItem) {
-                setActiveItem(result?.services[0].services[0]);
-            }
-        });
-    }, []);
+        !activeItem && services.length && setActiveItem(services[0]);
+    }, [services]);
+
 
     const toggleInfoBlock = (e, item) => {
         e.stopPropagation();
         setActiveItem(item);
     };
-
-    const services = servicesData?.services[0].services;
     return (
         <div className={styles.services}>
             <div className={styles.info}>
                 <div className={styles.header}>
-                    <BlockHeader header={header} />
+                    <BlockHeader header={header}/>
                 </div>
 
                 <div className={classNames("accent-text", styles.infoMenu)}>
@@ -71,14 +67,13 @@ const ServicesBlock = ({ tags, technologyAreas }) => {
                         <div>
                             <InfoBlock
                                 activeItem={activeItem}
-                                options={{ isDivider: true, isTitle: true }}
+                                options={{isDivider: true, isTitle: true}}
                             />
                         </div>
 
                         <div className={styles.dottedList}>
                             <DottedItemList
-                                technologies={technologyAreas}
-                                selectedTechnologiesIds={
+                                selectedTechnologies={
                                     activeItem.technologyAreas
                                 }
                             />
@@ -86,8 +81,7 @@ const ServicesBlock = ({ tags, technologyAreas }) => {
 
                         <div className={styles.tags}>
                             <Tags
-                                tags={tags}
-                                selectedTagsIds={activeItem.tags}
+                                selectedTags={activeItem.tags}
                             />
                         </div>
                     </div>

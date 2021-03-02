@@ -12,7 +12,7 @@ const DottedItem = ({ item, isPink, isHoverEffect }) => {
         )}>
             <div className={ isPink ? styles.circleLeftPink : styles.circleLeft }/>
             <div className={ classNames(styles.itemText, 'regular-text') }>
-                { item }
+                { item.title }
             </div>
         </div>
     )
