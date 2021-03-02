@@ -16,7 +16,7 @@ const IndexPage = () =>
                 <Particles id="tsparticles" options={options}/>
             </div>
 
-            <div className='full-height-view container'>
+            <div className='container'>
                 <HomeBlock/>
             </div>
         </Layout>

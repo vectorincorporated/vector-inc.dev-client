@@ -30,9 +30,6 @@ const HomeBlock = () => {
     const {loading, error, data} = useQuery(FETCH_HOME_PAGE);
     const homeData = data?.homePage || null;
 
-    console.log(homeData)
-
-
     return (
         <>
             <div className={styles.wrapper}>
@@ -56,17 +53,11 @@ const HomeBlock = () => {
                 <ServicesHomeBlock services={homeData?.servicesBlock}/>
             </div>
 
-            <div>
-                <HowWeWorkBlock workSteps={homeData?.howWeWorkBlock.work_steps}/>
-            </div>
+            <HowWeWorkBlock workSteps={homeData?.howWeWorkBlock.work_steps}/>
 
-            <div>
-                <OurClientsBlock clients={homeData?.ourClientsBlock.clients}/>
-            </div>
+            <OurClientsBlock clients={homeData?.ourClientsBlock.clients}/>
 
-            <div>
-                <QuestionsFormBlock/>
-            </div>
+            <QuestionsFormBlock/>
 
             <Helmet>
                 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"/>
