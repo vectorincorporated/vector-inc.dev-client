@@ -5,23 +5,16 @@ import DottedItem from "../dotted-item/DottedItem";
 import calculateShift from "../../utils/expertise-dotted-items/calculate-items-shift.helper";
 
 const DottedItemList = ({
-    technologies,
-    selectedTechnologiesIds,
+    selectedTechnologies,
     isPink,
     activeItemIndex,
 }) => {
-    let dottedItems = technologies?.reduce((accumulator, currentValue) => {
-        if (selectedTechnologiesIds.find(item => item === currentValue.id)) {
-            accumulator.push(currentValue.title);
-        }
-        return accumulator;
-    }, []);
 
     const shift =
         activeItemIndex || activeItemIndex === 0
             ? {
                   position: "absolute",
-                  top: calculateShift(dottedItems, activeItemIndex) + "px",
+                  top: calculateShift(selectedTechnologies, activeItemIndex) + "px",
               }
             : null;
 
@@ -38,8 +31,8 @@ const DottedItemList = ({
                     </div>
                 )} */}
 
-                {dottedItems?.map((item, i) => {
-                    return <DottedItem item={item} key={i} isPink={isPink} />;
+                {selectedTechnologies?.map((item, i) => {
+                    return <DottedItem item={item} key={item.id} isPink={isPink} />;
                 })}
             </div>
         </div>

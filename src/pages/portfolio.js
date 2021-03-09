@@ -1,24 +1,14 @@
-import React, {useEffect, useState} from "react"
-
-import PortfolioService from '../api/Portfolio.service';
+import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import PortfolioBlock from "../components/portfolio/PortfolioBlock";
 
 const PortfolioPage = () => {
-    const [portfolioData, setPortfolioData] = useState();
-
-    useEffect(() => {
-        PortfolioService.getPortfolios()
-            .then((result) => {
-                setPortfolioData(result);
-            })
-    }, []);
 
     return (<Layout>
-        <SEO title="Portfolio Page" />
+        <SEO title="Portfolio Page"/>
         <div className='container'>
-            <PortfolioBlock portfolioData={portfolioData}/>
+            <PortfolioBlock/>
         </div>
     </Layout>)
 };

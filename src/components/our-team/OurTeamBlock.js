@@ -8,7 +8,7 @@ const info = {
 };
 
 
-const OurTeamBlock = ({ data, filterRolesById }) => {
+const OurTeamBlock = ({ data }) => {
     return (
         <div className={ styles.ourTeam }>
             <div className={ styles.info }>
@@ -26,7 +26,7 @@ const OurTeamBlock = ({ data, filterRolesById }) => {
 
                     {
                         data?.team_members?.map((member) => {
-                            return <MemberTeam filterRolesById={filterRolesById} member={member} key={member.id}/>
+                            return <MemberTeam member={member} key={member.id}/>
                         })
                     }
                 </div>
